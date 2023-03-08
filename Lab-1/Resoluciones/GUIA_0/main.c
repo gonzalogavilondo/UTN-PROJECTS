@@ -12,6 +12,7 @@ int main()
         printf("Desea probar otro ejercicio? Presione s/n <si/cualquier otra letra>: ");
         fflush(stdin);
         scanf("%c", &control);
+
     }while (control == 's' || control == 'S');
 
     return 0;
