@@ -2,7 +2,6 @@ UTN
 Tecnicatura Universitaria en Programacion
 Laboratorio de computacion 1
 Programacion 1
-Prof. Matias Pascual
 
 CONTENIDOS:
 
