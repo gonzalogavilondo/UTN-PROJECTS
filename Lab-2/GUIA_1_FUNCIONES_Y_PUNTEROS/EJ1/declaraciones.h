@@ -30,5 +30,4 @@ void MostrarDescendenteString(char *, int);
 void MostrarVectorString(char *, int);
 
 
-
 #endif // DECLARACIONES_H_INCLUDED

@@ -1,4 +1,6 @@
 #include "declaraciones.h"
+#include "algoritmos.h"
+#include "funciones_aritmeticas.h"
 
 int main()
 {
