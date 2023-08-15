@@ -27,3 +27,28 @@
 1692110609 d:\utn\lab-2\guia_1_funciones_y_punteros\ej1\funciones_aritmeticas.h
 	"declaraciones.h"
 
+1692111567 source:c:\users\gonzalo\documents\utn-projects\lab-2\guia_1_funciones_y_punteros\ej1\algoritmos.c
+	"algoritmos.h"
+
+1692111567 c:\users\gonzalo\documents\utn-projects\lab-2\guia_1_funciones_y_punteros\ej1\algoritmos.h
+	"declaraciones.h"
+
+1692111567 c:\users\gonzalo\documents\utn-projects\lab-2\guia_1_funciones_y_punteros\ej1\declaraciones.h
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<conio.h>
+
+1692111567 source:c:\users\gonzalo\documents\utn-projects\lab-2\guia_1_funciones_y_punteros\ej1\funciones.c
+	"declaraciones.h"
+
+1692111567 source:c:\users\gonzalo\documents\utn-projects\lab-2\guia_1_funciones_y_punteros\ej1\funciones_aritmeticas.c
+	"funciones_aritmeticas.h"
+
+1692111567 c:\users\gonzalo\documents\utn-projects\lab-2\guia_1_funciones_y_punteros\ej1\funciones_aritmeticas.h
+	"declaraciones.h"
+
+1692111567 source:c:\users\gonzalo\documents\utn-projects\lab-2\guia_1_funciones_y_punteros\ej1\main.c
+	"funciones_aritmeticas.h"
+	"algoritmos.h"
+
