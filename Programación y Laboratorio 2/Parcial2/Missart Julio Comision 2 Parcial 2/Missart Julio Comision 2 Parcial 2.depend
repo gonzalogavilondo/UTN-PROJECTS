@@ -1,0 +1,40 @@
+# depslib dependency file v1.0
+1605276773 source:c:\users\jmiss\desktop\utn mdp\cuatrimestre ii\programación y laboratorio 2\parcial2\missart julio comision 2 parcial 2\paciente.c
+	<stdio.h>
+	<stdlib.h>
+	"registroArchivo.h"
+	"especialidad.h"
+	"paciente.h"
+
+1605278385 source:c:\users\jmiss\desktop\utn mdp\cuatrimestre ii\programación y laboratorio 2\parcial2\missart julio comision 2 parcial 2\registroarchivo.c
+	"registroArchivo.h"
+	"especialidad.h"
+	<string.h>
+
+1605275962 c:\users\jmiss\desktop\utn mdp\cuatrimestre ii\programación y laboratorio 2\parcial2\missart julio comision 2 parcial 2\registroarchivo.h
+	<stdlib.h>
+	<stdio.h>
+	"especialidad.h"
+
+1605279371 source:c:\users\jmiss\desktop\utn mdp\cuatrimestre ii\programación y laboratorio 2\parcial2\missart julio comision 2 parcial 2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"registroArchivo.h"
+	"especialidad.h"
+	"paciente.h"
+	<conio.h>
+
+1605277640 c:\users\jmiss\desktop\utn mdp\cuatrimestre ii\programación y laboratorio 2\parcial2\missart julio comision 2 parcial 2\especialidad.h
+	"paciente.h"
+
+1605275941 c:\users\jmiss\desktop\utn mdp\cuatrimestre ii\programación y laboratorio 2\parcial2\missart julio comision 2 parcial 2\paciente.h
+
+1605477089 source:c:\users\jmiss\desktop\utn mdp\cuatrimestre ii\programación y laboratorio 2\parcial2\missart julio comision 2 parcial 2\especialidad.c
+	<stdio.h>
+	<stdlib.h>
+	"registroArchivo.h"
+	"especialidad.h"
+	"paciente.h"
+	"conio.h"
+	<string.h>
+

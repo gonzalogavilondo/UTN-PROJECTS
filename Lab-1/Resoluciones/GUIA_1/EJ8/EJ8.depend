@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1679596615 source:f:\utn\lab-1\resoluciones\guia_1\ej8\pila.c
+	"pila.h"
+
+1679596612 f:\utn\lab-1\resoluciones\guia_1\ej8\pila.h
+	<stdio.h>
+	<malloc.h>
+
+1679596604 source:f:\utn\lab-1\resoluciones\guia_1\ej8\main.c
+	<stdio.h>
+	<stdlib.h>
+	"pila.h"
+

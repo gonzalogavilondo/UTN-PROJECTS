@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1597261892 source:c:\users\jmiss\desktop\utn mdp\cuatrimestre ii\programación y laboratorio 2\codeblock clases\clase01\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1597250761 c:\users\jmiss\desktop\utn mdp\cuatrimestre ii\programación y laboratorio 2\codeblock clases\clase01\empleados.h
+
+1597408386 source:c:\users\jmiss\desktop\utn mdp\cuatrimestre ii\programación y laboratorio 2\codeblock clases\clase02\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	"archivoEmpleados.h"
+
+1597407943 c:\users\jmiss\desktop\utn mdp\cuatrimestre ii\programación y laboratorio 2\codeblock clases\clase02\archivoempleados.h
+
+1597410652 source:c:\users\jmiss\desktop\utn mdp\cuatrimestre ii\programación y laboratorio 2\codeblock clases\clase02\archivoempleados.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	"archivoEmpleados.h"
+

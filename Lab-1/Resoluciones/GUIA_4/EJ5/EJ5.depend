@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1681847712 source:f:\utn\lab-1\resoluciones\guia_4\ej5\main.c
+	"declaraciones.h"
+	"operaciones.h"
+
+1681931440 f:\utn\lab-1\resoluciones\guia_4\ej5\declaraciones.h
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<conio.h>
+
+1681847510 f:\utn\lab-1\resoluciones\guia_4\ej5\operaciones.h
+
+1681847527 source:f:\utn\lab-1\resoluciones\guia_4\ej5\operaciones.c
+	"operaciones.h"
+
+1681847692 source:f:\utn\lab-1\resoluciones\guia_4\ej5\funciones.c
+	"declaraciones.h"
+

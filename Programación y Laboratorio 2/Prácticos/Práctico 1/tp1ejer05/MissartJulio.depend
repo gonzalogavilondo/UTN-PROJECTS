@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1597946730 source:c:\users\jmiss\desktop\utn mdp\cuatrimestre ii\programación y laboratorio 2\prácticos\práctico 1\tp1ejer05\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<conio.h>
+

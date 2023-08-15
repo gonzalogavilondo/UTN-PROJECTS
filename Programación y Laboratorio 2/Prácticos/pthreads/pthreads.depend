@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1600891389 source:c:\users\jmiss\desktop\utn mdp\cuatrimestre ii\programación y laboratorio 2\prácticos\pthreads\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<conio.h>
+	<pthread.h>
+

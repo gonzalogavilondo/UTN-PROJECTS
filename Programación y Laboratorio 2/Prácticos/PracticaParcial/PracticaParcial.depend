@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1601244221 source:c:\users\jmiss\desktop\utn mdp\cuatrimestre ii\programación y laboratorio 2\prácticos\practicaparcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"auto.h"
+
+1601244154 c:\users\jmiss\desktop\utn mdp\cuatrimestre ii\programación y laboratorio 2\prácticos\practicaparcial\auto.h
+
+1601470041 source:c:\users\jmiss\desktop\utn mdp\cuatrimestre ii\programación y laboratorio 2\prácticos\practicaparcial\auto.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"auto.h"
+

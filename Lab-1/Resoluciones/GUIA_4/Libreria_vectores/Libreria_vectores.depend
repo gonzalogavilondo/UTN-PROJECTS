@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1681735992 source:f:\utn\lab-1\librerias\libreria_vectores\funciones.c
+	"declaraciones.h"
+
+1681735876 f:\utn\lab-1\librerias\libreria_vectores\declaraciones.h
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+
+1681735938 source:f:\utn\lab-1\librerias\libreria_vectores\main.c
+	"declaraciones.h"
+
+1681822698 source:f:\utn\lab-1\resoluciones\guia_4\libreria_vectores\main.c
+	"declaraciones.h"
+
+1681822414 f:\utn\lab-1\resoluciones\guia_4\libreria_vectores\declaraciones.h
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<conio.h>
+
+1681756865 source:f:\utn\lab-1\resoluciones\guia_4\libreria_vectores\funciones.c
+	"declaraciones.h"
+
+1681822673 source:f:\utn\lab-1\resoluciones\guia_4\libreria_vectores\algoritmos.c
+	"declaraciones.h"
+

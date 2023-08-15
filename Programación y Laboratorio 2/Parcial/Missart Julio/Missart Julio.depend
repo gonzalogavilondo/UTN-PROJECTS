@@ -1,0 +1,46 @@
+# depslib dependency file v1.0
+1601422158 source:c:\users\jmiss\desktop\utn mdp\cuatrimestre ii\programación y laboratorio 2\parcial\missart julio\persona.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"persona.h"
+
+1601422170 c:\users\jmiss\desktop\utn mdp\cuatrimestre ii\programación y laboratorio 2\parcial\missart julio\persona.h
+
+1601907847 source:c:\users\jmiss\desktop\utn mdp\cuatrimestre ii\programación y laboratorio 2\parcial\missart julio\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	<time.h>
+	"persona.h"
+	"listas.h"
+	"filas.h"
+
+1601907730 c:\users\jmiss\desktop\utn mdp\cuatrimestre ii\programación y laboratorio 2\parcial\missart julio\listas.h
+	"listas.h"
+	"persona.h"
+	"filas.h"
+
+1601907769 source:c:\users\jmiss\desktop\utn mdp\cuatrimestre ii\programación y laboratorio 2\parcial\missart julio\listas.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	<time.h>
+	"listas.h"
+	"persona.h"
+	"filas.h"
+
+1601648833 c:\users\jmiss\desktop\utn mdp\cuatrimestre ii\programación y laboratorio 2\parcial\missart julio\filas.h
+
+1601647891 source:c:\users\jmiss\desktop\utn mdp\cuatrimestre ii\programación y laboratorio 2\parcial\missart julio\filas.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	<time.h>
+	"listas.h"
+	"persona.h"
+	"filas.h"
+

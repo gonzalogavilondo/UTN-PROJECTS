@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1681931473 source:f:\utn\lab-1\resoluciones\1er_parcial_gavilondo\algoritmos.c
+	"declaraciones.h"
+
+1681931836 f:\utn\lab-1\resoluciones\1er_parcial_gavilondo\declaraciones.h
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<conio.h>
+
+1681928208 source:f:\utn\lab-1\resoluciones\1er_parcial_gavilondo\funciones.c
+	"declaraciones.h"
+
+1681757409 source:f:\utn\lab-1\resoluciones\1er_parcial_gavilondo\operaciones.c
+	"operaciones.h"
+
+1681757476 f:\utn\lab-1\resoluciones\1er_parcial_gavilondo\operaciones.h
+
+1680822159 source:f:\utn\lab-1\resoluciones\1er_parcial_gavilondo\pila.c
+	"pila.h"
+
+1682691214 f:\utn\lab-1\resoluciones\1er_parcial_gavilondo\pila.h
+	<stdlib.h>
+	<stdio.h>
+	<malloc.h>
+
+1682868290 source:f:\utn\lab-1\resoluciones\1er_parcial_gavilondo\main.c
+	"pila.h"
+

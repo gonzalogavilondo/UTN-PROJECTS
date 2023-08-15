@@ -1,0 +1,93 @@
+# depslib dependency file v1.0
+1681690707 source:c:\users\gonza\desktop\libreria_matrices\funciones_reales.c
+	"declaraciones_funciones_reales.h"
+	<stdio.h>
+	<stdlib.h>
+
+1681690316 c:\users\gonza\desktop\libreria_matrices\declaraciones_funciones_reales.h
+
+1681691161 source:c:\users\gonza\desktop\libreria_matrices\main.c
+	"declaraciones_funciones_reales.h"
+	"declaraciones_funciones.h"
+	"declaraciones_menu.h"
+	<stdio.h>
+	<stdlib.h>
+
+1681691079 source:c:\users\gonza\desktop\libreria_matrices\menu.c
+	"declaraciones_funciones_reales.h"
+	"declaraciones_funciones.h"
+	"declaraciones_menu.h"
+	<stdio.h>
+	<stdlib.h>
+
+1681690962 c:\users\gonza\desktop\libreria_matrices\declaraciones_menu.h
+
+1681690387 source:c:\users\gonza\desktop\libreria_matrices\opcion_elegida.c
+	"declaraciones_funciones_reales.h"
+	"declaraciones_funciones.h"
+	"declaraciones_menu.h"
+	<stdio.h>
+	<stdlib.h>
+
+1681689983 c:\users\gonza\desktop\libreria_matrices\declaraciones_funciones.h
+
+1681690167 source:c:\users\gonza\desktop\libreria_matrices\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	"declaraciones_funciones_reales.h"
+	"declaraciones_funciones.h"
+
+1681691570 source:f:\utn\lab-1\resoluciones\guia_4\libreria_matrices\funciones_reales.c
+	"declaraciones_funciones_reales.h"
+
+1681691566 f:\utn\lab-1\resoluciones\guia_4\libreria_matrices\declaraciones_funciones_reales.h
+	<stdio.h>
+	<stdlib.h>
+
+1681691079 source:f:\utn\lab-1\resoluciones\guia_4\libreria_matrices\menu.c
+	"declaraciones_funciones_reales.h"
+	"declaraciones_funciones.h"
+	"declaraciones_menu.h"
+	<stdio.h>
+	<stdlib.h>
+
+1681691394 f:\utn\lab-1\resoluciones\guia_4\libreria_matrices\declaraciones_funciones.h
+
+1681690962 f:\utn\lab-1\resoluciones\guia_4\libreria_matrices\declaraciones_menu.h
+
+1681691574 source:f:\utn\lab-1\resoluciones\guia_4\libreria_matrices\funciones.c
+	"declaraciones_funciones_reales.h"
+	"declaraciones_funciones.h"
+
+1681691359 source:f:\utn\lab-1\resoluciones\guia_4\libreria_matrices\main.c
+	"declaraciones_funciones_reales.h"
+	"declaraciones_funciones.h"
+	"declaraciones_menu.h"
+	<stdio.h>
+	<stdlib.h>
+
+1681691574 source:f:\utn\lab-1\resoluciones\guia_4_1\libreria_matrices\funciones.c
+	"declaraciones_funciones_reales.h"
+	"declaraciones_funciones.h"
+
+1681691566 f:\utn\lab-1\resoluciones\guia_4_1\libreria_matrices\declaraciones_funciones_reales.h
+	<stdio.h>
+	<stdlib.h>
+
+1681691394 f:\utn\lab-1\resoluciones\guia_4_1\libreria_matrices\declaraciones_funciones.h
+
+1681691570 source:f:\utn\lab-1\resoluciones\guia_4_1\libreria_matrices\funciones_reales.c
+	"declaraciones_funciones_reales.h"
+
+1681691785 source:f:\utn\lab-1\resoluciones\guia_4_1\libreria_matrices\main.c
+	"declaraciones_funciones_reales.h"
+	"declaraciones_funciones.h"
+	"declaraciones_menu.h"
+
+1681691592 f:\utn\lab-1\resoluciones\guia_4_1\libreria_matrices\declaraciones_menu.h
+
+1681691606 source:f:\utn\lab-1\resoluciones\guia_4_1\libreria_matrices\menu.c
+	"declaraciones_funciones_reales.h"
+	"declaraciones_funciones.h"
+	"declaraciones_menu.h"
+

@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1605879551 source:c:\users\jmiss\desktop\utn mdp\cuatrimestre ii\programación y laboratorio 2\parcial2\recu\missart julio com2\lista.c
+	<stdio.h>
+	<stdlib.h>
+	"lista.h"
+
+1605873758 source:c:\users\jmiss\desktop\utn mdp\cuatrimestre ii\programación y laboratorio 2\parcial2\recu\missart julio com2\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1605174198 source:c:\users\jmiss\desktop\utn mdp\cuatrimestre ii\programación y laboratorio 2\parcial2\recu\missart julio com2\registroarchivo.c
+	"registroArchivo.h"
+
+1605174194 c:\users\jmiss\desktop\utn mdp\cuatrimestre ii\programación y laboratorio 2\parcial2\recu\missart julio com2\registroarchivo.h
+	<stdlib.h>
+	<stdio.h>
+
+1605880418 source:c:\users\jmiss\desktop\utn mdp\cuatrimestre ii\programación y laboratorio 2\parcial2\recu\missart julio com2\arbol.c
+	"arbol.h"
+	"lista.h"
+	"registroArchivo.h"
+	<string.h>
+
+1605880500 c:\users\jmiss\desktop\utn mdp\cuatrimestre ii\programación y laboratorio 2\parcial2\recu\missart julio com2\arbol.h
+	"lista.h"
+
+1605880488 c:\users\jmiss\desktop\utn mdp\cuatrimestre ii\programación y laboratorio 2\parcial2\recu\missart julio com2\lista.h
+

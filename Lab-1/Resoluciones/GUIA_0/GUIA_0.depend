@@ -1,0 +1,54 @@
+# depslib dependency file v1.0
+1677067454 source:f:\utn\1er_año\laboratorio_1\guia-0\funciones.c
+	"declaraciones.h"
+
+1677067453 f:\utn\1er_año\laboratorio_1\guia-0\declaraciones.h
+	<stdio.h>
+	<stdlib.h>
+
+1677067822 source:f:\utn\1er_año\laboratorio_1\guia-0\main.c
+	"declaraciones.h"
+
+1677072221 source:f:\utn\1er_año\laboratorio_1\guia_0\funciones.c
+	"declaraciones.h"
+
+1677067453 f:\utn\1er_año\laboratorio_1\guia_0\declaraciones.h
+	<stdio.h>
+	<stdlib.h>
+
+1677067822 source:f:\utn\1er_año\laboratorio_1\guia_0\main.c
+	"declaraciones.h"
+
+1678284901 source:f:\utn\1er_cuatrimestre\laboratorio_1\guia_0\funciones.c
+	"declaraciones.h"
+
+1677067453 f:\utn\1er_cuatrimestre\laboratorio_1\guia_0\declaraciones.h
+	<stdio.h>
+	<stdlib.h>
+
+1678281850 source:f:\utn\1er_cuatrimestre\laboratorio_1\guia_0\main.c
+	"declaraciones.h"
+
+1679060012 source:f:\utn\lab-1\resoluciones\guia_0\funciones.c
+	"declaraciones.h"
+
+1679075426 f:\utn\lab-1\resoluciones\guia_0\declaraciones.h
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<time.h>
+
+1679056042 source:f:\utn\lab-1\resoluciones\guia_0\main.c
+	"declaraciones.h"
+
+1679012067 source:d:\utn-projects\lab-1\resoluciones\guia_0\funciones.c
+	"declaraciones.h"
+
+1679011918 d:\utn-projects\lab-1\resoluciones\guia_0\declaraciones.h
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+1679000232 source:d:\utn-projects\lab-1\resoluciones\guia_0\main.c
+	"declaraciones.h"
+

@@ -1,0 +1,121 @@
+/*
+ LABORATORIO II - UTN Mdp
+ Este es un ejemplo de visualizaicon de Arbol Binario
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+struct nodoArbol
+{
+    int dato;
+    struct nodoArbol *izq;
+    struct nodoArbol *der;
+};
+
+struct nodoArbol * inicArbol()
+{
+    return NULL;
+}
+struct nodoArbol * crearNodoArbol(int dato)
+{
+    struct nodoArbol * aux = (struct nodoArbol *) malloc(sizeof ( struct nodoArbol ) );
+    aux->dato=dato;
+    aux->der=NULL;
+    aux->izq=NULL;
+    return aux;
+}
+
+struct nodoArbol * insertar(struct nodoArbol * arbol, int dato)
+{
+    if(arbol==NULL)
+        arbol = crearNodoArbol(dato);
+    else
+    {
+        if(dato>arbol->dato)
+        arbol->der = insertar(arbol->der, dato);
+        else
+        arbol->izq = insertar(arbol->izq, dato);
+    }
+    return arbol;
+}
+
+void inorder(struct nodoArbol * arbol)
+{
+  if(arbol != NULL)
+  {
+   inorder(arbol->izq);
+   printf("%d ", arbol->dato);
+   inorder(arbol->der);
+  }
+}
+
+
+int DibujarArbolLinea(struct nodoArbol * arbol, int esIzq, int inicia, int nivel, char s[20][255])
+{
+    char b[10];
+    int ancho = 4; //es el ancho del nodo que dibujo
+    int i;
+
+    if (!arbol) return 0;
+
+    sprintf(b, "(%d)", arbol->dato); // agrego valor de nodo a la matriz
+
+    int izq  = DibujarArbolLinea(arbol->izq,  1, inicia,                nivel + 1, s);
+    int der = DibujarArbolLinea(arbol->der, 0, inicia + izq + ancho, nivel + 1, s);
+
+    //dibujo nodo
+    for (i = 0; i < ancho; i++)
+        s[2 * nivel][inicia + izq + i] = b[i];
+
+    //dibujo lineas .----+----.
+    if (nivel && esIzq) {
+
+        for (i = 0; i < ancho + der; i++)
+            s[2 * nivel - 1][inicia + izq + ancho/2 + i] = '-';
+
+        s[2 * nivel - 1][inicia + izq + ancho/2] = '.';
+        s[2 * nivel - 1][inicia + izq + ancho + der + ancho/2] = '+';
+
+    } else if (nivel && !esIzq) {
+
+        for (i = 0; i < izq + ancho; i++)
+            s[2 * nivel - 1][inicia - ancho/2 + i] = '-';
+
+        s[2 * nivel - 1][inicia + izq + ancho/2] = '.';
+        s[2 * nivel - 1][inicia - ancho/2 - 1] = '+';
+    }
+
+    //Cerebros quemados everywere!!
+    return izq + ancho + der;
+}
+
+int DibujarArbol(struct nodoArbol * arbol)
+{
+    char s[10][255];
+    int i;
+    //creo una matriz de char para hacer mi "dibujo"
+    for (i = 0; i < 10; i++)
+        sprintf(s[i], "%80s", " ");
+
+    //Hago magia
+    DibujarArbolLinea(arbol, 0, 0, 0, s);
+
+    //Imprimo matris
+    for (i = 0; i < 10; i++)
+        printf("%s\n", s[i]);
+}
+
+int main()
+{
+  struct nodoArbol * miArbol = inicArbol();
+  miArbol = insertar(miArbol, 50);
+  miArbol = insertar(miArbol, 30);
+  miArbol = insertar(miArbol, 60);
+  miArbol = insertar(miArbol, 70);
+  miArbol = insertar(miArbol, 20);
+  miArbol = insertar(miArbol, 40);
+  miArbol = insertar(miArbol, 35);
+  miArbol = insertar(miArbol, 45);
+  DibujarArbol(miArbol);
+}

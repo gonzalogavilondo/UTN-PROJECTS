@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1598127049 source:c:\users\jmiss\desktop\utn mdp\cuatrimestre ii\programación y laboratorio 2\prácticos\práctico 1\stack\main.c
+	<stdio.h>
+	<stdlib.h>
+	"stack.h"
+
+1598127065 c:\users\jmiss\desktop\utn mdp\cuatrimestre ii\programación y laboratorio 2\prácticos\práctico 1\stack\stack.h
+
+1598127772 source:c:\users\jmiss\desktop\utn mdp\cuatrimestre ii\programación y laboratorio 2\prácticos\práctico 1\stack\stack.c
+	"stack.h"
+

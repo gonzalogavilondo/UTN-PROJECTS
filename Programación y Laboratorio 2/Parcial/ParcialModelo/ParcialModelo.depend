@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1605226261 source:c:\users\jmiss\desktop\utn mdp\cuatrimestre ii\programación y laboratorio 2\parcial\parcialmodelo\vagon.c
+	<stdio.h>
+	<stdlib.h>
+	"vagon.h"
+
+1605200061 c:\users\jmiss\desktop\utn mdp\cuatrimestre ii\programación y laboratorio 2\parcial\parcialmodelo\vagon.h
+

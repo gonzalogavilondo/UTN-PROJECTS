@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1605266228 source:c:\users\jmiss\desktop\utn mdp\cuatrimestre ii\programación y laboratorio 2\parcial\com2_tp5arboles_missart\arbol.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"arbol.h"
+
+1605266239 c:\users\jmiss\desktop\utn mdp\cuatrimestre ii\programación y laboratorio 2\parcial\com2_tp5arboles_missart\arbol.h
+
+1604703100 source:c:\users\jmiss\desktop\utn mdp\cuatrimestre ii\programación y laboratorio 2\parcial\com2_tp5arboles_missart\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<conio.h>
+	<string.h>
+	"arbol.h"
+	"lista.h"
+
+1604703331 c:\users\jmiss\desktop\utn mdp\cuatrimestre ii\programación y laboratorio 2\parcial\com2_tp5arboles_missart\lista.h
+	"arbol.h"
+
+1604703343 source:c:\users\jmiss\desktop\utn mdp\cuatrimestre ii\programación y laboratorio 2\parcial\com2_tp5arboles_missart\lista.c
+	<stdio.h>
+	<stdlib.h>
+	"lista.h"
+

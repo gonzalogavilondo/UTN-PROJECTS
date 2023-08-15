@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1680788691 source:f:\utn\lab-1\resoluciones\guia_3\ej7\main.c
+	<stdio.h>
+	<stdlib.h>
+	"declaraciones.h"
+	"pila.h"
+
+1680788377 f:\utn\lab-1\resoluciones\guia_3\ej7\declaraciones.h
+	"pila.h"
+
+1679660538 f:\utn\lab-1\resoluciones\guia_3\ej7\pila.h
+	<stdio.h>
+	<malloc.h>
+
+1679660538 source:f:\utn\lab-1\resoluciones\guia_3\ej7\pila.c
+	"pila.h"
+
+1680788760 source:f:\utn\lab-1\resoluciones\guia_3\ej7\funciones.c
+	"declaraciones.h"
+
