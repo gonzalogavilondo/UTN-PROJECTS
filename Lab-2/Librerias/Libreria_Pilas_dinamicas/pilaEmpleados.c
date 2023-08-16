@@ -123,3 +123,71 @@ void mostrarPilaEmpleados(pilaEmpleados *pE)
         apilarEmpleado(pE, desapilarEmpleado(&pEaux));
     }
 }
+
+/**--------------------------------------------------------------------------------------------------------------------------------**/
+
+/**
+    cargarPilaEmpleados
+    Parametros: Tipo de datos pilaEmpleados que es una estructura, que contiene
+    un puntero a la estructura de empleados (es decir, simula un arreglo de empleados)
+    Carga una cantidad de empleados en una pila.
+**/
+void cargarPilaEmpleados(pilaEmpleados *pE)
+{
+    int cntEmpleados = 0;
+
+    printf("Ingrese la cantidad de empleados a cargar: ");
+    scanf("%d", &cntEmpleados);
+    fflush(stdin);
+
+    for(int i = 0; i < cntEmpleados; i++)
+    {
+        apilarEmpleado(pE, cargarUnEmpleado());
+    }
+}
+
+/**--------------------------------------------------------------------------------------------------------------------------------**/
+
+/**
+    guardarPilaEnArchivo
+    Parametros: Tipo de datos pilaEmpleados que es una estructura, que contiene
+    un puntero a la estructura de empleados (es decir, simula un arreglo de empleados)
+    Guardar en un archivo de texto la pila cargada.
+**/
+
+void guardarPilaEnArchivo(pilaEmpleados *pE)
+{
+    char *empleadoStr = NULL;
+    empleadoStr = (char*)malloc(sizeof(char) * 200);
+
+    ///Es una estructura creada por el programador
+    pilaEmpleados pEaux;
+
+    ///Inicializamos la pila para cargarle datos
+    iniciaPilaEmpleados(&pEaux);
+
+    ///Creo y abro el archivo en modo escritura
+    FILE* archivo = fopen("archivo.txt", "w");
+    if (archivo == NULL)
+    {
+        perror("Error al abrir el archivo");
+        exit(EXIT_FAILURE);
+    }
+
+    while(!pilaVaciaEmpleados(pE))
+    {
+        empleadoStr = empleadoToStr(topeEmpleado(pE));
+        fprintf(archivo, "%s\n", empleadoStr);
+        apilarEmpleado(&pEaux, desapilarEmpleado(pE));
+    }
+
+    ///Vuelvo a recuperar los datos de la pila original
+    while(!pilaVaciaEmpleados(&pEaux))
+    {
+        apilarEmpleado(pE, desapilarEmpleado(&pEaux));
+    }
+
+    fclose(archivo);
+    free(empleadoStr);
+
+}

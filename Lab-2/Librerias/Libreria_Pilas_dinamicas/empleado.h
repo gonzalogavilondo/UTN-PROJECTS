@@ -1,6 +1,7 @@
 #ifndef EMPLEADO_H_INCLUDED
 #define EMPLEADO_H_INCLUDE
 
+#define LONGMAX 25
 
 typedef struct
 {
@@ -12,7 +13,8 @@ typedef struct
 }stEmpleado;
 
 stEmpleado cargarUnEmpleado();
-void muestraUnEmpleado(stEmpleado e);
+void muestraUnEmpleado(stEmpleado);
+char *empleadoToStr(stEmpleado);
 
 
 

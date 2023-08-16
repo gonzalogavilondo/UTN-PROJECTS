@@ -13,14 +13,18 @@ int main()
     ///Inicializamos la pila para cargarle datos
     iniciaPilaEmpleados(&pE);
 
+    ///Cargo empleados especificando la cantidad.
+    cargarPilaEmpleados(&pE);
 
-    ///MUESTRO UNA PILA CON 30 EMPLEADOS (SE TUBO QUE REDIMENSIONAR PORQUE NOS PASAMOS DE LOS 10 DE DIM)
-    for (int i = 0; i < 5; i++)
-    {
-        apilarEmpleado(&pE, cargarUnEmpleado());
-    }
+    ///Una pausa y limpiado de pantalla
+    system("pause");
+    system("cls || clear");
 
+    ///Muestro la pila
     mostrarPilaEmpleados(&pE);
+
+    ///Guardar la pila en un archivo
+    guardarPilaEnArchivo(&pE);
 
     return 0;
 }
