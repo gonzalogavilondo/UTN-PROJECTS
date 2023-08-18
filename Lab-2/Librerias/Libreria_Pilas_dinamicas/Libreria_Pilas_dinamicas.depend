@@ -7,15 +7,15 @@
 
 1692193841 d:\utn\lab-2\librerias\libreria_pilas_dinamicas\empleado.h
 
-1692193956 source:d:\utn\lab-2\librerias\libreria_pilas_dinamicas\pilaempleados.c
+1692364367 source:d:\utn\lab-2\librerias\libreria_pilas_dinamicas\pilaempleados.c
 	"pilaEmpleados.h"
 
-1692192928 d:\utn\lab-2\librerias\libreria_pilas_dinamicas\pilaempleados.h
+1692363445 d:\utn\lab-2\librerias\libreria_pilas_dinamicas\pilaempleados.h
 	<malloc.h>
 	<stdio.h>
 	<stdlib.h>
 	"empleado.h"
 
-1692192880 source:d:\utn\lab-2\librerias\libreria_pilas_dinamicas\main.c
+1692363102 source:d:\utn\lab-2\librerias\libreria_pilas_dinamicas\main.c
 	"pilaEmpleados.h"
 

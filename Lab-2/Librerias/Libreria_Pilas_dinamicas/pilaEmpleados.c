@@ -55,7 +55,7 @@ void apilarEmpleado(pilaEmpleados *pE, stEmpleado e)
     que corre la referencia un lugar atras de los validos, asi se pierde la referencia al ultimo lugar,
     y eso el sistema lo interpreta automaticamente como basura.
 **/
-stEmpleado desapilarEmpleado(pilaEmpleados * pE)
+stEmpleado desapilarEmpleado(pilaEmpleados *pE)
 {
     stEmpleado e; ///empleado a "devolver"
 
@@ -111,11 +111,13 @@ void mostrarPilaEmpleados(pilaEmpleados *pE)
     ///Inicializamos la pila para cargarle datos
     iniciaPilaEmpleados(&pEaux);
 
+    printf("\n\Tope ..............................................\n\n");
     while(!pilaVaciaEmpleados(pE))
     {
         muestraUnEmpleado(topeEmpleado(pE));
         apilarEmpleado(&pEaux, desapilarEmpleado(pE));
     }
+    printf("\n\nBase ..............................................\n\n");
 
     ///Vuelvo a recuperar los datos de la pila original
     while(!pilaVaciaEmpleados(&pEaux))
@@ -187,7 +189,7 @@ void guardarPilaEnArchivo(pilaEmpleados *pE)
         apilarEmpleado(pE, desapilarEmpleado(&pEaux));
     }
 
+    ///Cierro el archivo y libero memoria del puntero a char utilizado para guardar las estructuras.
     fclose(archivo);
     free(empleadoStr);
-
 }
