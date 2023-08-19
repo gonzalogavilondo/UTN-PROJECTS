@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1692404894 source:c:\users\gonzalo\documents\utn-projects\lab-2\guia_1_funciones_y_punteros\ej6\main.c
+	"declaraciones.h"
+
+1692404729 c:\users\gonzalo\documents\utn-projects\lab-2\guia_1_funciones_y_punteros\ej6\declaraciones.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1692404764 source:c:\users\gonzalo\documents\utn-projects\lab-2\guia_1_funciones_y_punteros\ej6\funciones.c
+	"declaraciones.h"
+
