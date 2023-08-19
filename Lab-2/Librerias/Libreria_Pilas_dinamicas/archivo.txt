@@ -1,2 +1,2 @@
-Id: 2 - Apellido: Gareca - Nombre: Ricardo - Edad: 66
+Id: 2 - Apellido: Gomez - Nombre: Ricardo - Edad: 35
 Id: 1 - Apellido: Gavilondo - Nombre: Gonzalo - Edad: 25

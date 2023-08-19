@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1692111567 source:c:\users\gonzalo\documents\utn-projects\lab-2\guia_1_funciones_y_punteros\ej4\algoritmos.c
+	"algoritmos.h"
+
+1692111567 c:\users\gonzalo\documents\utn-projects\lab-2\guia_1_funciones_y_punteros\ej4\algoritmos.h
+	"declaraciones.h"
+
+1692111567 c:\users\gonzalo\documents\utn-projects\lab-2\guia_1_funciones_y_punteros\ej4\declaraciones.h
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<conio.h>
+
+1692111567 source:c:\users\gonzalo\documents\utn-projects\lab-2\guia_1_funciones_y_punteros\ej4\funciones.c
+	"declaraciones.h"
+
+1692111567 source:c:\users\gonzalo\documents\utn-projects\lab-2\guia_1_funciones_y_punteros\ej4\funciones_aritmeticas.c
+	"funciones_aritmeticas.h"
+
+1692111567 c:\users\gonzalo\documents\utn-projects\lab-2\guia_1_funciones_y_punteros\ej4\funciones_aritmeticas.h
+	"declaraciones.h"
+

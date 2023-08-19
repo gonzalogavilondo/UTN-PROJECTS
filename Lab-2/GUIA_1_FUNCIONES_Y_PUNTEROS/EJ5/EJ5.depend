@@ -1,0 +1,36 @@
+# depslib dependency file v1.0
+1692403287 source:c:\users\gonzalo\documents\utn-projects\lab-2\guia_1_funciones_y_punteros\ej5\funciones.c
+	"declaraciones.h"
+
+1692104510 c:\users\gonzalo\documents\utn-projects\lab-2\guia_1_funciones_y_punteros\ej5\declaraciones_funciones_reales.h
+
+1692104510 c:\users\gonzalo\documents\utn-projects\lab-2\guia_1_funciones_y_punteros\ej5\declaraciones_funciones.h
+
+1692104510 source:c:\users\gonzalo\documents\utn-projects\lab-2\guia_1_funciones_y_punteros\ej5\funciones_reales.c
+	"declaraciones_funciones_reales.h"
+	<stdio.h>
+	<stdlib.h>
+
+1692104510 source:c:\users\gonzalo\documents\utn-projects\lab-2\guia_1_funciones_y_punteros\ej5\menu.c
+	"declaraciones_funciones_reales.h"
+	"declaraciones_funciones.h"
+	"declaraciones_menu.h"
+	<stdio.h>
+	<stdlib.h>
+
+1692104510 c:\users\gonzalo\documents\utn-projects\lab-2\guia_1_funciones_y_punteros\ej5\declaraciones_menu.h
+
+1692104510 source:c:\users\gonzalo\documents\utn-projects\lab-2\guia_1_funciones_y_punteros\ej5\opcion_elegida.c
+	"declaraciones_funciones_reales.h"
+	"declaraciones_funciones.h"
+	"declaraciones_menu.h"
+	<stdio.h>
+	<stdlib.h>
+
+1692403387 source:c:\users\gonzalo\documents\utn-projects\lab-2\guia_1_funciones_y_punteros\ej5\main.c
+	"declaraciones.h"
+
+1692403272 c:\users\gonzalo\documents\utn-projects\lab-2\guia_1_funciones_y_punteros\ej5\declaraciones.h
+	<stdio.h>
+	<stdlib.h>
+

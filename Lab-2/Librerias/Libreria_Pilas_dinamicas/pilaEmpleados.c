@@ -51,9 +51,12 @@ void apilarEmpleado(pilaEmpleados *pE, stEmpleado e)
     Parametros: Tipo de datos pilaEmpleados que es una estructura, que contiene
     un puntero a la estructura de empleados (es decir, simula un arreglo de empleados)
     Desapila un empleado en la "pila" que en realidad es un arreglo de empleados.
-    Lo que hace es quitar la referencia al ultimo valor que se encuentra en el arreglo, fijarse
-    que corre la referencia un lugar atras de los validos, asi se pierde la referencia al ultimo lugar,
-    y eso el sistema lo interpreta automaticamente como basura.
+    Lo que hace en realidad es disminuir la cantidad de validos, entonces como la mayoria
+    de las funciones hechas se maneja con validos, por ejemplo pilavacia, la pila va a estar
+    vacia cuando los validos sea igual a 0, pero no pierdo la referencia al puntero de empleados
+    dentro de la estructura, podria acceder de igual manera... asi que lo unico que hago es disminuir
+    el valor de validos para que el resto de la funcionalidad y como esta pensado todo haga como que la
+    pila "esta vacia"
 **/
 stEmpleado desapilarEmpleado(pilaEmpleados *pE)
 {

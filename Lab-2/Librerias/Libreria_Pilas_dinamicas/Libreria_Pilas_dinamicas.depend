@@ -19,3 +19,23 @@
 1692363102 source:d:\utn\lab-2\librerias\libreria_pilas_dinamicas\main.c
 	"pilaEmpleados.h"
 
+1692372381 source:c:\users\gonzalo\documents\utn-projects\lab-2\librerias\libreria_pilas_dinamicas\empleado.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"empleado.h"
+
+1692372381 c:\users\gonzalo\documents\utn-projects\lab-2\librerias\libreria_pilas_dinamicas\empleado.h
+
+1692400238 source:c:\users\gonzalo\documents\utn-projects\lab-2\librerias\libreria_pilas_dinamicas\main.c
+	"pilaEmpleados.h"
+
+1692372381 c:\users\gonzalo\documents\utn-projects\lab-2\librerias\libreria_pilas_dinamicas\pilaempleados.h
+	<malloc.h>
+	<stdio.h>
+	<stdlib.h>
+	"empleado.h"
+
+1692372381 source:c:\users\gonzalo\documents\utn-projects\lab-2\librerias\libreria_pilas_dinamicas\pilaempleados.c
+	"pilaEmpleados.h"
+

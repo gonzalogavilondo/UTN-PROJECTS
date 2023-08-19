@@ -23,11 +23,6 @@ int main()
     ///Muestro la pila
     mostrarPilaEmpleados(&pE);
 
-//    for(int i = 0; i < 2; i++)
-//    {
-//        muestraUnEmpleado(pE.e[i]); ///PREGUNTAR! YO CUANDO DESAPILO NO PIERDO LA REFERENCIA, SINO QUE LOS VALIDOS AL SER 0 NO HACE EL RECORRIDO, ENTONCES PARECIERA QUE SE PERDIO LA REFERENCIA PERO NO
-//    }                               ///HACER LA PRUEBA COMENTANDO EN LA FUNCION mostrarPilaEmpleados EL ULTIMO WHILE
-
     ///Guardar la pila en un archivo
     guardarPilaEnArchivo(&pE);
 
