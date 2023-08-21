@@ -2,14 +2,23 @@
 #include <stdlib.h>
 #include <ctype.h>
 
+///EJ 1
 void intercambiar(int *a, int *b) ;
+///EJ 2
 int sumaArreglo(int *arre, int dim);
+///EJ 3
 void convertirMayusculas(char *str);
+///EJ 4
 void eliminarPares(int *arre, int *dim);
+///EJ 5
 int contarVocales(char *str);
+///EJ 6
 void copiarCadena(char *dest, const char *src);
+///EJ 7
 void encontrarMinimoMaximo(int *arre, int dim, int *min, int *max);
+///EJ 8
 void concatenarCadenas(char *dest, const char *src);
+///EJ 9
 int buscarCaracter(const char *str, char c);
 
 
@@ -17,30 +26,44 @@ int buscarCaracter(const char *str, char c);
 int main()
 {
     ///EJ1
+    printf("EJERCICIO 1\n ");
     int x = 5, y = 10;
-    intercambiar(&x, &y);
+    intercambiar (&x, &y);
     printf("x: %d, y: %d\n", x, y);
 
     ///EJ 2
+    printf("EJERCICIO 2\n ");
     int numeros[] = {1, 2, 3, 4, 5};
     int dim = sizeof(numeros) / sizeof(numeros[0]);
     printf("Suma: %d\n", sumaArreglo(numeros, dim));
 
     ///EJ3
+    printf("EJERCICIO 3\n ");
     char cadena[] = "hola mundo";
     convertirMayusculas(cadena);
     printf("Cadena en mayusculas: %s\n", cadena);
 
     ///EJ4
+    printf("EJERCICIO 4\n ");
     int numeros1[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    int dim1 = sizeof(numeros1) / sizeof(numeros1[0]);
-    eliminarPares(numeros1, &dim);
+    int dim1 = sizeof(numeros) / sizeof(numeros1[0]);
+
+    printf("Arreglo original:\n");
+    for (int i = 0; i < dim1; i++) {
+        printf("%d ", numeros1[i]);
+    }
+    printf("\n");
+
+    eliminarPares(numeros, &dim1);
+
+    printf("Arreglo después de eliminar los pares:\n");
     for (int i = 0; i < dim1; i++) {
         printf("%d ", numeros1[i]);
     }
     printf("\n");
 
     ///EJ5
+    printf("EJERCICIO 5\n ");
     int numeros2[] = {1, 2, 3, 4, 5};
     int dim2 = sizeof(numeros2) / sizeof(numeros2[0]);
     invertirArreglo(numeros2, dim2);
@@ -50,16 +73,19 @@ int main()
     printf("\n");
 
     ///EJ6
+    printf("EJERCICIO 6\n ");
     char cadena1[] = "Hola, esto es una cadena de prueba.";
     printf("Numero de vocales: %d\n", contarVocales(cadena1));
 
     ///EJ7
+    printf("EJERCICIO 7\n ");
     char origen[] = "Hola, esto es una cadena de prueba.";
     char destino[100];
     copiarCadena(destino, origen);
     printf("Destino: %s\n", destino);
 
     ///EJ8
+    printf("EJERCICIO 8\n ");
     int numeros3[] = {34, 12, 56, 89, 7, 23};
     int dim3 = sizeof(numeros3) / sizeof(numeros3[0]);
     int min, max;
@@ -67,6 +93,7 @@ int main()
     printf("Minimo: %d, Maximo: %d\n", min, max);
 
     ///EJ9
+    printf("EJERCICIO 9\n ");
     char cadena3[] = "Hola ";
     char cadena4[] = "esto es una cadena de prueba.";
     char resultado[100];
@@ -75,6 +102,7 @@ int main()
     printf("Resultado: %s\n", resultado);
 
     ///EJ10
+    printf("EJERCICIO 10\n ");
     char cadena5[] = "Hola, esto es una cadena de prueba.";
     char caracter = 'e';
     if (buscarCaracter(cadena5, caracter)) {
@@ -89,7 +117,8 @@ int main()
 
 /// 1. Intercambiar Valores: Escribe un programa que intercambie los valores de dos variables utilizando punteros.
 
-void intercambiar(int *a, int *b) {
+void intercambiar(int *a, int *b)
+{
     int temp = *a;
     *a = *b;
     *b = temp;
@@ -132,16 +161,20 @@ void convertirMayusculas(char *str) {
 }
 
 ///4. Eliminar Números Pares: Elimina los números pares de un arreglo utilizando punteros.
-void eliminarPares(int *arre, int *dim) {
-    int *dest = arre;
+void eliminarPares(int *arr, int *dim) {
+    int *p = arr; /// Puntero para recorrer el arreglo
+    int newSize = 0; /// Nuevo tamaño del arreglo después de eliminar los pares
+
+    /// Recorremos el arreglo original para contar los elementos impares y ajustar el tamaño
     for (int i = 0; i < *dim; i++) {
-        if (*arre % 2 != 0) {
-            *dest = *arre;
-            dest++;
+        if (*p % 2 != 0) {
+            arr[newSize] = *p; /// Sobrescribimos el arreglo original con elementos impares
+            newSize++; /// Incrementamos el nuevo tamaño
         }
-        arre++;
+        p++;
     }
-    *dim = dest - arre;
+
+    *dim = newSize; /// Actualizamos el tamaño del arreglo
 }
 
 ///5. Invertir Arreglo: Invierte un arreglo utilizando punteros.
