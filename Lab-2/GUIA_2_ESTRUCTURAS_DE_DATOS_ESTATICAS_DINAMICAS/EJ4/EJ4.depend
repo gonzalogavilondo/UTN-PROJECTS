@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1692642241 source:d:\utn\lab-2\guia_2_estructuras_de_datos_estaticas_dinamicas\ej4\pila.c
+	"pila.h"
+
+1692642236 d:\utn\lab-2\guia_2_estructuras_de_datos_estaticas_dinamicas\ej4\pila.h
+	<stdio.h>
+	<malloc.h>
+
+1692643996 source:d:\utn\lab-2\guia_2_estructuras_de_datos_estaticas_dinamicas\ej4\main.c
+	"declaraciones.h"
+
+1692644005 d:\utn\lab-2\guia_2_estructuras_de_datos_estaticas_dinamicas\ej4\declaraciones.h
+	"pila.h"
+
+1692643997 source:d:\utn\lab-2\guia_2_estructuras_de_datos_estaticas_dinamicas\ej4\funciones.c
+	"declaraciones.h"
+

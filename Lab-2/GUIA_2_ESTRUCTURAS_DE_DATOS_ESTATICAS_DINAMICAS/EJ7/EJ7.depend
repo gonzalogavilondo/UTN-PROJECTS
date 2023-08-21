@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1692642406 source:d:\utn\lab-2\guia_2_estructuras_de_datos_estaticas_dinamicas\ej7\algoritmos.c
+	"algoritmos.h"
+
+1692109878 d:\utn\lab-2\guia_2_estructuras_de_datos_estaticas_dinamicas\ej7\algoritmos.h
+	"declaraciones.h"
+
+1692644353 d:\utn\lab-2\guia_2_estructuras_de_datos_estaticas_dinamicas\ej7\declaraciones.h
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<conio.h>
+
+1692111234 source:d:\utn\lab-2\guia_2_estructuras_de_datos_estaticas_dinamicas\ej7\funciones_aritmeticas.c
+	"funciones_aritmeticas.h"
+
+1692110609 d:\utn\lab-2\guia_2_estructuras_de_datos_estaticas_dinamicas\ej7\funciones_aritmeticas.h
+	"declaraciones.h"
+
+1692644500 source:d:\utn\lab-2\guia_2_estructuras_de_datos_estaticas_dinamicas\ej7\main.c
+	"declaraciones.h"
+	"algoritmos.h"
+	"funciones_aritmeticas.h"
+
+1692644508 source:d:\utn\lab-2\guia_2_estructuras_de_datos_estaticas_dinamicas\ej7\funciones.c
+	"declaraciones.h"
+

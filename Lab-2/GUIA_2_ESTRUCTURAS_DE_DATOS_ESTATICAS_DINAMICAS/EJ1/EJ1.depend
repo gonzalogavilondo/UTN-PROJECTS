@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1692630991 source:d:\utn\lab-2\guia_2_estructuras_de_datos_estaticas_dinamicas\ej1\funciones.c
+	"declaraciones.h"
+
+1692630432 d:\utn\lab-2\guia_2_estructuras_de_datos_estaticas_dinamicas\ej1\declaraciones.h
+	<stdio.h>
+	<stdlib.h>
+
+1692631618 source:d:\utn\lab-2\guia_2_estructuras_de_datos_estaticas_dinamicas\ej1\main.c
+	"declaraciones.h"
+
