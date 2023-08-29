@@ -1,6 +1,12 @@
 # depslib dependency file v1.0
-1693345339 source:c:\users\usuario\desktop\ej8\main.c
+1693345984 source:c:\users\usuario\desktop\ej8\main.c
+	"header.h"
+
+1693345501 c:\users\usuario\desktop\ej8\header.h
 	<stdio.h>
 	<stdlib.h>
 	<limits.h>
+
+1693345981 source:c:\users\usuario\desktop\ej8\source.c
+	"header.h"
 

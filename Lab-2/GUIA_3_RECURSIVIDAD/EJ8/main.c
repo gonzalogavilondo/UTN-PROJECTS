@@ -16,7 +16,7 @@ int main()
     apertura_archivo(&archivo);
 
     ///Llamamos al procesamiento principal
-    resultado = buscar_menor_elemento(archivo, menor);
+    resultado = buscar_menor_elemento_file(archivo, menor);
 
     ///Cierro el archivo
     fclose(archivo);

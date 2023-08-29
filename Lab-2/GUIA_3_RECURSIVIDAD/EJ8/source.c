@@ -18,7 +18,7 @@ int buscar_menor_elemento_file(FILE *archivo, int menor_actual)
     }
 
     ///Llamada recursiva para seguir buscando
-    return buscar_menor_elemento(archivo, menor_actual);
+    return buscar_menor_elemento_file(archivo, menor_actual);
 }
 
 void apertura_archivo(FILE **archivo)
