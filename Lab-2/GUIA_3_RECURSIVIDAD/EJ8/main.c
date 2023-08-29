@@ -1,10 +1,8 @@
 #include "header.h"
 
 /**
-    Buscar el menor elemento de un archivo de números enteros de forma recursiva. (desde el mismo archivo)
+    Buscar el menor elemento de un archivo de nÃºmeros enteros de forma recursiva. (desde el mismo archivo)
 **/
-void apertura_archivo(FILE **);
-int buscar_menor_elemento(FILE *, int);
 
 int main()
 {
