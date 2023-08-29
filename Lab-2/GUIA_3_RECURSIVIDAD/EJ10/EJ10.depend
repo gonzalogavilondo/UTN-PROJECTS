@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1693347669 source:c:\users\usuario\desktop\ej10\source.c
+	"header.h"
+
+1693347636 c:\users\usuario\desktop\ej10\header.h
+	<stdio.h>
+	<stdlib.h>
+	<limits.h>
+
+1693347619 source:c:\users\usuario\desktop\ej10\main.c
+	"header.h"
+

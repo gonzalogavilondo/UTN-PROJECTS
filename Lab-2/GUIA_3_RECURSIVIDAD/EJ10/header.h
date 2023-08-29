@@ -6,7 +6,7 @@
 #include <limits.h> //Es para la constante INT_MAX, donde define los limites de los tipos de datos
 
 int buscar_menor_elemento_file(FILE *, int);
-void invertir_archivo(FILE *);
+void mostrar_archivo_invertido(FILE *);
 void apertura_archivo(FILE **);
 
 

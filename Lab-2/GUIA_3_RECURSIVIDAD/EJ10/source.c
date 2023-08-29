@@ -31,7 +31,7 @@ void apertura_archivo(FILE **archivo)
     }
 }
 
-void invertir_archivo(FILE * archivo)
+void mostrar_archivo_invertido(FILE * archivo)
 {
     int numero;
 
@@ -41,7 +41,7 @@ void invertir_archivo(FILE * archivo)
         return; //Fin del archivo, terminamos la recursion
     }
     ///Llamada recursiva para invertir los numeros restantes
-    invertir_archivo(archivo);
+    mostrar_archivo_invertido(archivo);
 
     ///Imprimimos el numero leido en orden inverso
     printf("%d ", numero);

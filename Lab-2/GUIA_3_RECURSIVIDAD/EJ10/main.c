@@ -21,7 +21,7 @@ int main()
 
     ///Invertimos el archivo
     printf("Contenido del archivo en orden inverso.\n");
-    invertir_archivo(archivo);
+    mostrar_archivo_invertido(archivo);
 
     ///Cierro el archivo
     fclose(archivo);
