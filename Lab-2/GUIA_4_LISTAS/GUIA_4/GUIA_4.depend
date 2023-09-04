@@ -1,8 +1,8 @@
 # depslib dependency file v1.0
-1693840658 source:d:\utn\lab-2\guia_4_listas\guia_4\main.c
+1693840777 source:d:\utn\lab-2\guia_4_listas\guia_4\main.c
 	"listas.h"
 
-1693840309 d:\utn\lab-2\guia_4_listas\guia_4\listas.h
+1693853377 d:\utn\lab-2\guia_4_listas\guia_4\listas.h
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>

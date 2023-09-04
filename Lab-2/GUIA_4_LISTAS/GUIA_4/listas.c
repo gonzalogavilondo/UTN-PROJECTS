@@ -54,12 +54,12 @@ void muestraArchivoEnteros(char archivo[])
     printf("\n");
 }
 
-nodo *inicLista()
+nodo* inicLista()
 {
     return NULL;
 }
 
-nodo *archivo2lista(nodo *lista, char archivo[])
+nodo* archivo2lista(nodo *lista, char archivo[])
 {
 
     FILE *pArch = fopen(archivo, "rb");
@@ -76,19 +76,19 @@ nodo *archivo2lista(nodo *lista, char archivo[])
     return lista;
 }
 
-nodo *crearNodo(int entero)
+nodo* crearNodo(int entero)
 {
 
-    nodo* nuevo = (nodo*) malloc(sizeof(nodo));
+    nodo *nuevo = (nodo*) malloc(sizeof(nodo));
     nuevo->dato = entero;
     nuevo->siguiente = NULL;
 
     return nuevo;
 }
 
-nodo *buscaUltimoLista(nodo *lista)
+nodo* buscaUltimoLista(nodo *lista)
 {
-    nodo* seg = lista; ///seg es seguidor
+    nodo *seg = lista; ///seg es seguidor
     if(seg != NULL) ///Lista esta vacia?
     {
         while(seg->siguiente != NULL) ///Recorro la lista
@@ -99,7 +99,7 @@ nodo *buscaUltimoLista(nodo *lista)
     return seg;
 }
 
-nodo *agregarAlInicio(nodo *nuevo, nodo *lista)
+nodo* agregarAlInicio(nodo *nuevo, nodo *lista)
 {
 
     if(lista == NULL)
@@ -115,7 +115,7 @@ nodo *agregarAlInicio(nodo *nuevo, nodo *lista)
     return lista;
 }
 
-nodo *agregarAlFinal(nodo *nuevo, nodo *lista)
+nodo* agregarAlFinal(nodo *nuevo, nodo *lista)
 {
 
     if(lista == NULL)
@@ -124,7 +124,7 @@ nodo *agregarAlFinal(nodo *nuevo, nodo *lista)
     }
     else
     {
-        nodo* ultimo = buscaUltimoLista(lista);
+        nodo *ultimo = buscaUltimoLista(lista);
         ultimo->siguiente = nuevo;
     }
 
@@ -146,8 +146,8 @@ nodo *agregarOrdenado(nodo *nuevo, nodo *lista)
         }
         else
         {
-            nodo* ante = lista;
-            nodo* aux = lista;
+            nodo *ante = lista;
+            nodo *aux = lista;
             while(aux && nuevo->dato > aux->dato)
             {
                 ante = aux;
@@ -164,7 +164,7 @@ nodo *agregarOrdenado(nodo *nuevo, nodo *lista)
 void mostrarLista(nodo *lista)
 {
 
-    nodo* copia = lista;
+    nodo *copia = lista;
     while (copia)
     {
         printf("\nDato: %d", copia->dato);
@@ -195,7 +195,7 @@ nodo* borrarNodo(int entero, nodo *lista)
 
     nodo* aux;
     nodo* ante;
-    if (lista && entero == lista->dato)
+    if ((lista != NULL) && (entero == lista->dato))
     {
         aux = lista;
         lista = lista->siguiente;
@@ -216,6 +216,67 @@ nodo* borrarNodo(int entero, nodo *lista)
             free(aux);
         }
     }
-    printf("\nNodo borrado satisfactoriamente.\n");
     return lista;
+}
+
+nodo* borrarPrimerNodo(nodo *lista)
+{
+    nodo *aux = lista;
+    lista = lista->siguiente;
+    free(aux);
+    return lista;
+}
+
+nodo* borrarUltimoNodo(nodo *lista)
+{
+    nodo *aux;
+    nodo *ante;
+    if(lista != NULL)
+    {
+        if(lista->siguiente == NULL)
+        {
+            aux = lista;
+            lista = lista->siguiente;
+            free(aux);
+        }
+        else
+        {
+            aux = lista;
+            while(aux->siguiente != NULL)
+            {
+                ante = aux;
+                aux = aux->siguiente;
+            }
+            free(aux);
+            ante->siguiente = NULL;
+        }
+    }
+    return lista;
+}
+
+nodo* buscarNodo(int dato, nodo *lista)
+{
+    nodo *seg;
+    seg = lista;
+
+    while ((seg != NULL) && (seg->dato != dato))
+    {
+        seg = seg->siguiente;
+    }
+
+    return seg;
+}
+
+nodo* borrarLista(nodo *lista)
+{
+    nodo *proximo;
+    nodo *seg;
+    seg = lista;
+    while(seg != NULL)
+    {
+        proximo = seg->siguiente;
+        free(seg);
+        seg = proximo;
+    }
+    return seg;
 }

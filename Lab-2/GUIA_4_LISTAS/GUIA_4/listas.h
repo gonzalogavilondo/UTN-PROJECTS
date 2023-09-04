@@ -30,5 +30,9 @@ nodo *agregarOrdenado(nodo*, nodo*);
 void mostrarLista(nodo*);
 nodo *archivo2ListaOrdenado(nodo*, char archivo[]);
 nodo *borrarNodo(int, nodo*);
+nodo *borrarPrimerNodo(nodo *);
+nodo *borrarUltimoNodo(nodo *);
+nodo *buscarNodo(int dato, nodo *);
+nodo* borrarLista(nodo *lista);
 
 #endif // LISTAS_H_INCLUDED
