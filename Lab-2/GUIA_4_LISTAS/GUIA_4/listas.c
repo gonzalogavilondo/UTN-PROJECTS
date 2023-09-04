@@ -1,0 +1,221 @@
+#include "listas.h"
+
+void mostrarMenu()
+{
+
+    printf("\n\t\t - Trabajo Practico 4 - Listas Simples - Gavilondo Gonzalo - \n");
+    printf("\n1. - Genera un nuevo archivo de enteros con 10 datos (Borra el anterior si ya existe).");
+    printf("\n2. - Mostrar archivo de Enteros.");
+    printf("\n3. - Leer archivo y agregar elementos a la lista.");
+    printf("\n4. - Mostrar Lista.");
+    printf("\n5. - Leer archivo e insertar elementos en lista de forma ordenada.");
+    printf("\n6. - Borrar nodo.\n");
+    printf("\nIngrese una opcion: ");
+
+}
+
+void generaArchivoEnteros(char archivo[])
+{
+    FILE *pArchEnteros = fopen(archivo, "wb");
+
+    srand(time(0));
+
+    if (pArchEnteros)
+    {
+
+        for (int i = 0; i < 10; i++)
+        {
+            int random = rand()%100;
+            fwrite(&random, sizeof(int), 1, pArchEnteros);
+        }
+        fclose(pArchEnteros);
+    }
+}
+
+void muestraUnEntero(int dato)
+{
+    printf(" %d -", dato);
+}
+
+void muestraArchivoEnteros(char archivo[])
+{
+
+    FILE *pArchEnteros = fopen(archivo, "rb");
+    int aux;
+
+    if (pArchEnteros)
+    {
+        while (fread(&aux, sizeof(int), 1, pArchEnteros) > 0)
+        {
+            muestraUnEntero(aux);
+        }
+        fclose(pArchEnteros);
+    }
+    printf("\n");
+}
+
+nodo *inicLista()
+{
+    return NULL;
+}
+
+nodo *archivo2lista(nodo *lista, char archivo[])
+{
+
+    FILE *pArch = fopen(archivo, "rb");
+    int entero;
+
+    if (pArch)
+    {
+        while (fread(&entero, sizeof(int), 1, pArch) > 0)
+        {
+            lista = agregarAlFinal(crearNodo(entero), lista);
+        }
+        fclose(pArch);
+    }
+    return lista;
+}
+
+nodo *crearNodo(int entero)
+{
+
+    nodo* nuevo = (nodo*) malloc(sizeof(nodo));
+    nuevo->dato = entero;
+    nuevo->siguiente = NULL;
+
+    return nuevo;
+}
+
+nodo *buscaUltimoLista(nodo *lista)
+{
+    nodo* seg = lista; ///seg es seguidor
+    if(seg != NULL) ///Lista esta vacia?
+    {
+        while(seg->siguiente != NULL) ///Recorro la lista
+        {
+            seg = seg->siguiente;
+        }
+    }
+    return seg;
+}
+
+nodo *agregarAlInicio(nodo *nuevo, nodo *lista)
+{
+
+    if(lista == NULL)
+    {
+        lista = nuevo;
+    }
+    else
+    {
+        nuevo->siguiente = lista;
+        lista = nuevo;
+    }
+
+    return lista;
+}
+
+nodo *agregarAlFinal(nodo *nuevo, nodo *lista)
+{
+
+    if(lista == NULL)
+    {
+        lista = nuevo;
+    }
+    else
+    {
+        nodo* ultimo = buscaUltimoLista(lista);
+        ultimo->siguiente = nuevo;
+    }
+
+    return lista;
+}
+
+
+nodo *agregarOrdenado(nodo *nuevo, nodo *lista)
+{
+    if(lista == NULL)
+    {
+        lista = nuevo;
+    }
+    else
+    {
+        if(nuevo->dato < lista->dato)
+        {
+            lista = agregarAlInicio(nuevo, lista);
+        }
+        else
+        {
+            nodo* ante = lista;
+            nodo* aux = lista;
+            while(aux && nuevo->dato > aux->dato)
+            {
+                ante = aux;
+                aux = aux->siguiente;
+            }
+            ante->siguiente = nuevo;
+            nuevo->siguiente = aux;
+        }
+    }
+
+    return lista;
+}
+
+void mostrarLista(nodo *lista)
+{
+
+    nodo* copia = lista;
+    while (copia)
+    {
+        printf("\nDato: %d", copia->dato);
+        copia = copia->siguiente;
+    }
+    printf("\n");
+}
+
+nodo* archivo2ListaOrdenado(nodo *lista, char archivo[])
+{
+
+    FILE *pArch = fopen(archivo, "rb");
+    int entero;
+
+    if (pArch)
+    {
+        while (fread(&entero, sizeof(int), 1, pArch) > 0)
+        {
+            lista = agregarOrdenado(crearNodo(entero), lista);
+        }
+        fclose(pArch);
+    }
+    return lista;
+}
+
+nodo* borrarNodo(int entero, nodo *lista)
+{
+
+    nodo* aux;
+    nodo* ante;
+    if (lista && entero == lista->dato)
+    {
+        aux = lista;
+        lista = lista->siguiente;
+        free(aux);
+    }
+    else
+    {
+        aux = lista;
+        while(aux && entero != aux->dato)
+        {
+            ante = aux;
+            aux = aux->siguiente;
+        }
+
+        if(aux)
+        {
+            ante->siguiente = aux->siguiente;
+            free(aux);
+        }
+    }
+    printf("\nNodo borrado satisfactoriamente.\n");
+    return lista;
+}
