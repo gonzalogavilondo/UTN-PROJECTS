@@ -12,8 +12,16 @@ int main()
     ///Declaro la lista
     nodo* lista;
 
+    nodo* lista_A;
+    nodo* lista_B;
+    nodo* lista_C;
+
     ///Inicializo la lista en NULL
     lista = inicLista();
+
+    lista_A = inicLista();
+    lista_B = inicLista();
+    lista_C = inicLista();
 
     do
     {
@@ -36,7 +44,7 @@ int main()
                 break;
             case 52:
                 system("cls");
-                mostrarLista(lista);
+                mostrarListaEnteros(lista);
                 system("pause");
                 break;
             case 53:
@@ -49,9 +57,34 @@ int main()
                 lista = borrarNodo(detalle, lista);
                 system("pause");
                 break;
+            case 55:
+                system("cls");
+                ///Lista A
+                lista_A = listaRandomOrdenado(lista_A, 5);
+                printf("-LISTA A-\n");
+                mostrarListaEnteros(lista_A);
+
+                ///Lista B
+                lista_B = listaRandomOrdenado(lista_B, 5);
+                printf("\n-LISTA B-\n");
+                mostrarListaEnteros(lista_B);
+
+                ///Lista C
+                lista_C = intercalarListas(lista_A, lista_B, lista_C);
+                printf("\n-LISTA C-\n");
+                mostrarListaEnteros(lista_C);
+                printf("\n");
+                system("pause");
+                break;
         }
 
     }while(opcion!=ESC);
+
+    ///Libero memoria de lista
+    free(lista);
+    free(lista_C);
+    free(lista_A);
+    free(lista_B);
 
     return 0;
 }

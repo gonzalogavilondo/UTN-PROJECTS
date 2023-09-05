@@ -2,15 +2,15 @@
 
 void mostrarMenu()
 {
-
     printf("\n\t\t - Trabajo Practico 4 - Listas Simples - Gavilondo Gonzalo - \n");
     printf("\n1. - Genera un nuevo archivo de enteros con 10 datos (Borra el anterior si ya existe).");
     printf("\n2. - Mostrar archivo de Enteros.");
     printf("\n3. - Leer archivo y agregar elementos a la lista.");
     printf("\n4. - Mostrar Lista.");
     printf("\n5. - Leer archivo e insertar elementos en lista de forma ordenada.");
-    printf("\n6. - Borrar nodo.\n");
-    printf("\nIngrese una opcion: ");
+    printf("\n6. - Borrar nodo.");
+    printf("\n7. - Intercalar dos listas aleatorias.\n");
+    printf("\nIngrese una opcion o ESC para salir: ");
 
 }
 
@@ -39,7 +39,6 @@ void muestraUnEntero(int dato)
 
 void muestraArchivoEnteros(char archivo[])
 {
-
     FILE *pArchEnteros = fopen(archivo, "rb");
     int aux;
 
@@ -61,7 +60,6 @@ nodo* inicLista()
 
 nodo* archivo2lista(nodo *lista, char archivo[])
 {
-
     FILE *pArch = fopen(archivo, "rb");
     int entero;
 
@@ -78,7 +76,6 @@ nodo* archivo2lista(nodo *lista, char archivo[])
 
 nodo* crearNodo(int entero)
 {
-
     nodo *nuevo = (nodo*) malloc(sizeof(nodo));
     nuevo->dato = entero;
     nuevo->siguiente = NULL;
@@ -101,7 +98,6 @@ nodo* buscaUltimoLista(nodo *lista)
 
 nodo* agregarAlInicio(nodo *nuevo, nodo *lista)
 {
-
     if(lista == NULL)
     {
         lista = nuevo;
@@ -115,9 +111,8 @@ nodo* agregarAlInicio(nodo *nuevo, nodo *lista)
     return lista;
 }
 
-nodo* agregarAlFinal(nodo *nuevo, nodo *lista)
+nodo* agregarAlFinal(nodo *lista, nodo *nuevo)
 {
-
     if(lista == NULL)
     {
         lista = nuevo;
@@ -161,21 +156,20 @@ nodo *agregarOrdenado(nodo *nuevo, nodo *lista)
     return lista;
 }
 
-void mostrarLista(nodo *lista)
+void mostrarListaEnteros(nodo *lista)
 {
-
-    nodo *copia = lista;
-    while (copia)
+    nodo *aux = lista;
+    printf("| ");
+    while (aux != NULL)
     {
-        printf("\nDato: %d", copia->dato);
-        copia = copia->siguiente;
+        printf("%d ", aux->dato);
+        aux = aux->siguiente;
     }
-    printf("\n");
+    printf("|\n");
 }
 
 nodo* archivo2ListaOrdenado(nodo *lista, char archivo[])
 {
-
     FILE *pArch = fopen(archivo, "rb");
     int entero;
 
@@ -192,7 +186,6 @@ nodo* archivo2ListaOrdenado(nodo *lista, char archivo[])
 
 nodo* borrarNodo(int entero, nodo *lista)
 {
-
     nodo* aux;
     nodo* ante;
     if ((lista != NULL) && (entero == lista->dato))
@@ -256,8 +249,7 @@ nodo* borrarUltimoNodo(nodo *lista)
 
 nodo* buscarNodo(int dato, nodo *lista)
 {
-    nodo *seg;
-    seg = lista;
+    nodo *seg = lista;
 
     while ((seg != NULL) && (seg->dato != dato))
     {
@@ -279,4 +271,55 @@ nodo* borrarLista(nodo *lista)
         seg = proximo;
     }
     return seg;
+}
+
+nodo *intercalarListas(nodo *lista_A, nodo *lista_B, nodo *lista_C)
+{
+    nodo *aux;
+
+    while((lista_A != NULL) && (lista_B != NULL))
+    {
+        if(lista_A->dato < lista_B->dato)
+        {
+            aux = lista_A;
+            lista_A = lista_A->siguiente;
+            aux->siguiente = NULL;
+            lista_C = agregarAlFinal(lista_C, aux);
+        }
+        else
+        {
+            aux = lista_B;
+            lista_B = lista_B->siguiente;
+            aux->siguiente = NULL;
+            lista_C = agregarAlFinal(lista_C, aux);
+        }
+    }
+
+    //Si quedara algo en la lista A
+    if(lista_A != NULL)
+    {
+        lista_C = agregarAlFinal(lista_C, lista_A);
+    }
+    //Si quedara algo en la lista B
+    else if(lista_B != NULL)
+    {
+        lista_C = agregarAlFinal(lista_C, lista_B);
+    }
+
+    return lista_C;
+}
+
+nodo* listaRandomOrdenado(nodo *lista, int cntElementos)
+{
+    int cnt = 0;
+
+    if(lista == NULL)
+    {
+        while (cnt < cntElementos)
+        {
+            lista = agregarOrdenado(crearNodo(rand() % 99), lista);
+            cnt++;
+        }
+    }
+    return lista;
 }

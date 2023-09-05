@@ -27,12 +27,14 @@ nodo *buscaUltimoLista(nodo*);
 nodo *agregarAlInicio(nodo*, nodo*);
 nodo *agregarAlFinal(nodo*, nodo*);
 nodo *agregarOrdenado(nodo*, nodo*);
-void mostrarLista(nodo*);
+void mostrarListaEnteros(nodo*);
 nodo *archivo2ListaOrdenado(nodo*, char archivo[]);
 nodo *borrarNodo(int, nodo*);
 nodo *borrarPrimerNodo(nodo *);
 nodo *borrarUltimoNodo(nodo *);
 nodo *buscarNodo(int dato, nodo *);
-nodo* borrarLista(nodo *lista);
+nodo *borrarLista(nodo *lista);
+nodo *intercalarListas(nodo *, nodo*, nodo*);
+nodo *listaRandomOrdenado(nodo *, int);
 
 #endif // LISTAS_H_INCLUDED
