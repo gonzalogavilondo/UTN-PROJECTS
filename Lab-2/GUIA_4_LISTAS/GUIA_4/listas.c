@@ -9,7 +9,8 @@ void mostrarMenu()
     printf("\n4. - Mostrar Lista.");
     printf("\n5. - Leer archivo e insertar elementos en lista de forma ordenada.");
     printf("\n6. - Borrar nodo.");
-    printf("\n7. - Intercalar dos listas aleatorias.\n");
+    printf("\n7. - Intercalar dos listas aleatorias.");
+    printf("\n8. - Invertir una lista aleatoria.\n");
     printf("\nIngrese una opcion o ESC para salir: ");
 
 }
@@ -322,4 +323,28 @@ nodo* listaRandomOrdenado(nodo *lista, int cntElementos)
         }
     }
     return lista;
+}
+
+nodo* invertirLista(nodo *lista)
+{
+    /// la idea es extraer el primero de la lista original
+    /// y luego agregarlo al principio de la nueva lista
+    /// retornamos el puntero al inicio de la nueva lista
+    /// para pisar la referencia del main
+
+    nodo *listaInvertida = NULL;
+    nodo *aux;
+    while(lista != NULL)
+    {
+        /// extraemos el primero (se puede modularizar)
+        aux = lista;
+
+        lista = lista->siguiente;
+
+        aux->siguiente = NULL;
+
+        /// lo agregamos al principio de la nueva lista invertida
+        listaInvertida = agregarAlInicio(aux, listaInvertida);
+    }
+    return listaInvertida;
 }

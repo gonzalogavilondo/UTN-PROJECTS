@@ -76,13 +76,26 @@ int main()
                 printf("\n");
                 system("pause");
                 break;
+            case 56:
+                system("cls");
+                lista = listaRandomOrdenado(lista, 7);
+                printf("\n-LISTA A INVERTIR-\n");
+                mostrarListaEnteros(lista);
+                printf("\n");
+                lista = invertirLista(lista);
+                printf("\n-LISTA INVERTIDA-\n");
+                mostrarListaEnteros(lista);
+
+
+                system("pause");
+                break;
         }
 
-    }while(opcion!=ESC);
+    }while(opcion != ESC);
 
     ///Libero memoria de lista
     free(lista);
-    free(lista_C);
+    //free(lista_C);
     free(lista_A);
     free(lista_B);
 

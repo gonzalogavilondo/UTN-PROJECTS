@@ -36,5 +36,6 @@ nodo *buscarNodo(int dato, nodo *);
 nodo *borrarLista(nodo *lista);
 nodo *intercalarListas(nodo *, nodo*, nodo*);
 nodo *listaRandomOrdenado(nodo *, int);
+nodo *invertirLista(nodo *);
 
 #endif // LISTAS_H_INCLUDED
