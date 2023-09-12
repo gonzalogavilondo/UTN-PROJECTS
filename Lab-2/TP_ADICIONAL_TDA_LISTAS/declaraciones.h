@@ -18,6 +18,8 @@ void Vector2ArchivoBin(int *, int , const char *);
 int ArchivoBin2Vector(int **, const char *);
 void Vector2ArchivoTxt(int *, int, const char *);
 int ArchivoTxt2Vector(int **, const char *);
+void AgregarAlFinalVec(int **, int, int);
+
 
 ///FUNCIONES BASICAS DE VECTORES REALES
 float *ReservarMemoriaReales(int);

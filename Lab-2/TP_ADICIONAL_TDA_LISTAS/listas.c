@@ -266,6 +266,29 @@ nodo* listaRandomOrdenado(nodo *lista, int cntElementos)
     return lista;
 }
 
+nodo* listaRandom50(nodo *lista, int cntElementos)
+{
+    int cnt = 0;
+
+    if(lista == NULL)
+    {
+        if(cntElementos >= 50)
+        {
+            while (cnt < cntElementos)
+            {
+                lista = agregarAlFinal(crearNodo(rand() % 99), lista);
+                cnt++;
+            }
+        }
+        else
+        {
+            printf("La cantidad de elementos es insuficiente, debe haber al menos 50 en la lista\n");
+        }
+
+    }
+    return lista;
+}
+
 nodo* invertirLista(nodo *lista)
 {
     /// la idea es extraer el primero de la lista original
@@ -300,6 +323,18 @@ void mostrarListaEnteros(nodo *lista)
         aux = aux->siguiente;
     }
     printf("|\n");
+}
+
+int lista2array(nodo *lista, int **vec)
+{
+    int cnt = 0;
+    while(lista != NULL)
+    {
+        AgregarAlFinalVec(vec, cnt, lista->dato);
+        cnt++;
+        lista = lista->siguiente;
+    }
+    return cnt;
 }
 
 /*****************************************************************************************************

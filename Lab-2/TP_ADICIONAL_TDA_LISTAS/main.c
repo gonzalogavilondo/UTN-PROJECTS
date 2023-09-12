@@ -24,9 +24,6 @@ int main()
 //    lista = agregarOrdenado(crearNodo(6), lista);
 //    lista = agregarOrdenado(crearNodo(5), lista);
 //
-//    ///Elimino los nodos y devuelvo cuantos nodos borre
-//
-//
 //    ///Reservo memoria primero para un vector de dimension maxima
 //    vec = ReservarMemoria(MAXDIM);
 //
@@ -58,34 +55,58 @@ int main()
 /**
     EJ 4
 **/
-    int cntNodosBorrados;
+//    int cntNodosBorrados;
+//    nodo *lista;
+//    int numAborrar;
+//
+//    lista = inicLista();
+//
+//    lista = agregarOrdenado(crearNodo(5), lista);
+//    lista = agregarOrdenado(crearNodo(2), lista);
+//    lista = agregarOrdenado(crearNodo(3), lista);
+//    lista = agregarOrdenado(crearNodo(6), lista);
+//    lista = agregarOrdenado(crearNodo(5), lista);
+//    lista = agregarAlInicio(crearNodo(1), lista);
+//    lista = agregarAlFinal(crearNodo(1), lista);
+//
+//    ///Muestro la lista original
+//    mostrarListaEnteros(lista);
+//
+//    ///Elijo el numero a borrar de la lista
+//    numAborrar = 1;
+//
+//    ///Elimino los nodos y devuelvo cuantos nodos borre
+//    cntNodosBorrados = borrarNodosRepetidos(numAborrar, &lista);
+//
+//    ///Muestro la lista final
+//    mostrarListaEnteros(lista);
+//
+//    printf("La cantidad de %d borrados es: %d", numAborrar, cntNodosBorrados);
+
+/**
+    EJ 5
+**/
+    ///Declaramos el vector y la lista
+    int *vec = NULL;
+    int cntElementos;
     nodo *lista;
-    int numAborrar;
+
+    ///Resevamos memoria e inicializamos
+    vec = ReservarMemoria(10); ///Reservo memoria inicialmente para 10 elementos
+
+    MostrarVector(vec, 11);
 
     lista = inicLista();
 
-    lista = agregarOrdenado(crearNodo(5), lista);
-    lista = agregarOrdenado(crearNodo(2), lista);
-    lista = agregarOrdenado(crearNodo(3), lista);
-    lista = agregarOrdenado(crearNodo(6), lista);
-    lista = agregarOrdenado(crearNodo(5), lista);
-    lista = agregarAlInicio(crearNodo(1), lista);
-    lista = agregarAlFinal(crearNodo(1), lista);
+    lista = listaRandom50(lista, 52);
 
-    ///Muestro la lista original
+    cntElementos = lista2array(lista, &vec);
+
+    printf("\n--LISTA--\n");
     mostrarListaEnteros(lista);
 
-    ///Elijo el numero a borrar de la lista
-    numAborrar = 1;
-
-    ///Elimino los nodos y devuelvo cuantos nodos borre
-    cntNodosBorrados = borrarNodosRepetidos(numAborrar, &lista);
-
-    ///Muestro la lista final
-    mostrarListaEnteros(lista);
-
-    printf("La cantidad de %d borrados es: %d", numAborrar, cntNodosBorrados);
-
+    printf("\n--VECTOR--\n");
+    MostrarVector(vec, cntElementos);
 
     return 0;
 }

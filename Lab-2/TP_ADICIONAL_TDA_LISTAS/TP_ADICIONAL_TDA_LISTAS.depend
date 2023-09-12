@@ -21,3 +21,26 @@
 	<conio.h>
 	<time.h>
 
+1694558042 source:c:\users\usuario\desktop\tp_adicional_tda_listas\funciones.c
+	"declaraciones.h"
+
+1694557572 c:\users\usuario\desktop\tp_adicional_tda_listas\declaraciones.h
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<conio.h>
+
+1694557703 source:c:\users\usuario\desktop\tp_adicional_tda_listas\listas.c
+	"listas.h"
+
+1694557702 c:\users\usuario\desktop\tp_adicional_tda_listas\listas.h
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<time.h>
+	"declaraciones.h"
+
+1694558443 source:c:\users\usuario\desktop\tp_adicional_tda_listas\main.c
+	"declaraciones.h"
+	"listas.h"
+

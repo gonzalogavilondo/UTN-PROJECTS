@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <conio.h>
 #include <time.h>
+#include "declaraciones.h"
 
 
 typedef struct nodo
@@ -30,8 +31,10 @@ nodo *buscarNodo(int dato, nodo *);
 nodo *borrarLista(nodo *lista);
 nodo *intercalarListas(nodo *, nodo*, nodo*);
 nodo *listaRandomOrdenado(nodo *, int);
+nodo *listaRandom50(nodo *, int);
 nodo *invertirLista(nodo *);
 void mostrarListaEnteros(nodo*);
+int lista2array(nodo *, int **);
 
 /**
     FUNCIONES BASICAS PARA EL MANEJO DE LISTAS CON ARCHIVOS

@@ -216,6 +216,20 @@ int ArchivoTxt2Vector(int **vector, const char *nombreArchivo)
     return size;
 }
 
+void AgregarAlFinalVec(int **vec, int pos, int dato)
+{
+    int tam  = MAXDIM;
+
+    if (pos == MAXDIM)
+    {
+        ///Si se llega al final del vector, se reserva más memoria.
+        tam *= 2;
+        *vec = (int*)realloc(*vec, tam * sizeof(int));
+    }
+
+    *(vec[pos]) = dato;
+}
+
 /// ----------------------------------------------------------------------------------
 
 /**
