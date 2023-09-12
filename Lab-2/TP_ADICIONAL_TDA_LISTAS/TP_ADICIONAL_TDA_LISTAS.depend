@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1694520814 source:d:\utn\lab-2\tp_adicional_tda_listas\funciones.c
+	"declaraciones.h"
+
+1694520681 d:\utn\lab-2\tp_adicional_tda_listas\declaraciones.h
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<conio.h>
+
+1694520735 source:d:\utn\lab-2\tp_adicional_tda_listas\main.c
+	"declaraciones.h"
+
