@@ -1,25 +1,26 @@
 # depslib dependency file v1.0
-1694520814 source:d:\utn\lab-2\tp_adicional_tda_listas\funciones.c
+1694562461 source:d:\utn\lab-2\tp_adicional_tda_listas\funciones.c
 	"declaraciones.h"
 
-1694520681 d:\utn\lab-2\tp_adicional_tda_listas\declaraciones.h
+1694562328 d:\utn\lab-2\tp_adicional_tda_listas\declaraciones.h
 	<stdio.h>
 	<stdlib.h>
 	<locale.h>
 	<conio.h>
 
-1694532439 source:d:\utn\lab-2\tp_adicional_tda_listas\main.c
+1694562612 source:d:\utn\lab-2\tp_adicional_tda_listas\main.c
 	"declaraciones.h"
 	"listas.h"
 
-1694532341 source:d:\utn\lab-2\tp_adicional_tda_listas\listas.c
+1694562625 source:d:\utn\lab-2\tp_adicional_tda_listas\listas.c
 	"listas.h"
 
-1694531955 d:\utn\lab-2\tp_adicional_tda_listas\listas.h
+1694562618 d:\utn\lab-2\tp_adicional_tda_listas\listas.h
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>
 	<time.h>
+	"declaraciones.h"
 
 1694558042 source:c:\users\usuario\desktop\tp_adicional_tda_listas\funciones.c
 	"declaraciones.h"

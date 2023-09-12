@@ -330,6 +330,7 @@ int lista2array(nodo *lista, int **vec)
     int cnt = 0;
     while(lista != NULL)
     {
+        MostrarVector(*vec, cnt);
         AgregarAlFinalVec(vec, cnt, lista->dato);
         cnt++;
         lista = lista->siguiente;

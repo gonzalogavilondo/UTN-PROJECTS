@@ -227,7 +227,7 @@ void AgregarAlFinalVec(int **vec, int pos, int dato)
         *vec = (int*)realloc(*vec, tam * sizeof(int));
     }
 
-    *(vec[pos]) = dato;
+    (*vec)[pos] = dato;
 }
 
 /// ----------------------------------------------------------------------------------

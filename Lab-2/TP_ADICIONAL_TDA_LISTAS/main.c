@@ -92,7 +92,7 @@ int main()
     nodo *lista;
 
     ///Resevamos memoria e inicializamos
-    vec = ReservarMemoria(10); ///Reservo memoria inicialmente para 10 elementos
+    vec = ReservarMemoria(MAXDIM); ///Reservo memoria inicialmente para 10 elementos
 
     MostrarVector(vec, 11);
 
