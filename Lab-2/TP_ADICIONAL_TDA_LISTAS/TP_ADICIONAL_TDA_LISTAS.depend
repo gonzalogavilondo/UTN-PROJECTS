@@ -8,6 +8,16 @@
 	<locale.h>
 	<conio.h>
 
-1694520735 source:d:\utn\lab-2\tp_adicional_tda_listas\main.c
+1694532439 source:d:\utn\lab-2\tp_adicional_tda_listas\main.c
 	"declaraciones.h"
+	"listas.h"
+
+1694532341 source:d:\utn\lab-2\tp_adicional_tda_listas\listas.c
+	"listas.h"
+
+1694531955 d:\utn\lab-2\tp_adicional_tda_listas\listas.h
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<time.h>
 
