@@ -221,7 +221,6 @@ RegistroCompraCliente* copiarPedidosMayores5000(NodoPedido *lista, int *cntPedid
 
 void lista2array(NodoPedido *lista, RegistroCompraCliente *registro)
 {
-
     registro->MontoCompra = lista->MontoCompra;
     registro->NroCliente = lista->cliente.NroCliente;
     strcpy(registro->NyA, lista->cliente.NyA);

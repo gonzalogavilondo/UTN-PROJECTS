@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1695164991 source:c:\users\usuario\desktop\simulacroparcial\main.c
+1695165295 source:c:\users\usuario\desktop\simulacroparcial\main.c
 	"declaraciones.h"
 
 1695164885 c:\users\usuario\desktop\simulacroparcial\declaraciones.h
@@ -7,6 +7,6 @@
 	<stdlib.h>
 	<string.h>
 
-1695164927 source:c:\users\usuario\desktop\simulacroparcial\funciones.c
+1695165193 source:c:\users\usuario\desktop\simulacroparcial\funciones.c
 	"declaraciones.h"
 
