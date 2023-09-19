@@ -25,32 +25,41 @@
 	"declaraciones.h"
 	"persona.h"
 
-1694558042 source:c:\users\usuario\desktop\tp_adicional_tda_listas\funciones.c
+1695138208 source:c:\users\usuario\desktop\tp_adicional_tda_listas\funciones.c
 	"declaraciones.h"
 
-1694557572 c:\users\usuario\desktop\tp_adicional_tda_listas\declaraciones.h
+1695138208 c:\users\usuario\desktop\tp_adicional_tda_listas\declaraciones.h
 	<stdio.h>
 	<stdlib.h>
 	<locale.h>
 	<conio.h>
 
-1694557703 source:c:\users\usuario\desktop\tp_adicional_tda_listas\listas.c
+1695138208 source:c:\users\usuario\desktop\tp_adicional_tda_listas\listas.c
+	"listas.h"
 	"listas.h"
 
-1694557702 c:\users\usuario\desktop\tp_adicional_tda_listas\listas.h
+1695138208 c:\users\usuario\desktop\tp_adicional_tda_listas\listas.h
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>
 	<time.h>
+	<string.h>
 	"declaraciones.h"
+	"persona.h"
 
-1694558443 source:c:\users\usuario\desktop\tp_adicional_tda_listas\main.c
+1695138208 source:c:\users\usuario\desktop\tp_adicional_tda_listas\main.c
 	"declaraciones.h"
 	"listas.h"
 
 1695152372 d:\utn\lab-2\tp_adicional_tda_listas\persona.h
 
 1695152514 source:d:\utn\lab-2\tp_adicional_tda_listas\persona.c
+	"persona.h"
+	"listas.h"
+
+1695138208 c:\users\usuario\desktop\tp_adicional_tda_listas\persona.h
+
+1695138208 source:c:\users\usuario\desktop\tp_adicional_tda_listas\persona.c
 	"persona.h"
 	"listas.h"
 

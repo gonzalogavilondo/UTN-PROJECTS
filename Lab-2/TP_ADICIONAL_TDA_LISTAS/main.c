@@ -141,7 +141,7 @@ int main()
     ///Agrego la estructura a una lista ordenada
     for(int i = 0; i < cntElementos; i++)
     {
-       agregarOrdenadoEdadSt(crearNodoSt(personaNueva[i]), lista);
+       lista = agregarOrdenadoEdadSt(crearNodoSt(personaNueva[i]), lista);
     }
 
     ///Mostramos lista por pantalla
