@@ -7,6 +7,7 @@
 #include <locale.h>
 #include <conio.h>
 
+
 ///FUNCIONES BASICAS DE VECTORES ENTEROS
 int *ReservarMemoria(int);
 void InicializarVector(int *, int);

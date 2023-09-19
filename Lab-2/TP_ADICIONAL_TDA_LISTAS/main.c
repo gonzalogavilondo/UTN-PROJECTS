@@ -86,27 +86,70 @@ int main()
 /**
     EJ 5
 **/
-    ///Declaramos el vector y la lista
-    int *vec = NULL;
+//    ///Declaramos el vector y la lista
+//    int *vec = NULL;
+//    int cntElementos;
+//    nodo *lista;
+//
+//    ///Resevamos memoria e inicializamos
+//    vec = ReservarMemoria(MAXDIM); ///Reservo memoria inicialmente para 10 elementos
+//
+//    ///MostrarVector(vec, 11);
+//
+//    lista = inicLista();
+//
+//    lista = listaRandom50(lista, 52);
+//
+//    cntElementos = recorrerLista(lista, &vec);
+//
+//    printf("--LISTA--\n");
+//    mostrarListaEnteros(lista);
+//
+//    printf("\n--VECTOR--\n");
+//    MostrarVector(vec, cntElementos);
+
+/**
+    EJ6
+**/
+
+    /**
+        Escribir un programa que lea edades de un arreglo dinámico de 10 posiciones para combinarlas con 10 nombres leídos de otro arreglo
+        estático de 10 posiciones. Una vez leídos ambos datos, debe generar un registro con esa info, el cual será agregado a una lista ordenada
+        que finalmente mostrará por pantalla. Luego, guardar esa lista en un archivo de texto o binario y eliminar la lista. Finalmente mostrar
+        el archivo resultante. Modularizar.
+    **/
+
     int cntElementos;
-    nodo *lista;
+    int *edades = NULL;
+    char *nombres[] = {"Gonzalo", "Carlos", "Camila", "Micaela", "Romina",
+                        "Pedro", "Pablo", "Melina", "Julio", "Nicolas"};
+    persona *personaNueva;
+    nodoSt *lista = inicListaSt();
 
-    ///Resevamos memoria e inicializamos
-    vec = ReservarMemoria(MAXDIM); ///Reservo memoria inicialmente para 10 elementos
 
-    MostrarVector(vec, 11);
+    edades = ReservarMemoria(10); //Arreglo de 10 posiciones de arreglos
 
-    lista = inicLista();
+    printf("Ingresar las edades\n");
+    cntElementos = CargarVector(edades);
 
-    lista = listaRandom50(lista, 52);
+    ///Reservo memoria para 10 personas
+    personaNueva = ReservarMemoriaStruct(10);
 
-    cntElementos = lista2array(lista, &vec);
+    ///Guardo en una estructura generada por el array de edades y nombres
+    personaNueva = arrays2Struct(personaNueva, edades, nombres, cntElementos);
 
-    printf("\n--LISTA--\n");
-    mostrarListaEnteros(lista);
+    ///Agrego la estructura a una lista ordenada
+    for(int i = 0; i < cntElementos; i++)
+    {
+       agregarOrdenadoEdadSt(crearNodoSt(personaNueva[i]), lista);
+    }
 
-    printf("\n--VECTOR--\n");
-    MostrarVector(vec, cntElementos);
+    ///Mostramos lista por pantalla
+    mostrarListaStruct(lista);
+
+    ///La guardamos en un archivo txt
+    lista2archivoTxt_struct(lista, "PersonasOrdenado.txt");
+
 
     return 0;
 }

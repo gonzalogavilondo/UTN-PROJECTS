@@ -16,6 +16,7 @@ typedef struct nodo
     struct nodo * siguiente;
 } nodo;
 
+
 /**
     FUNCIONES BASICAS PARA EL MANEJO DE LISTAS CON ESTRUCTURAS
 **/
