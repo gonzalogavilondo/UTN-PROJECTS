@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1695164991 source:c:\users\usuario\desktop\simulacroparcial\main.c
+	"declaraciones.h"
+
+1695164885 c:\users\usuario\desktop\simulacroparcial\declaraciones.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1695164927 source:c:\users\usuario\desktop\simulacroparcial\funciones.c
+	"declaraciones.h"
+
