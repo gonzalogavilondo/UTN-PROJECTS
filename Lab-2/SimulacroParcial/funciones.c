@@ -203,26 +203,66 @@ float calcularTotalMontoCompra(NodoPedido *lista)
 
 RegistroCompraCliente* copiarPedidosMayores5000(NodoPedido *lista, int *cntPedidos)
 {
-    int cntAux = 0;
+    int cnt = 0,
+        tam = *cntPedidos;
+
     RegistroCompraCliente* pedidosMayores5000 = (RegistroCompraCliente*)malloc(*cntPedidos * sizeof(RegistroCompraCliente));
+    if(pedidosMayores5000 == NULL)
+    {
+        perror("No se ha podido reservar memoria.\n");
+        exit(1);
+    }
+
     while(lista != NULL)
     {
         if(lista->MontoCompra > 5000)
         {
-            lista2array(lista, &pedidosMayores5000[cntAux]);
-            cntAux++;
+            if (cnt == tam)
+            {
+                ///Si se llega al final del vector, se reserva más memoria.
+                tam *= 2;
+                pedidosMayores5000 = (RegistroCompraCliente*)realloc(pedidosMayores5000, tam * sizeof(RegistroCompraCliente));
+            }
+            lista2array(lista, &pedidosMayores5000[cnt]);
+            cnt++;
         }
         lista = lista->siguiente;
     }
-    pedidosMayores5000 = (RegistroCompraCliente*)realloc(pedidosMayores5000, cntAux * sizeof(RegistroCompraCliente));
+    *cntPedidos = cnt; ///Actualizo el valor de cntPedidos
 
     return pedidosMayores5000;
 }
 
 void lista2array(NodoPedido *lista, RegistroCompraCliente *registro)
 {
-    registro->MontoCompra = lista->MontoCompra;
-    registro->NroCliente = lista->cliente.NroCliente;
-    strcpy(registro->NyA, lista->cliente.NyA);
-    registro->NroPedido = lista->NroPedido;
+    if(lista != NULL)
+    {
+        registro->MontoCompra = lista->MontoCompra;
+        registro->NroCliente = lista->cliente.NroCliente;
+        strcpy(registro->NyA, lista->cliente.NyA);
+        registro->NroPedido = lista->NroPedido;
+    }
 }
+
+
+/**
+    9.Crear la función (mostrarPedidos) que reciba el arreglo dinámico y la cantidad de pedidos cargados en el mismo para
+    finalmente mostrar esos pedidos. La función no debe retornar nada.
+**/
+void mostrarPedidos(RegistroCompraCliente* registro, int cntRegistros)
+{
+    for(int i = 0; i < cntRegistros; i++)
+    {
+        printf("Numero de cliente: %d\n", registro[i].NroCliente);
+        printf("Nombre y apellido: %s\n", registro[i].NyA);
+        printf("Numero de pedido: %d\n", registro[i].NroPedido);
+        printf("Monto de la compra: %.2f\n", registro[i].MontoCompra);
+        puts("\n");
+    }
+}
+
+/**
+    10.Crear la función (armaFilaPedidos) la cual debe armar una FILA (filaPedidos) con todos los pedidos (leídos desde el
+    archivo), cuyos montos seas mayores a 20000. La fila debe ser implementada mediante listas dobles
+**/
+

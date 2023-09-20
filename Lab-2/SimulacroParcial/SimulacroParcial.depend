@@ -10,3 +10,14 @@
 1695165193 source:c:\users\usuario\desktop\simulacroparcial\funciones.c
 	"declaraciones.h"
 
+1695212472 source:d:\utn\lab-2\simulacroparcial\funciones.c
+	"declaraciones.h"
+
+1695212380 d:\utn\lab-2\simulacroparcial\declaraciones.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1695212362 source:d:\utn\lab-2\simulacroparcial\main.c
+	"declaraciones.h"
+

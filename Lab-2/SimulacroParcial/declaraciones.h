@@ -43,5 +43,6 @@ NodoPedido* ingresarPedido(NodoPedido *);
 float calcularTotalMontoCompra(NodoPedido *);
 RegistroCompraCliente* copiarPedidosMayores5000(NodoPedido *, int *);
 void lista2array(NodoPedido*, RegistroCompraCliente*);
+void mostrarPedidos(RegistroCompraCliente*, int);
 
 #endif // DECLARACIONES_H_INCLUDED

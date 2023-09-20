@@ -19,14 +19,14 @@ int main()
     mostrarLista(lista);
 
     ///Calculamos el monto total de la compra
-    printf("El resultado de la compra es: %.2f", calcularTotalMontoCompra(lista));
+    printf("El resultado de la compra es: %.2f\n", calcularTotalMontoCompra(lista));
 
-    //printf("\n%.2f",registro->MontoCompra);
+    puts("\n\n---------------------------------------------------------------------------\n");
+    printf("\n--REGISTROS CON COMPRAS MAYOR A 5000--\n\n");
+    mostrarPedidos(registro, cnt);
 
     ///Liberamos la lista
     liberarLista(lista);
-
-
 
     return 0;
 }
