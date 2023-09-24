@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1694798923 source:d:\utn\tup\lab 2\parciales\simulacro parcial lab 2 150923\simulacro parcial lab 2 150923\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1695587309 source:d:\utn\lab-2\simulacro_1er_parcial_lab\resolucion\simulacroparcialprofe\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

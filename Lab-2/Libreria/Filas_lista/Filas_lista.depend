@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1695386016 source:d:\utn\lab-2\libreria\filas_lista\fila.c
+	"Fila.h"
+
+1695386156 d:\utn\lab-2\libreria\filas_lista\fila.h
+	<stdio.h>
+	<stdlib.h>
+
