@@ -3,7 +3,7 @@
 int main()
 {
     RegistroCompraCliente *registro = NULL;
-    int cnt = 10;
+    int cnt;
     ///Creo el nodo
     NodoPedido *lista = inicLista();
 
@@ -11,6 +11,9 @@ int main()
     lista = crearListaPedidos("Archivo binario.dat");
 
     //lista = ingresarPedido(lista);
+
+    ///Contamos la cantidad de pedidos de una lista
+    cnt = contarPedidos(lista);
 
     ///Copiamos los mayores a 5000
     registro = copiarPedidosMayores5000(lista, &cnt);
@@ -25,8 +28,9 @@ int main()
     printf("\n--REGISTROS CON COMPRAS MAYOR A 5000--\n\n");
     mostrarPedidos(registro, cnt);
 
-    ///Liberamos la lista
+    ///Liberamos la lista y el arreglo dinamico
     liberarLista(lista);
+    free(registro);
 
     return 0;
 }

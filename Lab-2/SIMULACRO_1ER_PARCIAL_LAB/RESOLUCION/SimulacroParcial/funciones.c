@@ -37,7 +37,7 @@ NodoPedido* agregarNodoPedido(NodoPedido *lista, RegistroCompraCliente registro)
 
     NodoPedido *nuevo = crearNodoPedido(registro); ///Creo el nodo con la funcion anterior, con el registro que paso por parametro
 
-    if(lista == NULL)
+    if(lista == NULL) ///Si la lista esta vacia, agrego en la posicion del primer elemento.
     {
         lista = nuevo;
     }
@@ -84,24 +84,9 @@ NodoPedido* crearListaPedidos(const char *nombreArchivo)
     rewind(archivo);
     while(fread(&pedidoNuevo, sizeof(pedidoNuevo), 1, archivo) > 0) //fread devuelve el numero de datos leidos
     {
-        lista = agregarAlFinalPedido(lista, crearNodoPedido(pedidoNuevo));
+        lista = agregarNodoPedido(lista, pedidoNuevo);
     }
     fclose(archivo);
-    return lista;
-}
-
-NodoPedido* agregarAlFinalPedido(NodoPedido *nuevo, NodoPedido *lista)
-{
-    if(lista == NULL)
-    {
-        lista = nuevo;
-    }
-    else
-    {
-        NodoPedido *ultimo = buscaUltimoLista(lista);
-        ultimo->siguiente = nuevo;
-    }
-
     return lista;
 }
 
@@ -162,7 +147,6 @@ NodoPedido* ingresarPedido(NodoPedido *lista)
 {
     RegistroCompraCliente registro;
 
-
     printf("Ingrese el numero del cliente: ");
     scanf("%d", &registro.NroCliente);
     printf("Ingrese el monto de la compra: ");
@@ -200,6 +184,19 @@ float calcularTotalMontoCompra(NodoPedido *lista)
     de monto superior a 5000. Retornar un puntero al arreglo creado y actualizar el puntero recibido como parámetro
     (para saber cuántos pedidos se almacenaron el arreglo). Modularizar si lo considera necesario.
 **/
+
+///Contamos la cantidad de pedidos primero
+int contarPedidos(NodoPedido* lista)
+{
+    int cnt = 0;
+    NodoPedido* seg = lista;
+    while (seg != NULL)
+    {
+        cantidad++;
+        seg = seg->siguiente;
+    }
+    return cnt;
+}
 
 RegistroCompraCliente* copiarPedidosMayores5000(NodoPedido *lista, int *cntPedidos)
 {

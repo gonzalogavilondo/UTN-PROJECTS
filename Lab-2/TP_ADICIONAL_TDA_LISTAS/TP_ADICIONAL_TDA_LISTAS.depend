@@ -63,3 +63,35 @@
 	"persona.h"
 	"listas.h"
 
+1696127117 source:e:\utn\lab-2\tp_adicional_tda_listas\funciones.c
+	"declaraciones.h"
+
+1696127117 e:\utn\lab-2\tp_adicional_tda_listas\declaraciones.h
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<conio.h>
+
+1696127117 source:e:\utn\lab-2\tp_adicional_tda_listas\listas.c
+	"listas.h"
+	"listas.h"
+
+1696127117 e:\utn\lab-2\tp_adicional_tda_listas\listas.h
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<time.h>
+	<string.h>
+	"declaraciones.h"
+	"persona.h"
+
+1696127117 e:\utn\lab-2\tp_adicional_tda_listas\persona.h
+
+1696127117 source:e:\utn\lab-2\tp_adicional_tda_listas\main.c
+	"declaraciones.h"
+	"listas.h"
+
+1696127117 source:e:\utn\lab-2\tp_adicional_tda_listas\persona.c
+	"persona.h"
+	"listas.h"
+
