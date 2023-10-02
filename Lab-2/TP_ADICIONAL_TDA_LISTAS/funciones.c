@@ -56,7 +56,7 @@ int CargarVector(int *vector)
         printf("VECTOR\n\n");
         MostrarVector(vector, i+1);
         i++;
-        if (i == MAXDIM)
+        if (i == tam)
         {
             // Si se llega al final del vector, se reserva más memoria.
             tam *= 2;
@@ -274,7 +274,7 @@ int CargarVectorReales(float *vector)
         printf("VECTOR\n\n");
         MostrarVectorReales(vector, i+1);
         i++;
-        if (i == MAXDIM)
+        if (i == tam)
         {
             // Si se llega al final del vector, se reserva más memoria.
             tam *= 2;
