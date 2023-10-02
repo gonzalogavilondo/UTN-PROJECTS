@@ -1,2 +1,5 @@
-Gonzalo 25
-Carlos 30
+Romina 1
+Micaela 2
+Gonzalo 3
+Camila 5
+Carlos 6

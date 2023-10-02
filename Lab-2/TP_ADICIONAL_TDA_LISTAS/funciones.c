@@ -389,7 +389,7 @@ int CargarVectorString(char *vector)
         printf("VECTOR\n\n");
         MostrarVectorString(vector, i+1);
         i++;
-        if (i == MAXDIM)
+        if (i == tam)
         {
             // Si se llega al final del vector, se reserva más memoria.
             tam *= 2;
