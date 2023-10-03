@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "declaraciones.h"
 ///Nodo doblemente enlazado
 
 typedef struct NodoPedido NodoPedido; // Declaración adelantada para que la estructura nodoD pueda referenciarla.
@@ -14,20 +15,6 @@ typedef struct nodoD
     struct nodoD* ant;
     struct nodoD* sig;
 } nodoD;
-
-typedef struct Cliente
-{
-    int NroCliente;
-    char NyA[30];
-} Cliente;
-
-typedef struct NodoPedido
-{
-    int NroPedido;
-    Cliente cliente;
-    float MontoCompra;
-    struct NodoPedido* siguiente;
-} NodoPedido;
 
 
 ///Estructura de la fila/cola
@@ -46,6 +33,7 @@ int vaciaFila(Fila*);
 void mostrarFila(Fila*);
 nodoD *buscarNodo (Fila*, int);
 void eliminarNodoIntermedio(Fila *, nodoD *);
+Fila armaFilaPedidos(NodoPedido* listaPedidos);
 
 
 #endif // FILA_H_INCLUDED
