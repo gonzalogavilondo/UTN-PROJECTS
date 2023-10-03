@@ -43,3 +43,23 @@
 1696189952 source:e:\utn\lab-2\simulacro_1er_parcial_lab\resolucion\simulacroparcial\funciones.c
 	"declaraciones.h"
 
+1696290804 source:e:\utn\lab-2\simulacro_1er_parcial_lab\simulacroparcial\funciones.c
+	"declaraciones.h"
+
+1696292332 e:\utn\lab-2\simulacro_1er_parcial_lab\simulacroparcial\declaraciones.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Fila.h"
+
+1696292915 source:e:\utn\lab-2\simulacro_1er_parcial_lab\simulacroparcial\main.c
+	"declaraciones.h"
+
+1696293177 source:e:\utn\lab-2\simulacro_1er_parcial_lab\simulacroparcial\fila.c
+	"Fila.h"
+
+1696292786 e:\utn\lab-2\simulacro_1er_parcial_lab\simulacroparcial\fila.h
+	<stdio.h>
+	<stdlib.h>
+	"declaraciones.h"
+

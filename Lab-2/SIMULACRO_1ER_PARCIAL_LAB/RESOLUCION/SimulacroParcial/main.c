@@ -28,6 +28,18 @@ int main()
     printf("\n--REGISTROS CON COMPRAS MAYOR A 5000--\n\n");
     mostrarPedidos(registro, cnt);
 
+    ///Llama a la función para armar la FILA con los pedidos mayores a 20000
+    Fila filaPedidosMayores = armaFilaPedidos(lista);
+
+    ///Muestra la FILA con los pedidos mayores a 20000
+    mostrarFila(&filaPedidosMayores);
+
+    // Suponiendo que ya has creado y llenado la FILA 'filaPedidosMayores' con pedidos
+    int numeroPedidoBuscado = 20799;
+    puts("\n");
+    buscaPedido(&filaPedidosMayores, numeroPedidoBuscado);
+
+
     ///Liberamos la lista y el arreglo dinamico
     liberarLista(lista);
     free(registro);

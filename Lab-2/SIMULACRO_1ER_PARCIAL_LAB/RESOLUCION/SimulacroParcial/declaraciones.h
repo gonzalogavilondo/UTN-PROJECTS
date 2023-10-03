@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "Fila.h"
 
 typedef struct RegistroCompraCliente
 {
