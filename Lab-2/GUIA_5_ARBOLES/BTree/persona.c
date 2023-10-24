@@ -1,5 +1,6 @@
 #include "persona.h"
 #include "listas.h"
+#include <string.h> // Para usar strcpy
 
 void mostrarPersona(persona per)
 {
@@ -48,4 +49,21 @@ persona *ReservarMemoriaStruct(int cntPersonas)
     }
 
     return personaNueva;
+}
+
+
+
+persona createPersona(int edad, const char *nombre)
+{
+    persona nuevaPersona;
+    nuevaPersona.edad = edad;
+
+    // Asegúrate de que el nombre no exceda el tamaño de tu arreglo
+    if (nombre != NULL) {
+        strncpy(nuevaPersona.nombre, nombre, sizeof(nuevaPersona.nombre));
+    } else {
+        nuevaPersona.nombre[0] = '\0'; // Si no se proporciona un nombre, se establece como cadena vacía
+    }
+
+    return nuevaPersona;
 }

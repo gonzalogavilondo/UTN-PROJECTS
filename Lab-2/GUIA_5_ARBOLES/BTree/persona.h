@@ -14,6 +14,7 @@ void muestraPersona(persona);
 void cargarPersona(persona **);
 persona *arrays2Struct(persona *, int *, char *[], int);
 persona *ReservarMemoriaStruct(int);
+persona createPersona(int edad, const char *nombre);
 
 
 #endif // PERSONA_H_INCLUDED
