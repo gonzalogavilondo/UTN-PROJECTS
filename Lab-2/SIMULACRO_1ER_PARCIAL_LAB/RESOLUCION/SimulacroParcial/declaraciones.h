@@ -27,7 +27,7 @@ typedef struct NodoPedido
     int NroPedido;
     Cliente cliente;
     float MontoCompra;
-    struct NodoPedido * siguiente;
+    struct NodoPedido *siguiente;
 
 } NodoPedido;
 

@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1696374023 source:d:\gavilondo_40666672\main.c
+	"declaraciones.h"
+
+1696374973 d:\gavilondo_40666672\declaraciones.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1696374658 source:d:\gavilondo_40666672\funciones.c
+	"declaraciones.h"
+
+1696381344 source:e:\utn\lab-2\1er_parcial\gavilondo_40666672\funciones.c
+	"declaraciones.h"
+
+1696381041 e:\utn\lab-2\1er_parcial\gavilondo_40666672\declaraciones.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1696381291 source:e:\utn\lab-2\1er_parcial\gavilondo_40666672\main.c
+	"declaraciones.h"
+

@@ -1,0 +1,60 @@
+# depslib dependency file v1.0
+1697762315 source:e:\utn\lab-2\libreria\btree\abtree.c
+	"Abtree.h"
+
+1697762314 e:\utn\lab-2\libreria\btree\abtree.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+
+1697762419 source:e:\utn\lab-2\libreria\btree\abtree_test.c
+	"Abtree.h"
+
+1697807216 source:e:\utn\lab-2\libreria\btree\main.c
+	"Abtree.h"
+
+1697983949 source:e:\utn\lab-2\guia_5_arboles\btree\abtree_test.c
+	"Abtree.h"
+
+1697995112 e:\utn\lab-2\guia_5_arboles\btree\abtree.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"listas.h"
+
+1697994511 source:e:\utn\lab-2\guia_5_arboles\btree\abtree.c
+	"Abtree.h"
+
+1697983962 source:e:\utn\lab-2\guia_5_arboles\btree\main.c
+	"Abtree.h"
+
+1697993993 e:\utn\lab-2\guia_5_arboles\btree\listas.h
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<time.h>
+	<string.h>
+	"declaraciones.h"
+	"persona.h"
+
+1696127117 e:\utn\lab-2\guia_5_arboles\btree\declaraciones.h
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<conio.h>
+
+1696127117 e:\utn\lab-2\guia_5_arboles\btree\persona.h
+
+1696209281 source:e:\utn\lab-2\guia_5_arboles\btree\funciones.c
+	"declaraciones.h"
+
+1696127117 source:e:\utn\lab-2\guia_5_arboles\btree\listas.c
+	"listas.h"
+	"listas.h"
+
+1696127117 source:e:\utn\lab-2\guia_5_arboles\btree\persona.c
+	"persona.h"
+	"listas.h"
+
