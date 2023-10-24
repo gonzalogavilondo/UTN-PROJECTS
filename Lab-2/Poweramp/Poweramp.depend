@@ -1,0 +1,72 @@
+# depslib dependency file v1.0
+1574761516 source:e:\utn\lab-2\poweramp\adl(usuarios).c
+	"ADL(Usuarios).h"
+
+1574761518 e:\utn\lab-2\poweramp\adl(usuarios).h
+	"Usuarios.h"
+	"Canciones.h"
+	"Playlist.h"
+
+1574761522 e:\utn\lab-2\poweramp\usuarios.h
+	<stdio.h>
+	<stdlib.h>
+	"conio.h"
+	"string.h"
+	"time.h"
+	"Canciones.h"
+
+1574761518 e:\utn\lab-2\poweramp\canciones.h
+	<stdio.h>
+	<stdlib.h>
+	"conio.h"
+	"string.h"
+	"time.h"
+	"Usuarios.h"
+
+1574761522 e:\utn\lab-2\poweramp\playlist.h
+	<stdio.h>
+	<stdlib.h>
+	"conio.h"
+	"string.h"
+	"time.h"
+	"Canciones.h"
+	"Usuarios.h"
+
+1574761518 source:e:\utn\lab-2\poweramp\canciones.c
+	"Canciones.h"
+
+1574761520 source:e:\utn\lab-2\poweramp\gotoxy.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+
+1574761518 source:e:\utn\lab-2\poweramp\main.c
+	<stdio.h>
+	<stdlib.h>
+	"conio.h"
+	"string.h"
+	"time.h"
+	"Canciones.h"
+	"Usuarios.h"
+	"Menu.h"
+	"ADL(Usuarios).h"
+
+1574761518 e:\utn\lab-2\poweramp\menu.h
+	<stdio.h>
+	<stdlib.h>
+	"conio.h"
+	"string.h"
+	"time.h"
+	"Usuarios.h"
+	"Canciones.h"
+	"ADL(Usuarios).h"
+
+1574761518 source:e:\utn\lab-2\poweramp\menu.c
+	"Menu.h"
+
+1574761522 source:e:\utn\lab-2\poweramp\playlist.c
+	"Playlist.h"
+
+1574761522 source:e:\utn\lab-2\poweramp\usuarios.c
+	"Usuarios.h"
+
