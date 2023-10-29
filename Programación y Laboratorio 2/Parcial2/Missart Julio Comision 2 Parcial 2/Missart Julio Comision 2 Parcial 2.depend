@@ -38,3 +38,34 @@
 	"conio.h"
 	<string.h>
 
+1696127117 source:e:\utn\programación y laboratorio 2\parcial2\missart julio comision 2 parcial 2\especialidad.c
+	<stdio.h>
+	<stdlib.h>
+	"registroArchivo.h"
+	"especialidad.h"
+	"paciente.h"
+	"conio.h"
+	<string.h>
+
+1696127117 e:\utn\programación y laboratorio 2\parcial2\missart julio comision 2 parcial 2\registroarchivo.h
+	<stdlib.h>
+	<stdio.h>
+	"especialidad.h"
+
+1696127117 e:\utn\programación y laboratorio 2\parcial2\missart julio comision 2 parcial 2\especialidad.h
+	"paciente.h"
+
+1696127117 e:\utn\programación y laboratorio 2\parcial2\missart julio comision 2 parcial 2\paciente.h
+
+1696127117 source:e:\utn\programación y laboratorio 2\parcial2\missart julio comision 2 parcial 2\paciente.c
+	<stdio.h>
+	<stdlib.h>
+	"registroArchivo.h"
+	"especialidad.h"
+	"paciente.h"
+
+1696127117 source:e:\utn\programación y laboratorio 2\parcial2\missart julio comision 2 parcial 2\registroarchivo.c
+	"registroArchivo.h"
+	"especialidad.h"
+	<string.h>
+

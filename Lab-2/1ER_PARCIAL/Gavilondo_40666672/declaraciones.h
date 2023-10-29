@@ -8,8 +8,8 @@
 typedef struct jugador
 {
     int dni;
-    char nombre_apellido[30];int
-    edad;
+    char nombre_apellido[30];
+    int edad;
     char equipo[30];
 } jugador;
 

@@ -13,7 +13,7 @@ void menu();
 int main()
 {
     stEspecialidadMedica arregloEspecialidades[DIM];
-    char nombreSpec[30];;
+    char nombreSpec[30];
     int vEspecialidad = 0;
     char opcion;
     int result;

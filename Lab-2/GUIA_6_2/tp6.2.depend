@@ -1,0 +1,38 @@
+# depslib dependency file v1.0
+1572525518 source:d:\pruebas\tp6.2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<string.h>
+	<time.h>
+	"utilidades.h"
+	"registroArchivo.h"
+	"arbol.h"
+
+1571670223 source:d:\pruebas\tp6.2\utilidades.c
+	"utilidades.h"
+
+1571670228 d:\pruebas\tp6.2\utilidades.h
+	<stdlib.h>
+	<stdio.h>
+
+1572465367 source:d:\pruebas\tp6.2\registroarchivo.c
+	"registroArchivo.h"
+
+1572462162 d:\pruebas\tp6.2\registroarchivo.h
+	<stdlib.h>
+	<stdio.h>
+	<windows.h>
+	<conio.h>
+	"utilidades.h"
+
+1572465367 source:d:\pruebas\tp6.2\arbol.c
+	"arbol.h"
+
+1572463899 d:\pruebas\tp6.2\arbol.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"registroArchivo.h"
+	"utilidades.h"
+
