@@ -51,10 +51,16 @@ void switchMenuPrincipal(int op, stCeldaUsuarios adl[],int validos){
             break;
         case 2:
             menuIngresoUserPrintf(adl,validos);
+            //menuProfesionalLabPrint(adl,validos);
             system("pause");
             system("cls");
             break;
         case 3:
+            menuAdministrativo(adl, validos);
+            system("pause");
+            system("cls || clear");
+            break;
+        case 4:
             system("cls");
             while(i<65){
                 printf("%c",220);
@@ -87,15 +93,20 @@ void switchMenuAdmin(int op,stCeldaUsuarios a[],int validos){
     switch(op){
         case 1:
             submenuAdminUsuarioPrintf(a,validos);
+            //subMenuAdminPacientePrint(a, validos);
             system("pause");
             system("cls");
             break;
         case 2:
             submenuAdminCancionPrintf();
+            //subMenuAdminPersonalPrint();
             system("pause");
             system("cls");
             break;
         case 3:
+            //menuGenerarInformes(a, validos);
+            break;
+        case 4:
             menuPrincipalPrint();
             break;
         default:
@@ -110,6 +121,7 @@ void switchMenuAdmin(int op,stCeldaUsuarios a[],int validos){
 ///SWICH ADMIN SUBMENU CANCION:
 void switchAdminSubCancion(int op){
     char nombreC[30];
+    //int dni;
 
     switch(op){
         case 1:
@@ -120,16 +132,18 @@ void switchAdminSubCancion(int op){
             break;
         case 2:
                 system("cls");
-                printf("Ingrese la cancion que desee eliminar: \n");
+                printf("Ingrese el DNI del paciente que desee eliminar: \n");
                 fflush(stdin);
                 gets(nombreC);
             elimininarCancion(nombreC);
+            //elimininarCancion(dni);
             system("pause");
             system("cls");
             break;
         case 3:
             system("cls");
             menuModificacionCancionPrintf();
+            //menuModificacionPersonalPrint
             system("pause");
             system("cls");
             break;
@@ -229,6 +243,9 @@ void switchIngresoDivision(int op,stCeldaUsuarios adl[],int validos){
             system("cls");
             break;
         case 2:
+            /**
+                ESTO IMPLEMENTAR EN PERFIL DE ADMINISTRADOR Y ADMINISTRATIVO.
+            **/
             system("cls");
             dim=1+cantUsers();
             validos=cargarADLmanual(adl,validos,dim);///carga de ald en usuario
@@ -269,6 +286,13 @@ void switchMenuUsuario(int op,char nombreU[],stCeldaUsuarios adl[],int validos){
     int i;
     //mostrarADL(adl,validos);
     //system("pause");
+
+    /**
+        IMPLEMENTAR PARA EL PROFESIONAL DE LABORATORIO:
+        printf("1. Registrar resultados de análisis")
+        printf("2. Consultar muestras pendientes")
+        SOLO DOS CASOS (POR AHORA)
+    **/
     switch(op){
         case 1:
             system("cls");
@@ -354,6 +378,13 @@ void modificacionCancion(int op){
         fflush(stdin);
         scanf("%d",&idCancionesGenerico);
     }
+    /**
+        • DNI (int)
+        • Apellido y nombre (string[40])
+        • Usuario (string[20)
+        • Contraseña (string[20])
+        • Perfil (string[20]) ¿Deberia poder cambiarse?
+    **/
     switch(op){
         case 1:
             system("cls");
@@ -642,7 +673,7 @@ void menuIngresoUserPrintf(stCeldaUsuarios adl[],int validos){
         system("cls");
         system("color F5");
         Rectangulo();
-        cabeza("PESTANIA USUARIO");
+        cabeza("PESTANIA PROFESIONAL DE LAB.");
         gotoxy(15,4);
         printf("(1)LOGIN");
         gotoxy(15,5);
@@ -674,7 +705,7 @@ void menuPrincipalAdmiPrint(int log,stCeldaUsuarios adl[],int validos){
     cabeza("PESTANIA ADMINISTRADOR");
 
     gotoxy(15,4);
-    printf("NOMBRE:");
+    printf("USUARIO:");
     gotoxy(15,6);
     printf("CONTRASENIA:");
         gotoxy(15,8);
@@ -698,12 +729,14 @@ void menuPrincipalAdmiPrint(int log,stCeldaUsuarios adl[],int validos){
         gotoxy(15,4);
         printf("A Que Submenu Desea Acceder?:\n");
         gotoxy(15,6);
-        printf("(1)Submenu Administracion Usuarios\n");
+        printf("1. Gestionar pacientes\n");
         gotoxy(15,7);
-        printf("(2)Submenu Administracion Canciones\n");
+        printf("2. Gestionar personal\n");
         gotoxy(15,8);
-        printf("(3)Volver\n");
+        printf("3. Generar informes");
         gotoxy(15,9);
+        printf("4. Volver");
+        gotoxy(15,10);
         fflush(stdin);
         scanf("%i", &opcion);
         system("cls");
@@ -734,7 +767,7 @@ void submenuAdminUsuarioPrintf(stCeldaUsuarios adl[],int validos){
     do{
         system("cls");
         Rectangulo();
-        cabeza("SUBMENU ADMINISTRACION USUARIO");
+        cabeza("SUBMENU ADMINISTRACION PACIENTES");
         gotoxy(15,4);
         printf("Que funcion desea ejecutar:\n");
         gotoxy(15,6);
@@ -754,6 +787,7 @@ void submenuAdminUsuarioPrintf(stCeldaUsuarios adl[],int validos){
         scanf("%i", &opcion);
         system("cls");
         switchAdminSubUsuario(opcion,adl,validos);
+        //switchAdminSubPaciente(opcion,adl,validos);
         system("cls");
         printf("Desea ejecutar otra funcion de administracion de usuario?: (s/n)");
         printf("%c\n", control = getch());
@@ -770,7 +804,7 @@ void submenuAdminCancionPrintf(){
     do{
         system("cls");
         Rectangulo();
-        cabeza("SUBMENU ADMINISTRACION CANCION");
+        cabeza("SUBMENU ADMINISTRACION PERSONAL");
         gotoxy(15,4);
         printf("Que funcion desea ejecutar:\n");
         gotoxy(15,6);
@@ -790,6 +824,7 @@ void submenuAdminCancionPrintf(){
         scanf("%i", &opcion);
         system("cls");
         switchAdminSubCancion(opcion);
+        //switchAdminSubPersonal(opcion);
 
         system("cls");
         printf("Desea ejecutar otra funcion de administracion cancion?:(s/n) ");
@@ -808,7 +843,7 @@ void menuPrincipalUsuarioPrint(stCeldaUsuarios adl[],int validos){
     char nombre[30];
     char contrasenia[30];
         Rectangulo();
-        cabeza("INICIO SESION USER");
+        cabeza("INICIO SESION");
         gotoxy(15,4);
         printf("NOMBRE:");
         gotoxy(15,6);
@@ -828,16 +863,12 @@ void menuPrincipalUsuarioPrint(stCeldaUsuarios adl[],int validos){
         gotoxy(15,4);
         printf("Que funcion desea ejecutar?:");
         gotoxy(15,6);
-        printf("(1)Ver Perfil");
+        printf("1. Registrar resultados de análisis");
         gotoxy(15,7);
-        printf("(2)Mostrar Playlist");
+        printf("2. Consultar muestras pendientes");
         gotoxy(15,8);
-        printf("(3)Escuchar Cancion");
-        gotoxy(15,9);
-        printf("(4)Canciones Recomendadas");
-        gotoxy(15,10);
-        printf("(5)Volver\n");
-        gotoxy(15,11);
+        printf("3. Volver\n");
+        gotoxy(15, 9);
 
         fflush(stdin);
         scanf("%d", &opcion);
@@ -892,6 +923,13 @@ void menuModificacionCancionPrintf(){
     int opcion;
     int validacion=obtenerID();
     do{
+        /**
+        • DNI (int)
+        • Apellido y nombre (string[40])
+        • Usuario (string[20)
+        • Contraseña (string[20])
+        • Perfil (string[20]) ¿Deberia poder cambiarse?
+        **/
         if(validacionCancionXId(validacion)==1){
         system("cls");
         Rectangulo();

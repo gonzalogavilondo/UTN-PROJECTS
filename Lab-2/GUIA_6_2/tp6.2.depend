@@ -36,3 +36,40 @@
 	"registroArchivo.h"
 	"utilidades.h"
 
+1698707568 source:e:\utn\lab-2\guia_6_2\arbol.c
+	"arbol.h"
+
+1698707568 e:\utn\lab-2\guia_6_2\arbol.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"registroArchivo.h"
+	"utilidades.h"
+
+1698707568 e:\utn\lab-2\guia_6_2\registroarchivo.h
+	<stdlib.h>
+	<stdio.h>
+	<windows.h>
+	<conio.h>
+	"utilidades.h"
+
+1698707568 e:\utn\lab-2\guia_6_2\utilidades.h
+	<stdlib.h>
+	<stdio.h>
+
+1698707568 source:e:\utn\lab-2\guia_6_2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<string.h>
+	<time.h>
+	"utilidades.h"
+	"registroArchivo.h"
+	"arbol.h"
+
+1698707568 source:e:\utn\lab-2\guia_6_2\registroarchivo.c
+	"registroArchivo.h"
+
+1698707568 source:e:\utn\lab-2\guia_6_2\utilidades.c
+	"utilidades.h"
+

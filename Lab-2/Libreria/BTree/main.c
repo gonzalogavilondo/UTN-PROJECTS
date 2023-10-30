@@ -7,9 +7,9 @@ int main()
 
     void (*prueba[])() =
     {
-      pruebaArbolBinario, ///nro=0
-      pruebaArbolBinarioDeBusqueda,///nro=1
-      pruebaEliminaEnABB, ///nro=2
+      pruebaArbolBinarioSt, ///nro=0
+      pruebaArbolBinarioDeBusquedaSt,///nro=1
+      pruebaEliminaEnABBSt, ///nro=2
     };
 
     (*prueba[nro])();
