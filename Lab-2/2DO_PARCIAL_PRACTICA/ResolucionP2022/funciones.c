@@ -252,8 +252,8 @@ int cantidadVendedoresSuperioresSector(nodoArbol *arbol, int ventas)
 int sectorMasVentas(celda arreglo[], int validos)
 {
     int idSector = 0,
-        ventas   = 0,
-        mayor    = 0,
+          ventas = 0,
+           mayor = 0,
                i = 0;
 
     while(i < validos)
