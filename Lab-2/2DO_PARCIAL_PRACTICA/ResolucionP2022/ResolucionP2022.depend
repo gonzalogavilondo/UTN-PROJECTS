@@ -1,9 +1,12 @@
 # depslib dependency file v1.0
-1698838965 source:e:\utn\lab-2\2do_parcial_practica\resolucionp2022\main.c
+1698870789 source:e:\utn\lab-2\2do_parcial_practica\resolucionp2022\main.c
 	"declaraciones.h"
 
-1698838984 e:\utn\lab-2\2do_parcial_practica\resolucionp2022\declaraciones.h
+1698870624 e:\utn\lab-2\2do_parcial_practica\resolucionp2022\declaraciones.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
+
+1698871924 source:e:\utn\lab-2\2do_parcial_practica\resolucionp2022\funciones.c
+	"declaraciones.h"
 

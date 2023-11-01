@@ -26,7 +26,7 @@ int alta(celda arreglo[], int validos, stRegistroVendedor aux)
 {
     int pos = buscarPosicion(arreglo, validos, aux.idSector);
 
-    if(pos == 1)
+    if(pos == -1)
     {
         validos = agregarSector(arreglo, validos, aux.idSector, aux.sector);
         pos = validos - 1;
