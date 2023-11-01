@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1690301680 source:c:\users\arieloxs\desktop\utn\2 cuatri\progra\preparando el final\uno segundo parcial\main\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1690312279 source:c:\users\arieloxs\desktop\utn\2 cuatri\progra\preparando el final\nueva carpeta\recu segundo parcial 2022\main\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

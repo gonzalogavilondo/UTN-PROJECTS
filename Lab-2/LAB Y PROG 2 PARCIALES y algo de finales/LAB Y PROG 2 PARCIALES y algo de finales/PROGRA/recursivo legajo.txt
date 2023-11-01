@@ -1,0 +1,18 @@
+int contarRecursivo(nodo *lista){
+
+int contador=0;
+nodo *aux=lista;
+	if(aux==NULL){
+
+		return 0;
+
+	}
+	elser {
+	   if(aux->dato.legajo %10==0)
+		contador=contarRecursivo(aux->siguiente)+1;
+	   else
+		contador=contarRecursivo(aux->siguiente)
+	}
+
+    return contador;
+}

@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1665600835 source:c:\users\arieloxs\desktop\utn\2 cuatri\progra\parcial 2017\2017\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<windows.h>
+

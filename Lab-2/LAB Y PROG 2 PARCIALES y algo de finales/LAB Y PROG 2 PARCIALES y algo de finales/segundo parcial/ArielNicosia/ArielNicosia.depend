@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1667247534 source:c:\users\arieloxs\desktop\parcial\ariel nicosia\arielnicosia\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

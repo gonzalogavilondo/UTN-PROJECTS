@@ -1,0 +1,15 @@
+1) 9 pts. No se controla si se abrirlo el archivo correctamente ni se cierra. Y en insertar te falto preguntar si tenes seguidora antes de hacer los enlaces,  y la funcion no termina cumpliendo su cometido
+
+2) 15 pts.
+
+3) 10 pts. El primer dato a comparar cuando buscamos un menor, es el primer dato de la coleccion ya que es un dato real, no se deberia asignar un valor arbitrario forzado como en tu caso que pusiste 5000.
+
+4) 9 pts. Faltan las librerias de pilas con las funciones como PonePila y el mismisimo Dato Pila.
+
+5) 7 pts. Mismo problema que el anterior y en ciclo while sacas, pero tambien le pones un dato, generando seguramente un ciclo infito, la solucion seria pasarla el dato a un auxilar y luego ese auxilar pasarlo de vuelta a la pila o trabajar por copia con la pila.
+
+6) 7 pts. Mismo problema que el inciso anterior de posible ciclo infinito en el else y falta la libreria de fila, no teniendo el codigo de las funciones llamadas.
+
+7) 4 pts. Faltan muchos archivos y se encuentran algunos errores. En la declaracion de los struct falta ponerle a los nodoD* siguiente por ej. el Prefijo struct para que indifique que es una estructura.
+
+Total 61 = 6(sies).

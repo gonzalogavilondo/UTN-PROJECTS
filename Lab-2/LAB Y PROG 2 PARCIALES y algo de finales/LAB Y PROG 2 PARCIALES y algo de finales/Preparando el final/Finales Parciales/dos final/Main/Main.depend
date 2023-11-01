@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1690728078 source:c:\users\arieloxs\desktop\utn\2 cuatri\progra\preparando el final\finales parciales\dos final\main\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
