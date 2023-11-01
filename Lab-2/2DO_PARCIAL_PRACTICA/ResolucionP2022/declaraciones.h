@@ -1,5 +1,8 @@
 #ifndef DECLARACIONES_H_INCLUDED
 #define DECLARACIONES_H_INCLUDED
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 typedef struct stRegistroVendedor
 {
@@ -12,7 +15,7 @@ typedef struct stRegistroVendedor
 
 typedef struct stSector
 {
-    int idSsector;
+    int idSector;
     char sector[30];
 }stSector;
 
@@ -36,7 +39,52 @@ typedef struct celda
     nodoArbol *arbolVendedores;
 }celda;
 
-int archivo2ADA(arreglo, dimension);
+/**
+*   Ejercicio 1
+**/
+int archivo2ADA(celda arreglo[], int);
+int alta(celda arreglo[], int, stRegistroVendedor);
+nodoArbol* crearNodoArbol(stRegistroVendedor);
+stVendedor cargarDatoArbol(stRegistroVendedor);
+int buscarPosicion(celda arreglo[], int, int);
+int agregarSector(celda arreglo[], int, int, char sector[]);
+nodoArbol *inicArbol();
+nodoArbol *insertarNodo(nodoArbol *, nodoArbol *);
+
+/**
+*   Ejercicio 2
+**/
+void mostrarADA(celda arreglo[], int);
+void inorder(nodoArbol *);
+void mostrarVendedor(stVendedor);
+
+/**
+* Ejercicio 3
+**/
+nodoArbol *buscarVendedorArreglo(celda arreglo[], int, int);
+nodoArbol *buscarVendedorArbol(nodoArbol *, int);
+
+/**
+* Ejercicio 4
+**/
+
+int cantidadVendedoresSuperiores(celda arreglo[], int, int, int);
+int cantidadVendedoresSuperioresSector2(nodoArbol *, int);
+int cantidadVendedoresSuperioresSector(nodoArbol *, int);
+
+/**
+*   Ejercicio 5
+**/
+int sectorMasVentas(celda arreglo[], int);
+int sumarVentasSector(nodoArbol *);
+int sumarValoresArbol(nodoArbol *);
+
+/**
+*   Ejercicio 6
+**/
+float porcentajeVentas(celda arreglo[], int, int );
+int calcularVentasTotales(celda arreglo[], int);
+
 
 
 #endif // DECLARACIONES_H_INCLUDED
