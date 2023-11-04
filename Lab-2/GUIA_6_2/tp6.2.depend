@@ -36,17 +36,17 @@
 	"registroArchivo.h"
 	"utilidades.h"
 
-1698707568 source:e:\utn\lab-2\guia_6_2\arbol.c
+1699131583 source:e:\utn\lab-2\guia_6_2\arbol.c
 	"arbol.h"
 
-1698707568 e:\utn\lab-2\guia_6_2\arbol.h
+1699131493 e:\utn\lab-2\guia_6_2\arbol.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"registroArchivo.h"
 	"utilidades.h"
 
-1698707568 e:\utn\lab-2\guia_6_2\registroarchivo.h
+1699131483 e:\utn\lab-2\guia_6_2\registroarchivo.h
 	<stdlib.h>
 	<stdio.h>
 	<windows.h>
@@ -57,7 +57,19 @@
 	<stdlib.h>
 	<stdio.h>
 
-1698707568 source:e:\utn\lab-2\guia_6_2\main.c
+1699131891 source:e:\utn\lab-2\guia_6_2\main.c
+	"especie.h"
+
+1699131715 source:e:\utn\lab-2\guia_6_2\registroarchivo.c
+	"registroArchivo.h"
+
+1699131604 source:e:\utn\lab-2\guia_6_2\utilidades.c
+	"utilidades.h"
+
+1699131873 source:e:\utn\lab-2\guia_6_2\especie.c
+	"especie.h"
+
+1699131892 e:\utn\lab-2\guia_6_2\especie.h
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -66,10 +78,4 @@
 	"utilidades.h"
 	"registroArchivo.h"
 	"arbol.h"
-
-1698707568 source:e:\utn\lab-2\guia_6_2\registroarchivo.c
-	"registroArchivo.h"
-
-1698707568 source:e:\utn\lab-2\guia_6_2\utilidades.c
-	"utilidades.h"
 

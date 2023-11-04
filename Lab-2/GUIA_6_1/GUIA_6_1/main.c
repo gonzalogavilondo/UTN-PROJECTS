@@ -16,14 +16,13 @@ int main()
    // mostrarRegistros(arRegistro);
     printf("\nPasando de archivo a ADL\n");
     validos  = archivo2adl(adl, validos, dim);
-    printf("\nHello world!\n");
-    mostrarADL(adl,validos);
+    mostrarADL(adl, validos);
     guardarAprobDesaprob(adl,validos);
     printf("\n <<< Archivo de Aprobados >>> \n");
-    printf("\n Total: %d \n",cuentaRegistros(arRegAprob,sizeof(stRegistroArchivo)));
+    printf("\n Total: %d \n", cuentaRegistros(arRegAprob, sizeof(stRegistroArchivo)));
     mostrarRegistros(arRegAprob);
     printf("\n <<< Archivo de Desaprobados >>> \n");
-    printf("\n Total: %d \n",cuentaRegistros(arRegDesAp,sizeof(stRegistroArchivo)));
+    printf("\n Total: %d \n", cuentaRegistros(arRegDesAp, sizeof(stRegistroArchivo)));
     mostrarRegistros(arRegDesAp);
 
     return 0;

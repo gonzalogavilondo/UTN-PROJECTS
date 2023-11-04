@@ -7,7 +7,8 @@ void ingresarRegistros()
     char opcion;
     stRegistroArchivo r;
 
-    do{
+    do
+    {
         system("pause");
         r = ingresarUnRegistro();
         agregarRegistro(r);
@@ -40,7 +41,8 @@ stRegistroArchivo ingresarUnRegistro()
 void agregarRegistro(stRegistroArchivo r)
 {
     FILE* pArchRegistro = fopen(arRegistro,"ab");
-    if(pArchRegistro){
+    if(pArchRegistro)
+    {
         fwrite(&r,sizeof(stRegistroArchivo),1,pArchRegistro);
         fclose(pArchRegistro);
     }
@@ -55,18 +57,22 @@ void mostrarUnRegistro(stRegistroArchivo r){
     replicante('-',70);
 }
 /// Se recorre el archivo y usando la funcion mostrarUnRegistro() se muestran los datos del archivo
-void mostrarRegistros(char archivo[]){
+void mostrarRegistros(char archivo[])
+{
     stRegistroArchivo r;
     FILE* pArchRegistro = fopen(archivo,"rb");
-    if(pArchRegistro){
-        while(fread(&r,sizeof(stRegistroArchivo),1,pArchRegistro)>0){
+    if(pArchRegistro)
+    {
+        while(fread(&r, sizeof(stRegistroArchivo), 1, pArchRegistro) > 0)
+        {
             mostrarUnRegistro(r);
         }
     }
 }
 
 /// funcion que asigna en la variable recibida un nombre al azar
-void getNombre(char n[]){
+void getNombre(char n[])
+{
     char nombres[][20] = {"Amalia","Juan","Roberta","Antonio","Juana","Fernando","Fernanda","Anibal","Antonia","Roberto",
                            "Anastasia","Anastasio","Artura","Arturo","Maria","Mario","Tamara","Adolfo","Adolfa","Pedro","Alfredo",
                            "Alfreda","Mauro","Maura","Benicio","Benicia","Ildefonso","Ildefonsa","Cuchuflito","Cuchuflita",
@@ -75,7 +81,8 @@ void getNombre(char n[]){
     strcpy(n,nombres[randomRango(0,sizeof(nombres)/(sizeof(char)*20))]);
 }
 /// funcion que asigna en la variable recibida un apellido al azar
-void getApellido(char a[]){
+void getApellido(char a[])
+{
     char apellidos[][20] = {"Gomez","Perez","Rodriguez","Latorre","Fernandez","Torquemada", "Marijuan", "Roca", "Mitre", "Rivadavia",
                             "San Martin", "Alvarez", "Comizo", "Borges", "Zama", "Recato", "Olvido", "Gil", "Trapero", "Restinga",
                             "De Antonio", "Ramirez", "Spinetta", "Cortez", "Gonzalez", "Andujar", "San Juan", "Bautista", "Anchorena", "Paso",
@@ -85,7 +92,8 @@ void getApellido(char a[]){
 }
 
 /// funcion que asigna en la variable recibida una materia al azar y retorna el id de materia
-int getMateria(char m[]){
+int getMateria(char m[])
+{
     char materias[][40] = {"Ingles I","Sistema de Procesamiento de Datos","Laboratorio de Computacion I","Matematica","Programacion I",
                             "Arquitectura y Sistemas Operativos", "Metodologia de la Investigacion", "Ingles II", "Laboratorio de Computacion II",
                             "Estadistica","Programacion II","Programacion III","Organizacion Empresarial","Organizacion Contable de la Empresa",
@@ -99,7 +107,8 @@ int getMateria(char m[]){
 }
 
 /// funcion que asigna en la variable recibida un apellido y un nombre concateandolos
-void getApellidoYNombre(char an[]){
+void getApellidoYNombre(char an[])
+{
     //strcpy(an,"");
     an[0]='\0';
     char n[20];
@@ -111,15 +120,18 @@ void getApellidoYNombre(char an[]){
     strcat(an,n);
 }
 /// Funcion que retorna un numero de legajo al azar
-int getLegajo(){
+int getLegajo()
+{
     return rand()%70000+1;
 }
 /// Funcion que retorna una nota al azar
-int getNota(){
+int getNota()
+{
     return rand()%10+1;
 }
 /// Funcion que genera un registro al azar y lo retorna
-stRegistroArchivo cargoRegistroArchivoRandom(){
+stRegistroArchivo cargoRegistroArchivoRandom()
+{
     stRegistroArchivo r;
     getApellidoYNombre(r.apeNom);
     r.idMateria=getMateria(r.materia);
@@ -127,32 +139,40 @@ stRegistroArchivo cargoRegistroArchivoRandom(){
     r.nota=getNota();
     return r;
 }
+
 /// funcion que guarda un dato de tipo stRegistroArchivo en el archivo especificado
-void guardaRegistroArchivo(char archivo[], stRegistroArchivo r){
+void guardaRegistroArchivo(char archivo[], stRegistroArchivo r)
+{
     FILE * pArch = fopen(archivo,"ab");
-    if(pArch){
-        fwrite(&r,sizeof(stRegistroArchivo),1,pArch);
+    if(pArch)
+    {
+        fwrite(&r,sizeof(stRegistroArchivo), 1, pArch);
         fclose(pArch);
     }
 }
 /// Funcion que llama a las funciones anteriores y genera y guarda en el archivo la cantidad de registros deseados
-void generaArchivoRandom(int cantidad){
+void generaArchivoRandom(int cantidad)
+{
     stRegistroArchivo r;
-    int i=0;
+    int i = 0;
     printf("Generando archivo.");
-    while(i<cantidad){
+    while(i < cantidad)
+    {
         (i % 400 == 0) ? printf("."):0;
         r = cargoRegistroArchivoRandom();
         guardaRegistroArchivo(arRegistro,r);
         i++;
     }
 }
+
 /// Funcion que cuenta la cantidad de registros en cualquier archivo, recibe el nombre de archivo y el sizeof del tipo de dato usado
-int cuentaRegistros(char nombreArchivo[], int tamStruct){
+int cuentaRegistros(char nombreArchivo[], int tamStruct)
+{
     FILE* pArchi = fopen(nombreArchivo,"rb");
-    int cantReg=0;
-    if(pArchi){
-        fseek(pArchi,0,SEEK_END);
+    int cantReg = 0;
+    if(pArchi)
+    {
+        fseek(pArchi, 0, SEEK_END);
         cantReg = ftell(pArchi)/tamStruct;
         fclose(pArchi);
     }

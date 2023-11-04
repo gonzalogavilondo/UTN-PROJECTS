@@ -1,6 +1,7 @@
 #include "alumnos.h"
 
-void mostrarUnaNota(stNotaAlumno n){
+void mostrarUnaNota(stNotaAlumno n)
+{
     printf("\n Legajo.........: %d ",n.legajo);
     printf("\n Alumno.........: %s ",n.apeNom);
     printf("\n Nota...........: %d \n",n.nota);

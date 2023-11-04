@@ -2,11 +2,13 @@
 
 
 /// El usuario ingresa la cantidad de datos que quiera
-void ingresarRegistros(){
+void ingresarRegistros()
+{
     char opcion;
     stRegistroArchivo r;
 
-    do{
+    do
+    {
         system("pause");
         r = ingresarUnRegistro();
         agregarRegistro(r);
@@ -17,7 +19,8 @@ void ingresarRegistros(){
 }
 
 /// Se pide un dato al usuario y se retorna
-stRegistroArchivo ingresarUnRegistro(){
+stRegistroArchivo ingresarUnRegistro()
+{
     stRegistroArchivo r;
 
     printf("\n Animal.......................: ");
@@ -37,16 +40,19 @@ stRegistroArchivo ingresarUnRegistro(){
 }
 
 /// se guarda un dato en el archivo
-void agregarRegistro(stRegistroArchivo r){
-    FILE* pArchRegistro = fopen(arRegistro,"ab");
-    if(pArchRegistro){
-        fwrite(&r,sizeof(stRegistroArchivo),1,pArchRegistro);
+void agregarRegistro(stRegistroArchivo r)
+{
+    FILE* pArchRegistro = fopen(arRegistro, "ab");
+    if(pArchRegistro)
+    {
+        fwrite(&r,sizeof(stRegistroArchivo), 1, pArchRegistro);
         fclose(pArchRegistro);
     }
 }
 
 /// Se muestra un dato de tipo stRegistroArchivo
-void mostrarUnRegistro(stRegistroArchivo r){
+void mostrarUnRegistro(stRegistroArchivo r)
+{
     char habitat[10];
     getHabitatChar(r.habitat,habitat);
     printf("\n Animal.....................: %s",r.animal);
@@ -58,11 +64,14 @@ void mostrarUnRegistro(stRegistroArchivo r){
 }
 
 /// Se recorre el archivo y usando la funcion mostrarUnRegistro() se muestran los datos del archivo
-void mostrarRegistros(char archivo[]){
+void mostrarRegistros(char archivo[])
+{
     stRegistroArchivo r;
     FILE* pArchRegistro = fopen(archivo,"rb");
-    if(pArchRegistro){
-        while(fread(&r,sizeof(stRegistroArchivo),1,pArchRegistro)>0){
+    if(pArchRegistro)
+    {
+        while(fread(&r,sizeof(stRegistroArchivo), 1, pArchRegistro) > 0)
+        {
             mostrarUnRegistro(r);
         }
         fclose(pArchRegistro);
@@ -70,15 +79,17 @@ void mostrarRegistros(char archivo[]){
 }
 
 /// funcion que asigna en la variable recibida un nombre al azar
-int getEspecie(char e[]){
-    char especies[][10] = {"Mamifero","Ave","Reptil","Pez"};
+int getEspecie(char e[])
+{
+    char especies[][10] = {"Mamifero", "Ave", "Reptil", "Pez"};
     int idEspecie = randomRango(0,sizeof(especies)/(sizeof(char)*10));
-    strcpy(e,especies[idEspecie]);
+    strcpy(e, especies[idEspecie]);
     return idEspecie;
 }
 
 /// funcion que asigna en la variable recibida un apellido al azar
-void getAnimal(char a[], int idEspecie){
+void getAnimal(char a[], int idEspecie)
+{
     char mamiferos[][20] = {"Canguro", "Mono", "Antilope", "Vaca", "Caballo", "Cerdo", "Oveja", "Cabra", "Leon", "Jirafa",
                             "Tapir", "Cebra", "Burro", "Gato", "Perro", "Mangosta", "Leopardo", "Guepardo", "Jirafa", "Okapi",
                             "Camello", "Llama", "Pacari", "Hipopotamo", "Elefante", "Zorro", "Panda", "Oso", "Conejo", "Liebre" };
@@ -91,16 +102,16 @@ void getAnimal(char a[], int idEspecie){
 
     switch(idEspecie){
         case 0:
-            strcpy(a,mamiferos[randomRango(0,sizeof(mamiferos)/(sizeof(char)*20))]);
+            strcpy(a,mamiferos[randomRango(0, sizeof(mamiferos)/(sizeof(char)*20))]);
             break;
         case 1:
-            strcpy(a,aves[randomRango(0,sizeof(aves)/(sizeof(char)*20))]);
+            strcpy(a,aves[randomRango(0, sizeof(aves)/(sizeof(char)*20))]);
             break;
         case 2:
-            strcpy(a,reptiles[randomRango(0,sizeof(reptiles)/(sizeof(char)*20))]);
+            strcpy(a,reptiles[randomRango(0, sizeof(reptiles)/(sizeof(char)*20))]);
             break;
         case 3:
-            strcpy(a,peces[randomRango(0,sizeof(peces)/(sizeof(char)*20))]);
+            strcpy(a,peces[randomRango(0, sizeof(peces)/(sizeof(char)*20))]);
             break;
         default:
             strcpy(a,"Error");
@@ -108,19 +119,23 @@ void getAnimal(char a[], int idEspecie){
 }
 
 /// Funcion que retorna un numero de habitat de 0 a 3 al azar
-int getHabitat(int idEspecie){
-    return ((idEspecie)>=0&&(idEspecie<=2))?randomRango(0,3):3;
+int getHabitat(int idEspecie)
+{
+    return ((idEspecie) >=0 && (idEspecie <= 2)) ? randomRango(0, 3) : 3;
 }
 
 
 /// Funcion que retorna cantidad de animales
-int getCantidad(){
-    return randomRango(0,8000);
+int getCantidad()
+{
+    return randomRango(0, 8000);
 }
 
 /// funcion que asigna en la variable recibida el tipo correspondiente de habitat
-void getHabitatChar(int n, char h[]){
-    switch(n){
+void getHabitatChar(int n, char h[])
+{
+    switch(n)
+    {
         case 0:
             strcpy(h,"Selva");
             break;
@@ -139,30 +154,35 @@ void getHabitatChar(int n, char h[]){
 }
 
 /// Funcion que genera un registro al azar y lo retorna
-stRegistroArchivo cargoRegistroArchivoRandom(){
+stRegistroArchivo cargoRegistroArchivoRandom()
+{
     stRegistroArchivo r;
-    r.idEspecie=getEspecie(r.especie);
-    getAnimal(r.animal,r.idEspecie);
-    r.habitat=getHabitat(r.idEspecie);
-    r.cant=getCantidad();
+    r.idEspecie = getEspecie(r.especie);
+    getAnimal(r.animal, r.idEspecie);
+    r.habitat = getHabitat(r.idEspecie);
+    r.cant = getCantidad();
     return r;
 }
 
 /// funcion que guarda un dato de tipo stRegistroArchivo en el archivo especificado
-void guardaRegistroArchivo(char archivo[], stRegistroArchivo r){
+void guardaRegistroArchivo(char archivo[], stRegistroArchivo r)
+{
     FILE * pArch = fopen(archivo,"ab");
-    if(pArch){
-        fwrite(&r,sizeof(stRegistroArchivo),1,pArch);
+    if(pArch)
+    {
+        fwrite(&r,sizeof(stRegistroArchivo), 1, pArch);
         fclose(pArch);
     }
 }
 
 /// Funcion que llama a las funciones anteriores y genera y guarda en el archivo la cantidad de registros deseados
-void generaArchivoRandom(int cantidad){
+void generaArchivoRandom(int cantidad)
+{
     stRegistroArchivo r;
-    int i=0;
+    int i = 0;
     printf("Generando archivo.");
-    while(i<cantidad){
+    while(i < cantidad)
+    {
         (i % 400 == 0) ? printf("."):0;
         r = cargoRegistroArchivoRandom();
         guardaRegistroArchivo(arRegistro,r);
@@ -171,11 +191,13 @@ void generaArchivoRandom(int cantidad){
 }
 
 /// Funcion que cuenta la cantidad de registros en cualquier archivo, recibe el nombre de archivo y el sizeof del tipo de dato usado
-int cuentaRegistros(char nombreArchivo[], int tamStruct){
-    FILE* pArchi = fopen(nombreArchivo,"rb");
-    int cantReg=0;
-    if(pArchi){
-        fseek(pArchi,0,SEEK_END);
+int cuentaRegistros(char nombreArchivo[], int tamStruct)
+{
+    FILE* pArchi = fopen(nombreArchivo, "rb");
+    int cantReg = 0;
+    if(pArchi)
+    {
+        fseek(pArchi, 0, SEEK_END);
         cantReg = ftell(pArchi)/tamStruct;
         fclose(pArchi);
     }

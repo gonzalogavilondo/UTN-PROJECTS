@@ -729,7 +729,7 @@ nodoSt *buscarNodoSt(nodoSt *lista, char nombre[20])
     seg = lista; ///con esto evito cambiar el valor de la variable
     ///lista, que contiene un puntero al primer nodoSt de la
     ///lista vinculada
-    while ((seg != NULL) && ( strcmp(nombre, seg->dato.apeNom)!=0 ))
+    while ((seg != NULL) && (strcmp(nombre, seg->dato.apeNom)!= 0))
     {
         ///busco mientras me quede lista por recorrer y no haya encontrado el nombre
         seg=seg->siguiente; ///avanzo hacia el siguiente nodoSt.
@@ -1088,15 +1088,18 @@ void mostrarUnNodo(nodoSt* aux)
    mostrarUnaNota(aux->dato);
 }
 
-void recorrerYmostrar(nodoSt* lista){
+void recorrerYmostrar(nodoSt* lista)
+{
     nodoSt* aux=lista;
-    while(aux!=NULL){
+    while(aux!=NULL)
+    {
         mostrarUnNodo(aux);
         puts("\n");
-        aux=aux->siguiente;
+        aux = aux->siguiente;
     }
 }
 /// Cuenta la cantidad de alumnos de una lisa de manera recursiva con un operador ternario
-int cuentaAlumnos(nodoSt* lista){
-    return (lista)?1+cuentaAlumnos(lista->siguiente):0;
+int cuentaAlumnos(nodoSt* lista)
+{
+    return (lista) ? 1 + cuentaAlumnos(lista->siguiente) : 0;
 }

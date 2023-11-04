@@ -9,7 +9,7 @@ int buscaPosMateria(stCelda adl[], stMateria m, int validos)
 {
     int rta = -1;
     int i = 0;
-    while((i < validos)&&(rta == -1))
+    while((i < validos) && (rta == -1))
     {
         if(strcmp(adl[i].m.materia, m.materia) == 0)
         {
@@ -43,7 +43,7 @@ int alta (stCelda adl[], stMateria m, stNotaAlumno n, int validos)
     if(pos == -1)
     {
         validos = agregar(adl, m, validos);
-        pos = validos-1;
+        pos = validos - 1;
     }
     adl[pos].listaDeNotas = agregarAlFinalSt(adl[pos].listaDeNotas, aux);
 
@@ -63,12 +63,12 @@ int archivo2adl(stCelda adl[], int validos, int dim)
         stNotaAlumno n;
         while( (fread(&rg, sizeof(stRegistroArchivo), 1, archivo) > 0) && (validos < dim) )
         {
-            m.idMateria=rg.idMateria;
-            strcpy(m.materia,rg.materia);
+            m.idMateria = rg.idMateria;
+            strcpy(m.materia, rg.materia);
             n.legajo = rg.legajo;
-            strcpy(n.apeNom,rg.apeNom);
+            strcpy(n.apeNom, rg.apeNom);
             n.nota = rg.nota;
-            validos = alta(adl,m,n,validos);
+            validos = alta(adl, m, n, validos);
         }
         fclose(archivo);
     }

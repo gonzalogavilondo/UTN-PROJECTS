@@ -7,7 +7,8 @@
 #include "registroArchivo.h"
 #include "utilidades.h"
 
-typedef struct {
+typedef struct stAnimal
+{
     char nombreAnimal[30];
     int cantidad;
     int habitat;
@@ -15,7 +16,8 @@ typedef struct {
 } stAnimal;
 
 /// estructura de datos
-typedef struct nodoArbol{
+typedef struct nodoArbol
+{
    stAnimal dato;
    struct nodoArbol* izq;
    struct nodoArbol* der;

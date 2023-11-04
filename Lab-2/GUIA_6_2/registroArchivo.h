@@ -8,7 +8,8 @@
 
 #define arRegistro "registroArchivo.dat"
 
-typedef struct {
+typedef struct stRegistroArchivo
+{
    char animal[30];
    int cant;
    int habitat;
