@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1636555584 source:c:\users\agust\dropbox\tecnicatura\2do cuatrimestre\programacion y laboratorio ii\parciales\2 parcial lab\agustin lopez (com 1) - lab2\main.c
-	<stdio.h>
-	<stdlib.h>
-	"string.h"
-	<time.h>
-
