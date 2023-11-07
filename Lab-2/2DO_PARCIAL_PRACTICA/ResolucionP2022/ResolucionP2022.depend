@@ -1,8 +1,8 @@
 # depslib dependency file v1.0
-1698880141 source:e:\utn\lab-2\2do_parcial_practica\resolucionp2022\main.c
+1698880279 source:e:\utn\lab-2\2do_parcial_practica\resolucionp2022\main.c
 	"declaraciones.h"
 
-1698870624 e:\utn\lab-2\2do_parcial_practica\resolucionp2022\declaraciones.h
+1699316605 e:\utn\lab-2\2do_parcial_practica\resolucionp2022\declaraciones.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

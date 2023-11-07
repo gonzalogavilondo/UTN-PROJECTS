@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1699319218 source:e:\utn\lab-2\2do_parcial_practica_2\resolucionp2020\funciones.c
+	"declaraciones.h"
+
+1699318027 e:\utn\lab-2\2do_parcial_practica_2\resolucionp2020\declaraciones.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1699319005 source:e:\utn\lab-2\2do_parcial_practica_2\resolucionp2020\main.c
+	"declaraciones.h"
+

@@ -126,7 +126,7 @@ void mostrarADA(celda arreglo[], int validos)
     }
 }
 
-void inorder(nodoArbol *arbol)
+void inorder(nodoArbol *arbol) //Muestro los pacientes en orden de acuerdo al nombre y apellido
 {
     if(arbol)
     {
