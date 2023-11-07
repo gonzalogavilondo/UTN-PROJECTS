@@ -2,47 +2,82 @@
 
 int main()
 {
-    int cntVendedores = 0,
-            cntVentas = 0,
-       idEspecialidad = 0,
-              validos = 0;
-
-
+    int validos = 0;
     celda arreglo[MAXDIM];
-    nodoArbol *arbol = NULL;
 
     ///Ejercicio 1
-    validos = archivo2ADA(arreglo, MAXDIM);
+    validos = archivo2ADA(arreglo);
 
     ///Ejercicio 2
     mostrarADA(arreglo, validos);
 
-    ///Ejercicio 3
-    /*arbol = buscarVendedorArreglo(arreglo, validos, 10030956);
-    puts("\n\n----------------------EJERCICIO 3---------------------------");
-    printf("\t--EMPLEADO BUSCADO-- \n");
-    mostrarVendedor(arbol->dato);
+    char nombrePaciente[30];
+    char apellidoPaciente[30];
+    char nombreEspecialidad[30];
+    char nombreArchivo[50];
+    int opcion;
+    int idEspecialidadBusqueda;
 
-    ///Ejercicio 4 (Cuantos vendedores de un sector por ejemplo 3, que superen las 2 ventas)
-    cntVentas = 2;
-    idSector = 3;
-    cntVendedores = cantidadVendedoresSuperiores(arreglo, validos, idSector, cntVentas);
-    puts("\n\n----------------------EJERCICIO 4---------------------------");
-    printf("La cantidad de vendedores que superan las %d ventas son: %d", cntVentas, cntVendedores);
-    puts("\n\n------------------------------------------------------------\n");
+    do {
+        printf("\n*** Menú de opciones ***\n");
+        printf("1. Agregar nueva atención médica\n");
+        printf("2. Buscar si un paciente fue atendido en una especialidad determinada\n");
+        printf("3. Determinar qué especialidad médica tuvo más atenciones\n");
+        printf("4. Realizar la persistencia de las atenciones médicas de una especialidad médica en particular\n");
+        printf("5. Salir\n");
+        printf("Ingrese la opción deseada: ");
+        scanf("%d", &opcion);
 
-    ///Ejercicio 5
-    idSector = sectorMasVentas(arreglo, validos);
-    puts("\n\n----------------------EJERCICIO 5---------------------------");
-    printf("El sector que mas ventas tuvo es el: %d", idSector);
-    puts("\n\n------------------------------------------------------------\n");
+        switch (opcion)
+        {
+            case 1:
+                agregarNuevaAtencion(arreglo, validos);
+                break;
+            case 2:
+                // Ejercicio 5: Buscar paciente en una especialidad
+                printf("Ingrese el nombre del paciente (solo el nombre): ");
+                getchar(); // Consumir el salto de línea pendiente del ingreso anterior
+                fgets(nombrePaciente, sizeof(nombrePaciente), stdin);
+                nombrePaciente[strcspn(nombrePaciente, "\n")] = '\0'; // Elimina el salto de línea
 
-    ///Ejercicio 6 (Se va a usar para probar el sector que tuvo mas ventas)
-    pVentas = porcentajeVentas(arreglo, validos, idSector);
-    puts("\n\n----------------------EJERCICIO 6---------------------------");
-    printf("El porcentaje de ventas del sector %d es: %.2f", idSector, pVentas);
-    puts("\n\n------------------------------------------------------------\n");
-*/
+                printf("Ingrese el apellido del paciente: ");
+                fgets(apellidoPaciente, sizeof(apellidoPaciente), stdin);
+                apellidoPaciente[strcspn(apellidoPaciente, "\n")] = '\0'; // Elimina el salto de línea
+
+                printf("Ingrese el ID de la especialidad médica: ");
+                scanf("%d", &idEspecialidadBusqueda);
+                int encontrado = buscarPacienteEnEspecialidad(arreglo, validos, nombrePaciente, apellidoPaciente, idEspecialidadBusqueda);
+                if (encontrado)
+                {
+                    printf("El paciente fue atendido en la especialidad médica especificada.\n");
+                }
+                else
+                {
+                    printf("El paciente no fue atendido en la especialidad médica especificada.\n");
+                }
+                break;
+
+            case 3:
+                // Ejercicio 6: Determinar especialidad con más atenciones
+                especialidadConMasAtenciones(arreglo, validos);
+                break;
+            case 4:
+                // Ejercicio 7: Persistencia de atenciones de una especialidad
+                printf("Ingrese el nombre de la especialidad médica: ");
+                scanf("%s", nombreEspecialidad);
+                printf("Ingrese el nombre del archivo de salida: ");
+                scanf("%s", nombreArchivo);
+                guardarEspecialidadEnArchivo(arreglo, validos, nombreEspecialidad, nombreArchivo);
+                break;
+            case 5:
+                printf("Saliendo del programa...\n");
+                break;
+            default:
+                printf("Opción no válida. Por favor, elija una opción válida.\n");
+        }
+        system("pause");
+
+    } while (opcion != 5);
 
     return 0;
 }

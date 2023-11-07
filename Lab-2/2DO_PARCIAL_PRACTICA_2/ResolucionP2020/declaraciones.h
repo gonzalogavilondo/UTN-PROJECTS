@@ -45,14 +45,14 @@ typedef struct nodoArbol
 typedef struct celda
 {
     stEspecialidadMedica especialidad;
-    nodoArbol *arbolEspecialidades;
+    nodoArbol *arbolPacientes;
 }celda;
 
 
 /**
-*   Ejercicio 1
+*   Ejercicio 1 y 2
 **/
-int archivo2ADA(celda arreglo[], int);
+int archivo2ADA(celda arreglo[]);
 int alta(celda arreglo[], int, stRegistroMedico);
 nodoArbol* crearNodoArbol(stRegistroMedico);
 stPaciente cargarDatoArbol(stRegistroMedico);
@@ -62,39 +62,24 @@ nodoArbol *inicArbol();
 nodoArbol *insertarNodo(nodoArbol *, nodoArbol *);
 
 /**
-*   Ejercicio 2
+*   Ejercicio 3
 **/
 
 void mostrarADA(celda arreglo[], int);
 void inorder(nodoArbol *);
 void mostrarPaciente(stPaciente);
-//
-///**
-//* Ejercicio 3
-//**/
-//nodoArbol *buscarVendedorArreglo(celda arreglo[], int, int);
-//nodoArbol *buscarVendedorArbol(nodoArbol *, int);
-//
-///**
-//* Ejercicio 4
-//**/
-//
-//int cantidadVendedoresSuperiores(celda arreglo[], int, int, int);
-//int cantidadVendedoresSuperioresSector2(nodoArbol *, int);
-//int cantidadVendedoresSuperioresSector(nodoArbol *, int);
-//
-///**
-//*   Ejercicio 5
-//**/
-//int sectorMasVentas(celda arreglo[], int);
-//int sumarVentasSector(nodoArbol *);
-//int sumarValoresArbol(nodoArbol *);
-//
-///**
-//*   Ejercicio 6
-//**/
-//float porcentajeVentas(celda arreglo[], int, int );
-//int calcularVentasTotales(celda arreglo[], int);
+
+void agregarNuevaAtencion(celda arreglo[], int validos);
+
+int buscarPacienteEnEspecialidad(celda arreglo[], int validos, char nombrePaciente[], char apellidoPaciente[], int idEspecialidad);
+nodoArbol* buscarPacienteEnArbol(nodoArbol* arbol, char nombrePaciente[], char apellidoPaciente[]);
+
+void especialidadConMasAtenciones(celda arreglo[], int validos);
+int contarAtencionesEnEspecialidad(nodoArbol* arbol);
+
+void guardarEspecialidadEnArchivo(celda arreglo[], int validos, char nombreEspecialidad[], char nombreArchivo[]);
+void guardarArbolEnArchivo(nodoArbol* arbol, FILE* archivo);
+
 
 
 #endif // DECLARACIONES_H_INCLUDED

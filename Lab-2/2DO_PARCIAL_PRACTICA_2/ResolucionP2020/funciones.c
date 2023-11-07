@@ -3,7 +3,7 @@
 /**
 *   Ejercicio 1
 **/
-int archivo2ADA(celda arreglo[], int dimension)
+int archivo2ADA(celda arreglo[])
 {
     int validos = 0;
     FILE *buf = fopen("registroMedico.dat", "rb");
@@ -12,7 +12,7 @@ int archivo2ADA(celda arreglo[], int dimension)
 
     if(buf)
     {
-        while(fread(&aux, sizeof(stRegistroMedico), 1, buf) > 0 && validos < dimension)
+        while(fread(&aux, sizeof(stRegistroMedico), 1, buf) > 0 && validos < MAXDIM) //Donde, MAXDIM es una constante definida en declaraciones.h, la cual es 10 como indica el enunciado.
         {
             validos = alta(arreglo, validos, aux);
         }
@@ -32,7 +32,7 @@ int alta(celda arreglo[], int validos, stRegistroMedico aux)
         pos = validos - 1;
     }
     nodoArbol *nuevo = crearNodoArbol(aux);
-    arreglo[pos].arbolEspecialidades = insertarNodo(arreglo[pos].arbolEspecialidades, nuevo);
+    arreglo[pos].arbolPacientes = insertarNodo(arreglo[pos].arbolPacientes, nuevo);
 
     return validos;
 }
@@ -82,7 +82,7 @@ int agregarEspecialidad(celda arreglo[], int validos, int idEspecialidad, char e
     strcpy(arreglo[validos].especialidad.diagnostico, diagnostico);
     strcpy(arreglo[validos].especialidad.fechaAtencion, fechaAtencion);
     strcpy(arreglo[validos].especialidad.nombreDoctor, nombreDoctor);
-    arreglo[validos].arbolEspecialidades = inicArbol();
+    arreglo[validos].arbolPacientes = inicArbol();
     validos++;
 
     return validos;
@@ -125,7 +125,7 @@ void mostrarADA(celda arreglo[], int validos)
         printf("Especialidad %s (ID %i)\nDiagnostico: %s\nFecha Atencion: %s\nNombreDoctor: %s\n", arreglo[i].especialidad.especialidadMedica, arreglo[i].especialidad.idEspecialidad, arreglo[i].especialidad.diagnostico, arreglo[i].especialidad.fechaAtencion, arreglo[i].especialidad.nombreDoctor );
         printf("------------------------------------\n");
         printf("------------------------------------\n");
-        inorder(arreglo[i].arbolEspecialidades);
+        inorder(arreglo[i].arbolPacientes);
     }
 }
 
@@ -145,193 +145,150 @@ void mostrarPaciente(stPaciente aux)
     printf("Nombre y apellido: %s %s\n", aux.nombrePaciente, aux.apellidoPaciente);
     printf("--------------------------------------------------\n");
 }
-//
-///**
-//* Ejercicio 3
-//**/
-//nodoArbol *buscarVendedorArreglo(celda arreglo[], int validos, int dni)
-//{
-//    int i = 0;
-//    nodoArbol *busc = NULL;
-//
-//    while(i < validos && !busc)
-//    {
-//        busc = buscarVendedorArbol(arreglo[i].arbolVendedores, dni);
-//        i++;
-//    }
-//
-//    return busc;
-//}
-//
-//nodoArbol *buscarVendedorArbol(nodoArbol *arbol, int dni)
-//{
-//    nodoArbol *busc = NULL;
-//
-//    if(arbol)
-//    {
-//        if(dni == arbol->dato.dni)
-//        {
-//            busc = arbol;
-//        }
-//        else
-//        {
-//            if(dni > arbol->dato.dni)
-//            {
-//                busc = buscarVendedorArbol(arbol->der, dni);
-//            }
-//            else
-//            {
-//                busc = buscarVendedorArbol(arbol->izq, dni);
-//            }
-//        }
-//    }
-//    return busc;
-//}
-//
-///**
-//* Ejercicio 4
-//**/
-//
-//int cantidadVendedoresSuperiores(celda arreglo[], int validos, int idSector, int ventas)
-//{
-//    int pos = buscarPosicion(arreglo, validos, idSector);
-//
-//    if(pos != -1)
-//    {
-//        int cantidad = cantidadVendedoresSuperioresSector(arreglo[pos].arbolVendedores, ventas);
-//        return cantidad;
-//    }
-//    else
-//    {
-//        return -1;
-//    }
-//}
-//
-//int cantidadVendedoresSuperioresSector2(nodoArbol *arbol, int ventas)
-//{
-//    int rta = 0;
-//
-//    if(arbol == NULL)
-//    {
-//        rta = 0;
-//    }
-//    else
-//    {
-//        if(arbol->dato.ventasDiarias > ventas)
-//        {
-//            rta = 1 + cantidadVendedoresSuperioresSector2(arbol->izq, ventas) + cantidadVendedoresSuperioresSector2(arbol->der, ventas);
-//        }
-//        else
-//        {
-//            rta = cantidadVendedoresSuperioresSector2(arbol->izq, ventas) + cantidadVendedoresSuperioresSector2(arbol->der, ventas);
-//        }
-//    }
-//
-//    return rta;
-//}
-//
-//int cantidadVendedoresSuperioresSector(nodoArbol *arbol, int ventas)
-//{
-//    int cnt = 0;
-//
-//    if(arbol)
-//    {
-//        if(arbol->dato.ventasDiarias > ventas)
-//        {
-//            cnt++;
-//        }
-//        cnt += cantidadVendedoresSuperioresSector(arbol->izq, ventas);
-//        cnt += cantidadVendedoresSuperioresSector(arbol->der, ventas);
-//    }
-//
-//    return cnt;
-//}
-//
-///**
-//*   Ejercicio 5
-//**/
-//
-//int sectorMasVentas(celda arreglo[], int validos)
-//{
-//    int idSector = 0,
-//          ventas = 0,
-//           mayor = 0,
-//               i = 0;
-//
-//    while(i < validos)
-//    {
-//        ventas = sumarVentasSector(arreglo[i].arbolVendedores);
-//        if(ventas > mayor)
-//        {
-//            mayor = ventas;
-//            idSector = arreglo[i].sector.idSector;
-//        }
-//        i++;
-//    }
-//
-//    return idSector;
-//}
-//
-//int sumarVentasSector(nodoArbol *arbol)
-//{
-//    int ventas = 0;
-//
-//    if(arbol)
-//    {
-//        ventas += arbol->dato.ventasDiarias;
-//        ventas += sumarVentasSector(arbol->izq);
-//        ventas += sumarVentasSector(arbol->der);
-//    }
-//
-//    return ventas;
-//}
-//
-//int sumarValoresArbol(nodoArbol *arbol)
-//{
-//    int rta;
-//
-//    if(arbol == NULL)
-//    {
-//        rta = 0;
-//    }
-//    else
-//    {
-//        rta = arbol->dato.ventasDiarias + sumarValoresArbol(arbol->izq) + sumarValoresArbol(arbol->der);
-//    }
-//
-//    return rta;
-//}
-//
-///**
-//*   Ejercicio 6
-//**/
-//
-//float porcentajeVentas(celda arreglo[], int validos, int idSector)
-//{
-//    int pos = buscarPosicion(arreglo, validos, idSector);
-//
-//    if(pos != -1)
-//    {
-//        int ventasSector = sumarVentasSector(arreglo[pos].arbolVendedores);
-//        int ventasTotales = calcularVentasTotales(arreglo, validos);
-//        float porcentaje = (float) (ventasSector * 100) / ventasTotales;
-//
-//        return porcentaje;
-//    }
-//    else
-//    {
-//        return -1;
-//    }
-//}
-//
-//int calcularVentasTotales(celda arreglo[], int validos)
-//{
-//    int total = 0;
-//
-//    for(int i = 0; i < validos; i++)
-//    {
-//        total += sumarVentasSector(arreglo[i].arbolVendedores);
-//    }
-//
-//    return total;
-//}
+
+/**
+    Ejercicio 4
+**/
+void agregarNuevaAtencion(celda arreglo[], int validos)
+{
+    stRegistroMedico nuevaAtencion;
+    printf("Ingrese el ID del paciente: ");
+    scanf("%d", &nuevaAtencion.idPaciente);
+
+    // Aquí puedes agregar más solicitudes de datos al usuario según la estructura del registro médico
+
+    printf("Ingrese la especialidad médica: ");
+    scanf("%s", nuevaAtencion.especialidadMedica);
+
+    printf("Ingrese el diagnóstico: ");
+    scanf("%s", nuevaAtencion.diagnostico);
+
+    // Puedes continuar solicitando y asignando los datos necesarios a 'nuevaAtencion'
+
+    int pos = buscarPosicion(arreglo, validos, nuevaAtencion.idEspecialidad);
+
+    if (pos == -1)
+    {
+        validos = agregarEspecialidad(arreglo, validos, nuevaAtencion.idEspecialidad, nuevaAtencion.especialidadMedica, nuevaAtencion.diagnostico, nuevaAtencion.fechaAtencion, nuevaAtencion.nombreDoctor);
+        pos = validos - 1;
+    }
+    nodoArbol* nuevo = crearNodoArbol(nuevaAtencion);
+    arreglo[pos].arbolPacientes = insertarNodo(arreglo[pos].arbolPacientes, nuevo);
+
+    printf("Atención agregada exitosamente.\n");
+}
+
+
+/**
+    Ejercicio 5
+**/
+int buscarPacienteEnEspecialidad(celda arreglo[], int validos, char nombrePaciente[], char apellidoPaciente[], int idEspecialidad)
+{
+    for (int i = 0; i < validos; i++)
+    {
+        if (arreglo[i].especialidad.idEspecialidad == idEspecialidad)
+        {
+            nodoArbol* pacienteEncontrado = buscarPacienteEnArbol(arreglo[i].arbolPacientes, nombrePaciente, apellidoPaciente);
+            if (pacienteEncontrado != NULL)
+            {
+                return 1; // Encontrado
+            }
+        }
+    }
+    return 0; // No encontrado
+}
+
+nodoArbol* buscarPacienteEnArbol(nodoArbol* arbol, char nombrePaciente[], char apellidoPaciente[])
+{
+    if (arbol == NULL)
+    {
+        return NULL;
+    }
+    int comparacion = strcmp(nombrePaciente, arbol->dato.nombrePaciente);
+    if (comparacion < 0)
+    {
+        return buscarPacienteEnArbol(arbol->izq, nombrePaciente, apellidoPaciente);
+    }
+    else if (comparacion > 0)
+    {
+        return buscarPacienteEnArbol(arbol->der, nombrePaciente, apellidoPaciente);
+    }
+    else
+    {
+        comparacion = strcmp(apellidoPaciente, arbol->dato.apellidoPaciente);
+        if (comparacion == 0)
+        {
+            return arbol; // Paciente encontrado
+        }
+    }
+    return NULL;
+}
+
+/**
+    Ejercicio 6
+**/
+void especialidadConMasAtenciones(celda arreglo[], int validos)
+{
+    int maxAtenciones = 0;
+    char especialidadMasAtendida[30];
+
+    for (int i = 0; i < validos; i++)
+    {
+        int atencionesEnEspecialidad = contarAtencionesEnEspecialidad(arreglo[i].arbolPacientes);
+        if (atencionesEnEspecialidad > maxAtenciones)
+        {
+            maxAtenciones = atencionesEnEspecialidad;
+            strcpy(especialidadMasAtendida, arreglo[i].especialidad.especialidadMedica);
+        }
+    }
+
+    printf("La especialidad con más atenciones es: %s (%d atenciones)\n", especialidadMasAtendida, maxAtenciones);
+}
+
+int contarAtencionesEnEspecialidad(nodoArbol* arbol)
+{
+    if (arbol == NULL)
+    {
+        return 0;
+    }
+    return 1 + contarAtencionesEnEspecialidad(arbol->izq) + contarAtencionesEnEspecialidad(arbol->der);
+}
+
+
+/**
+    Ejercicio 7
+**/
+void guardarEspecialidadEnArchivo(celda arreglo[], int validos, char nombreEspecialidad[], char nombreArchivo[])
+{
+    for (int i = 0; i < validos; i++)
+    {
+        if (strcmp(arreglo[i].especialidad.especialidadMedica, nombreEspecialidad) == 0)
+        {
+            FILE* archivoSalida = fopen(nombreArchivo, "wb");
+            if (archivoSalida)
+            {
+                guardarArbolEnArchivo(arreglo[i].arbolPacientes, archivoSalida);
+                fclose(archivoSalida);
+                printf("Datos de la especialidad '%s' guardados en '%s'.\n", nombreEspecialidad, nombreArchivo);
+            }
+            else
+            {
+                printf("No se pudo abrir el archivo de salida.\n");
+            }
+            return;
+        }
+    }
+    printf("Especialidad no encontrada: '%s'\n", nombreEspecialidad);
+}
+
+void guardarArbolEnArchivo(nodoArbol* arbol, FILE* archivo)
+{
+    if (arbol)
+    {
+        fwrite(&arbol->dato, sizeof(stPaciente), 1, archivo);
+        guardarArbolEnArchivo(arbol->izq, archivo);
+        guardarArbolEnArchivo(arbol->der, archivo);
+    }
+}
+
+
