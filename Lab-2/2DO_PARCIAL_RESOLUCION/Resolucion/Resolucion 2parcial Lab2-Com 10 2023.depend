@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1699655105 source:d:\utn\tup\lab 2\parciales\resolucion 2parcial - com 10 2023\resolucion 2parcial lab2-com 10 2023\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1700222595 source:e:\utn\lab-2\2do_parcial_resolucion\resolucion\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

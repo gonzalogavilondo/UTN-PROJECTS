@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1700223680 source:e:\utn\lab-2\programacion_2_2do_parcial\main.c
+	<stdio.h>
+	<stdlib.h>
+
