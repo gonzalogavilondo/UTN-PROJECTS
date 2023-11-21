@@ -120,8 +120,6 @@ void guardarAprobDesaprob(stCelda adl[], int validos)
             {
                 guardaRegistroArchivo(arRegDesAp, r);
             }
-
-            //(seg->dato.nota>=6) ? guardaRegistroArchivo(arRegAprob, r) : guardaRegistroArchivo(arRegDesAp, r);
             seg = seg->siguiente;
         }
     }

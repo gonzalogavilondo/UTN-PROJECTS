@@ -35,10 +35,10 @@ nodo* agregarAlInicio(nodo *nuevo, nodo *lista)
 
 nodo* buscaUltimoLista(nodo *lista)
 {
-    nodo *seg = lista; ///seg es seguidor
-    if(seg != NULL) ///Lista esta vacia?
+    nodo *seg = lista;
+    if(seg != NULL)
     {
-        while(seg->siguiente != NULL) ///Recorro la lista
+        while(seg->siguiente != NULL)
         {
             seg = seg->siguiente;
         }
@@ -121,37 +121,37 @@ nodo* borrarNodo(int entero, nodo *lista)
 
 int borrarNodosRepetidos(int entero, nodo **lista)
 {
-    int cntNodosBorrados = 0; ///Inicializa el contador de nodos borrados a 0.
-    nodo* aux = *lista; ///Crea un puntero auxiliar que apunte al inicio de la lista.
-    nodo* ante = NULL; ///Inicializa un puntero anterior a NULL.
+    int cntNodosBorrados = 0;
+    nodo* aux = *lista;
+    nodo* ante = NULL;
 
-    while (aux != NULL) ///Itera mientras no se llegue al final de la lista.
+    while (aux != NULL)
     {
-        if (entero == aux->dato) ///Comprueba si el valor del nodo actual es igual al valor buscado.
+        if (entero == aux->dato)
         {
-            if (ante == NULL) ///Si el nodo a borrar es el primer nodo de la lista.
+            if (ante == NULL)
             {
-                *lista = aux->siguiente; ///Actualiza el puntero al inicio de la lista.
-                free(aux); ///Libera la memoria del nodo a borrar.
-                aux = *lista; ///Avanza el puntero auxiliar al siguiente nodo.
+                *lista = aux->siguiente;
+                free(aux);
+                aux = *lista;
             }
             else
             {
-                ante->siguiente = aux->siguiente; ///Conecta el nodo anterior con el siguiente.
-                nodo *temp = aux; ///Crea un puntero temporal para el nodo a borrar.
-                aux = aux->siguiente; ///Avanza el puntero auxiliar al siguiente nodo.
-                free(temp); ///Libera la memoria del nodo a borrar.
+                ante->siguiente = aux->siguiente;
+                nodo *temp = aux;
+                aux = aux->siguiente;
+                free(temp);
             }
-            cntNodosBorrados++; ///Incrementa el contador de nodos borrados.
+            cntNodosBorrados++;
         }
         else
         {
-            ante = aux; ///Avanza el puntero anterior al nodo actual.
-            aux = aux->siguiente; ///Avanza el puntero auxiliar al siguiente nodo.
+            ante = aux;
+            aux = aux->siguiente;
         }
     }
 
-    return cntNodosBorrados; ///Devuelve la cantidad total de nodos borrados.
+    return cntNodosBorrados;
 }
 
 nodo* borrarPrimerNodo(nodo *lista)
@@ -237,12 +237,10 @@ nodo *intercalarListas(nodo *lista_A, nodo *lista_B, nodo *lista_C)
         }
     }
 
-    ///Si quedara algo en la lista A
     if(lista_A != NULL)
     {
         lista_C = agregarAlFinal(lista_A, lista_C);
     }
-    ///Si quedara algo en la lista B
     else if(lista_B != NULL)
     {
         lista_C = agregarAlFinal(lista_B, lista_C);
@@ -291,23 +289,16 @@ nodo* listaRandom50(nodo *lista, int cntElementos)
 
 nodo* invertirLista(nodo *lista)
 {
-    /// la idea es extraer el primero de la lista original
-    /// y luego agregarlo al principio de la nueva lista
-    /// retornamos el puntero al inicio de la nueva lista
-    /// para pisar la referencia del main
-
     nodo *listaInvertida = NULL;
     nodo *aux;
     while(lista != NULL)
     {
-        /// extraemos el primero (se puede modularizar)
         aux = lista;
 
         lista = lista->siguiente;
 
         aux->siguiente = NULL;
 
-        /// lo agregamos al principio de la nueva lista invertida
         listaInvertida = agregarAlInicio(aux, listaInvertida);
     }
     return listaInvertida;
@@ -352,12 +343,10 @@ int recorrerLista(nodo *lista, int **vec)
         }
         else
         {
-            aux = agregarAlFinal(crearNodo(lista->dato), aux); //Cargo en una lista auxiliar todos los impares
-        }
+            aux = agregarAlFinal(crearNodo(lista->dato), aux);
         lista = lista->siguiente;
     }
 
-    ///Agrego todos los impares al archivo de texto
     lista2archivoTxt_int(aux, "Impares.txt");
 
     return cnt;
@@ -523,15 +512,9 @@ nodoSt *inicListaSt()
 
 nodoSt *crearNodoSt(stNotaAlumno dato)
 {
-    ///crea un puntero de tipo nodoSt
     nodoSt * aux = (nodoSt*) malloc(sizeof(nodoSt));
-    ///asigna valores a sus campos de información
     aux->dato = dato;
-    ///asigna valor NULL al campo que contiene la dirección de memoria del
-    ///siguiente nodoSt
     aux->siguiente = NULL;
-    ///retorna la dirección de memoria del nuevo nodoSt, que deberá ser
-    ///asignada a una variable de tipo "puntero a nodoSt".
     return aux;
 }
 
@@ -552,10 +535,10 @@ nodoSt* agregarAlInicioSt(nodoSt *nuevo, nodoSt *lista)
 
 nodoSt* buscaUltimoListaSt(nodoSt *lista)
 {
-    nodoSt *seg = lista; ///seg es seguidor
-    if(seg != NULL) ///Lista esta vacia?
+    nodoSt *seg = lista;
+    if(seg != NULL)
     {
-        while(seg->siguiente != NULL) ///Recorro la lista
+        while(seg->siguiente != NULL)
         {
             seg = seg->siguiente;
         }
@@ -581,25 +564,18 @@ nodoSt* agregarAlFinalSt(nodoSt *nuevo, nodoSt *lista)
 
 nodoSt* agregarOrdenadoSt(nodoSt *nuevoNodoSt, nodoSt *lista)
 {
-    /// agrega un nuevo nodoSt a la lista manteniendo el orden.
-    ///si la lista está vacía agrego el primer elemento.
     if(lista == NULL)
     {
         lista = nuevoNodoSt;
     }
     else
     {
-        ///si el nuevo elemento es menor que el primero de la lista,
-        ///agrego al principio
         if(strcmp(nuevoNodoSt->dato.apeNom,lista->dato.apeNom)<0)
         {
             lista = agregarAlInicioSt(nuevoNodoSt, lista);
         }
         else
         {
-            ///busco el lugar en donde insertar el nuevo elemento.
-            ///necesito mantener la dirección de memoria del nodoSt anterior
-            ///al nodoSt que tiene un nombre mayor al del nuevo nodoSt.
             nodoSt * ante = lista;
             nodoSt * seg = lista->siguiente;
             while((seg != NULL)&&(strcmp(nuevoNodoSt->dato.apeNom,seg->dato.apeNom)>0))
@@ -607,7 +583,6 @@ nodoSt* agregarOrdenadoSt(nodoSt *nuevoNodoSt, nodoSt *lista)
                 ante = seg;
                 seg = seg->siguiente;
             }
-            ///inserto el nuevo nodoSt en el lugar indicado.
             nuevoNodoSt->siguiente = seg;
             ante->siguiente = nuevoNodoSt;
         }
@@ -617,28 +592,18 @@ nodoSt* agregarOrdenadoSt(nodoSt *nuevoNodoSt, nodoSt *lista)
 
 nodoSt* agregarOrdenadoNotaSt(nodoSt *nuevoNodoSt, nodoSt *lista)
 {
-    /// agrega un nuevo nodoSt a la lista manteniendo el orden con respecto a la edad.
-    ///si la lista está vacía agrego el primer elemento.
     if(lista == NULL)
     {
-        ///printf("es el primero...\n");
         lista = nuevoNodoSt;
     }
     else
     {
-        ///si el nuevo elemento es menor que el primero de la lista,
-        ///agrego al principio
         if(nuevoNodoSt->dato.nota < lista->dato.nota)
         {
-            ///printf("agrego al pcio...\n");
             lista = agregarAlInicioSt(nuevoNodoSt, lista);
         }
         else
         {
-            ///printf("agrego en el medio/final...\n");
-            ///busco el lugar en donde insertar el nuevo elemento.
-            ///necesito mantener la dirección de memoria del nodoSt anterior
-            ///al nodoSt que tiene un nombre mayor al del nuevo nodoSt.
             nodoSt *ante = lista;
             nodoSt *seg = lista->siguiente;
             while((seg != NULL)&&(nuevoNodoSt->dato.nota > seg->dato.nota))
@@ -646,7 +611,6 @@ nodoSt* agregarOrdenadoNotaSt(nodoSt *nuevoNodoSt, nodoSt *lista)
                 ante = seg;
                 seg = seg->siguiente;
             }
-            ///inserto el nuevo nodoSt en el lugar indicado.
             nuevoNodoSt->siguiente = seg;
             ante->siguiente = nuevoNodoSt;
         }
@@ -658,28 +622,25 @@ nodoSt* agregarOrdenadoNotaSt(nodoSt *nuevoNodoSt, nodoSt *lista)
 nodoSt *borrarNodoSt(nodoSt * lista, char nombre[20])
 {
     nodoSt * seg;
-    nodoSt * ante; ///apunta al nodoSt anterior que seg.
-    if((lista != NULL) && (strcmp(nombre, lista->dato.apeNom)==0 ))///encontre el nodoSt...
+    nodoSt * ante;
+    if((lista != NULL) && (strcmp(nombre, lista->dato.apeNom)==0 ))
     {
         nodoSt * aux = lista;
-        lista = lista->siguiente; ///salteo el primer nodoSt.
-        free(aux); ///elimino el primer nodoSt.
+        lista = lista->siguiente;
+        free(aux);
     }
     else
     {
         seg = lista;
-        while((seg != NULL) && (strcmp(nombre, seg->dato.apeNom)!=0 ))///mientras no lo encuentre...
+        while((seg != NULL) && (strcmp(nombre, seg->dato.apeNom)!=0 ))
         {
-            ante = seg; ///adelanto una posición la variable ante.
-            seg = seg->siguiente; ///avanzo al siguiente nodoSt.
+            ante = seg;
+            seg = seg->siguiente;
         }
-        ///en este punto tengo en la variable "ante" la dirección de
-        ///memoria del nodoSt anterior al buscado, y en la variable "seg",
-        ///la dirección de memoria del nodoSt que quiero borrar.
-        if(seg!=NULL)///corto porque lo encontro
+        if(seg!=NULL)
         {
-            ante->siguiente = seg->siguiente;///salteo el nodoSt que quiero eliminar.
-            free(seg);///elimino el nodoSt.
+            ante->siguiente = seg->siguiente;
+            free(seg);
         }
     }
     return lista;
@@ -723,21 +684,12 @@ nodoSt* borrarUltimoNodoSt(nodoSt *lista)
 
 nodoSt *buscarNodoSt(nodoSt *lista, char nombre[20])
 {
-    ///busca un nodoSt por nombre y retorna su posición de memoria
-    ///si no lo encuentra retorna NULL.
-    nodoSt * seg; ///apunta al nodoSt de la lista que está siendo procesado
-    seg = lista; ///con esto evito cambiar el valor de la variable
-    ///lista, que contiene un puntero al primer nodoSt de la
-    ///lista vinculada
+    nodoSt * seg;
+    seg = lista;
     while ((seg != NULL) && (strcmp(nombre, seg->dato.apeNom)!= 0))
     {
-        ///busco mientras me quede lista por recorrer y no haya encontrado el nombre
-        seg=seg->siguiente; ///avanzo hacia el siguiente nodoSt.
+        seg=seg->siguiente;
     }
-    ///en este punto puede haber fallado alguna de las dos condiciones
-    ///del while. si falla la primera es debido a que no encontró lo
-    ///que buscaba (seg es NULL), si falla la segunda es debido a que se
-    ///encontró el nodoSt buscado.
     return seg;
 }
 
@@ -748,11 +700,11 @@ nodoSt* borrarListaSt(nodoSt *lista)
     seg = lista;
     while(seg != NULL)
     {
-        proximo = seg->siguiente; ///tomo la dir del siguiente.
-        free(seg); ///borro el actual.
-        seg = proximo; ///actualizo el actual con la dir del siguiente, para avanzar.
+        proximo = seg->siguiente;
+        free(seg);
+        seg = proximo;
     }
-    return seg; ///retorna NULL a la variable lista del main()
+    return seg;
 }
 
 void borrarListaRecurSt(nodoSt* lista)
@@ -785,13 +737,10 @@ nodoSt *intercalarListasSt(nodoSt *lista_A, nodoSt *lista_B, nodoSt *lista_C)
             lista_C = agregarAlFinalSt(aux, lista_C);
         }
     }
-
-    ///Si quedara algo en la lista A
     if(lista_A != NULL)
     {
         lista_C = agregarAlFinalSt(lista_A, lista_C);
     }
-    ///Si quedara algo en la lista B
     else if(lista_B != NULL)
     {
         lista_C = agregarAlFinalSt(lista_B, lista_C);
@@ -803,19 +752,15 @@ nodoSt *intercalarListasSt(nodoSt *lista_A, nodoSt *lista_B, nodoSt *lista_C)
 nodoSt* crearListaOrdenadaSt(nodoSt *lista)
 {
     srand(time(NULL));
-    char continua = 's';///para saber si continua o no...
+    char continua = 's';
     while (continua=='s')
     {
-        ///esto debe hacerse bien, ahora cargo personas "a mano"...
         stNotaAlumno notaAlumno;
         strcpy(notaAlumno.apeNom,"Isabel");
         notaAlumno.nota = rand()%99+1;
-
-        ///genero un nodoSt nuevo con la persona creada anteriormente
         nodoSt *nuevoNodo = crearNodoSt(notaAlumno);
         mostrarUnNodoSt(nuevoNodo);
 
-        ///voy insertando en la lista de manera ordenada segun la edad de la persona
         lista = agregarOrdenadoNotaSt(nuevoNodo, lista);
         printf("Desea continuar? s/n: ");
         fflush(stdin);
@@ -827,23 +772,17 @@ nodoSt* crearListaOrdenadaSt(nodoSt *lista)
 
 nodoSt* invertirListaSt(nodoSt *lista)
 {
-    /// la idea es extraer el primero de la lista original
-    /// y luego agregarlo al principio de la nueva lista
-    /// retornamos el puntero al inicio de la nueva lista
-    /// para pisar la referencia del main
 
     nodoSt *listaInvertida = NULL;
     nodoSt *aux;
     while(lista != NULL)
     {
-        /// extraemos el primero (se puede modularizar)
         aux = lista;
 
         lista = lista->siguiente;
 
         aux->siguiente = NULL;
 
-        /// lo agregamos al principio de la nueva lista invertida
         listaInvertida = agregarAlInicioSt(aux, listaInvertida);
     }
     return listaInvertida;
@@ -885,7 +824,6 @@ void recorrerYmostrarRecursivaSt(nodoSt *lista)
 
 int sumarNotasListaSt(nodoSt *lista)
 {
-    ///recorro la lista y sumo las notas.
     int suma = 0;
     nodoSt * seg = lista;
     while (seg != NULL)
@@ -908,7 +846,6 @@ void generaArchivoBin_struct(const char *nombreArchivo)
 {
     FILE *archivo = fopen(nombreArchivo, "wb");
 
-    /// Veo si se pudo abrir el archivo
     if (archivo == NULL)
     {
         perror("Error al abrir el archivo");
@@ -918,7 +855,6 @@ void generaArchivoBin_struct(const char *nombreArchivo)
     char continua = 's';
     while(continua == 's')
     {
-        ///MODULARIZAR LA CARGA DE UNA PERSONA...
         printf("Ingrese el legajo: \n");
         scanf("%d",&personaNueva.legajo);
         printf("Ingrese el nombre: \n");
@@ -942,8 +878,6 @@ void generaArchivoBin_struct(const char *nombreArchivo)
 void lista2archivoBin_struct(nodoSt *lista, const char *nombreArchivo)
 {
     FILE *archivo = fopen(nombreArchivo, "wb");
-
-    /// Veo si se pudo abrir el archivo
     if (archivo == NULL)
     {
         perror("Error al abrir el archivo");
@@ -965,7 +899,6 @@ nodoSt* archivoBin2lista_struct(nodoSt *lista, const char *nombreArchivo)
 {
     FILE *archivo = fopen(nombreArchivo, "rb");
 
-    /// Veo si se pudo abrir el archivo
     if (archivo == NULL)
     {
         perror("Error al abrir el archivo");
@@ -989,7 +922,6 @@ void generaArchivoTxt_struct(const char *nombreArchivo)
 {
     FILE *archivo = fopen(nombreArchivo, "w");
 
-    /// Veo si se pudo abrir el archivo
     if (archivo == NULL)
     {
         perror("Error al abrir el archivo");
@@ -1025,7 +957,6 @@ void lista2archivoTxt_struct(nodoSt *lista, const char *nombreArchivo)
 {
     FILE *archivo = fopen(nombreArchivo, "w");
 
-    /// Veo si se pudo abrir el archivo
     if (archivo == NULL)
     {
         perror("Error al abrir el archivo");
@@ -1047,7 +978,6 @@ nodoSt* archivoTxt2lista_struct(nodoSt *lista, const char *nombreArchivo)
 {
     FILE *archivo = fopen(nombreArchivo, "r");
 
-    /// Veo si se pudo abrir el archivo
     if (archivo == NULL)
     {
         perror("Error al abrir el archivo");
