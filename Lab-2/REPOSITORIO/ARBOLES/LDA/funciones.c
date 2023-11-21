@@ -22,21 +22,30 @@ listaCeldas* archivo2LDA()
 
     return lista;
 }
-
 listaCeldas* altaEnLista(listaCeldas *lista, stRegistroVendedor aux)
 {
     int pos = buscarPosicionEnLista(lista, aux.idSector);
 
     if (pos == -1)
     {
-        // Si no se encuentra el sector, agregar uno nuevo a la lista
-        listaCeldas nuevaCelda;
-        nuevaCelda.sector.idSector = aux.idSector;
-        strcpy(nuevaCelda.sector.sector, aux.sector);
-        nuevaCelda.arbolVendedores = inicArbol();
+        // Si no se encuentra el sector, agregar uno nuevo al final de la lista
+        listaCeldas *nuevaCelda = malloc(sizeof(listaCeldas));
+        if (nuevaCelda)
+        {
+            nuevaCelda->sector.idSector = aux.idSector;
+            strcpy(nuevaCelda->sector.sector, aux.sector);
+            nuevaCelda->arbolVendedores = inicArbol();
+            nuevaCelda->siguiente = NULL;  // La nueva celda será el último elemento
 
-        agregarCeldaALista(nuevaCelda.sector, nuevaCelda.arbolVendedores, &lista);
-        pos = 0; // Ahora la posición es 0 porque se añadió al principio de la lista
+            // Agregar al final de la lista usando las funciones proporcionadas
+            lista = agregarFinal(lista, nuevaCelda);
+        }
+        else
+        {
+            // Manejo de error: no se pudo asignar memoria para la nueva celda
+            printf("\nNo se pudo asignar memoria para la nueva celda.\n");
+            return lista;
+        }
     }
 
     nodoArbol *nuevo = crearNodoArbol(aux);
@@ -51,36 +60,55 @@ listaCeldas* altaEnLista(listaCeldas *lista, stRegistroVendedor aux)
     return lista;
 }
 
+
+listaCeldas* agregarFinal(listaCeldas* lista, listaCeldas* nuevaCelda)
+{
+    if (lista == NULL)
+    {
+        lista = nuevaCelda;
+    }
+    else
+    {
+        listaCeldas* ultimo = buscarUltimo(lista);
+        ultimo->siguiente = nuevaCelda;
+    }
+    return lista;
+}
+
+listaCeldas* buscarUltimo(listaCeldas* lista)
+{
+    listaCeldas* seg = lista;
+    if (seg)
+    {
+        while (seg->siguiente != NULL)
+        {
+            seg = seg->siguiente;
+        }
+    }
+    return seg;
+}
+
+
 int buscarPosicionEnLista(listaCeldas *lista, int idSector)
 {
     int pos = -1;
     int i = 0;
+    listaCeldas *seg = lista;
 
-    while (lista && pos == -1)
+    while (seg && pos == -1)
     {
-        if (lista->sector.idSector == idSector)
+        if (seg->sector.idSector == idSector)
         {
             pos = i;
         }
 
-        lista = lista->siguiente;
+        seg = seg->siguiente;
         i++;
     }
 
     return pos;
 }
 
-void agregarCeldaALista(stSector datos, nodoArbol *arbolVendedores, listaCeldas **lista)
-{
-    listaCeldas *nuevo = malloc(sizeof(listaCeldas));
-    if (nuevo)
-    {
-        nuevo->sector = datos;
-        nuevo->arbolVendedores = arbolVendedores;
-        nuevo->siguiente = *lista;
-        *lista = nuevo;
-    }
-}
 
 nodoArbol* crearNodoArbol(stRegistroVendedor aux)
 {
@@ -256,7 +284,7 @@ int cantidadVendedoresSuperioresSector(nodoArbol *arbol, int ventas)
 {
     int cnt = 0;
 
-    if(arbol)
+    if (arbol)
     {
         cnt += cantidadVendedoresSuperioresSector(arbol->izq, ventas);
         cnt += cantidadVendedoresSuperioresSector(arbol->der, ventas);

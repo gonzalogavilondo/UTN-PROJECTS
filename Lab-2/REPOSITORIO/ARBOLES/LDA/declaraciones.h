@@ -48,7 +48,8 @@ typedef struct listaCeldas
 **/
 listaCeldas* archivo2LDA();
 listaCeldas* altaEnLista(listaCeldas *lista, stRegistroVendedor aux);
-void agregarCeldaALista(stSector datos, nodoArbol *arbolVendedores, listaCeldas **lista);
+listaCeldas* agregarFinal(listaCeldas* lista, listaCeldas* nuevaCelda);
+listaCeldas* buscarUltimo(listaCeldas* lista);
 int buscarPosicionEnLista(listaCeldas *lista, int idSector);
 nodoArbol* crearNodoArbol(stRegistroVendedor);
 stVendedor cargarDatoArbol(stRegistroVendedor);

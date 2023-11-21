@@ -30,3 +30,23 @@
 1573042366 source:d:\tsp\programacion 2\clases\estructuras compuestas\listadelistacajacliente\listacliente.c
 	"listaCliente.h"
 
+1573042366 source:e:\utn\lab-2\lista de lista ej youtics\lista de lista ej youtics\listadelistacajacliente\listacliente.c
+	"listaCliente.h"
+
+1573041538 e:\utn\lab-2\lista de lista ej youtics\lista de lista ej youtics\listadelistacajacliente\listacliente.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1573042502 source:e:\utn\lab-2\lista de lista ej youtics\lista de lista ej youtics\listadelistacajacliente\main.c
+	<stdio.h>
+	<stdlib.h>
+	"listaCliente.h"
+	"nodoCaja.h"
+
+1573041813 e:\utn\lab-2\lista de lista ej youtics\lista de lista ej youtics\listadelistacajacliente\nodocaja.h
+	"listaCliente.h"
+
+1573041863 source:e:\utn\lab-2\lista de lista ej youtics\lista de lista ej youtics\listadelistacajacliente\nodocaja.c
+	"nodoCaja.h"
+

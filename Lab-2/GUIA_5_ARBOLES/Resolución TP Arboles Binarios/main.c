@@ -166,9 +166,11 @@ int buscarDato(nodoA* A, int dato)
     {
         if (A->dato != dato)
         {
-            enc= buscarDato(A->izq,dato);
+            enc = buscarDato(A->izq,dato);
             if (!enc)
+            {
                 enc=buscarDato(A->der,dato);
+            }
         }
         else
             enc=1;
