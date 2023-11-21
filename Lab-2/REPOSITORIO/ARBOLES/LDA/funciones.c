@@ -95,15 +95,17 @@ int buscarPosicionEnLista(listaCeldas *lista, int idSector)
     int i = 0;
     listaCeldas *seg = lista;
 
-    while (seg && pos == -1)
+    while (seg != NULL && pos == -1)
     {
         if (seg->sector.idSector == idSector)
         {
             pos = i;
         }
-
-        seg = seg->siguiente;
-        i++;
+        else
+        {
+            seg = seg->siguiente;
+            i++;
+        }
     }
 
     return pos;
