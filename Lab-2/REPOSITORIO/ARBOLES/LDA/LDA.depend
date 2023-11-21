@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1700526213 source:e:\utn\lab-2\repositorio\lda\main.c
+	"declaraciones.h"
+
+1700526406 e:\utn\lab-2\repositorio\lda\declaraciones.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1700526433 source:e:\utn\lab-2\repositorio\lda\funciones.c
+	"declaraciones.h"
+

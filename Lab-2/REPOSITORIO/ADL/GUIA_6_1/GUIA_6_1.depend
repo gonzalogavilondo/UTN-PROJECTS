@@ -1,0 +1,70 @@
+# depslib dependency file v1.0
+1698593429 source:e:\utn\lab-2\guia_6_1\guia_6_1\alumnos.c
+	"alumnos.h"
+
+1698594148 source:e:\utn\lab-2\guia_6_1\guia_6_1\materias.c
+	"materias.h"
+	"registroArchivo.h"
+
+1698593032 source:e:\utn\lab-2\guia_6_1\guia_6_1\registroarchivo.c
+	"registroArchivo.h"
+	"utilidades.h"
+
+1698592998 e:\utn\lab-2\guia_6_1\guia_6_1\registroarchivo.h
+	<stdlib.h>
+	<stdio.h>
+	<windows.h>
+	<conio.h>
+	"utilidades.h"
+
+1696127117 e:\utn\lab-2\guia_6_1\guia_6_1\utilidades.h
+	<stdlib.h>
+	<stdio.h>
+
+1698593538 source:e:\utn\lab-2\guia_6_1\guia_6_1\utilidades.c
+	"utilidades.h"
+
+1698593379 e:\utn\lab-2\guia_6_1\guia_6_1\alumnos.h
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<string.h>
+
+1698593770 source:e:\utn\lab-2\guia_6_1\guia_6_1\listas.c
+	"listas.h"
+	"listas.h"
+
+1698593812 e:\utn\lab-2\guia_6_1\guia_6_1\listas.h
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<time.h>
+	<string.h>
+	"alumnos.h"
+	"declaraciones.h"
+
+1698594336 source:e:\utn\lab-2\guia_6_1\guia_6_1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<string.h>
+	"materias.h"
+
+1698594135 e:\utn\lab-2\guia_6_1\guia_6_1\materias.h
+	"utilidades.h"
+	"listas.h"
+	"registroArchivo.h"
+
+1698593032 e:\utn\lab-2\guia_6_1\guia_6_1\registroarchivo.c
+	"registroArchivo.h"
+	"utilidades.h"
+
+1696127117 e:\utn\lab-2\guia_6_1\guia_6_1\declaraciones.h
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<conio.h>
+
+1696209281 source:e:\utn\lab-2\guia_6_1\guia_6_1\funciones.c
+	"declaraciones.h"
+
