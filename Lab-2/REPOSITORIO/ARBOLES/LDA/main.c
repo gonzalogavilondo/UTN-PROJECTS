@@ -16,8 +16,6 @@ int main()
     ///Ejercicio 2
     mostrarLDA(lista);
 
-    // Resto del código ...
-
     ///Ejercicio 3
     nodoArbol *arbol = buscarVendedorLista(lista, 10030956);
     puts("\n\n----------------------EJERCICIO 3---------------------------");

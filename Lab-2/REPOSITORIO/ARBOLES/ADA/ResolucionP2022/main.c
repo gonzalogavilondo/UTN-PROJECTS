@@ -13,7 +13,7 @@ int main()
     nodoArbol *arbol = NULL;
 
     ///Ejercicio 1
-    validos = archivo2ADA(arreglo, MAXDIM);
+    validos = archivo2ADA(arreglo);
 
     ///Ejercicio 2
     mostrarADA(arreglo, validos);

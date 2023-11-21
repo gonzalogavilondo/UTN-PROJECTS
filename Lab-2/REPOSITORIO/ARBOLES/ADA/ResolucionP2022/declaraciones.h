@@ -43,7 +43,7 @@ typedef struct celda
 /**
 *   Ejercicio 1
 **/
-int archivo2ADA(celda arreglo[], int);
+int archivo2ADA(celda arreglo[]);
 int alta(celda arreglo[], int, stRegistroVendedor);
 nodoArbol* crearNodoArbol(stRegistroVendedor);
 stVendedor cargarDatoArbol(stRegistroVendedor);

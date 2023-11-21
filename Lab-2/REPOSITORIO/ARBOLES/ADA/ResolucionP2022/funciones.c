@@ -3,7 +3,7 @@
 /**
 *   Ejercicio 1
 **/
-int archivo2ADA(celda arreglo[], int dimension)
+int archivo2ADA(celda arreglo[])
 {
     int validos = 0;
     FILE *buf = fopen("archivoRegistrosVendedor.bin", "rb");
@@ -12,7 +12,7 @@ int archivo2ADA(celda arreglo[], int dimension)
 
     if(buf)
     {
-        while(fread(&aux, sizeof(stRegistroVendedor), 1, buf) > 0 && validos < dimension)
+        while(fread(&aux, sizeof(stRegistroVendedor), 1, buf) > 0 && validos < MAXDIM)
         {
             validos = alta(arreglo, validos, aux);
         }
