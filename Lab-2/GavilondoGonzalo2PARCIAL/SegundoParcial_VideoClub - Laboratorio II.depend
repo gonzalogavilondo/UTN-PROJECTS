@@ -1,0 +1,71 @@
+# depslib dependency file v1.0
+1700609629 source:c:\users\gonzalo\desktop\gavilondogonzalo\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ArbolPeliculas.h"
+	"ListaGeneros.h"
+	"Pelicula.h"
+
+1700609201 source:c:\users\gonzalo\desktop\gavilondogonzalo\pelicula.c
+	<stdio.h>
+	<stdlib.h>
+	"Pelicula.h"
+
+1700355528 c:\users\gonzalo\desktop\gavilondogonzalo\pelicula.h
+	<conio.h>
+	<string.h>
+
+1700609646 source:c:\users\gonzalo\desktop\gavilondogonzalo\arbolpeliculas.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArbolPeliculas.h"
+
+1700609641 c:\users\gonzalo\desktop\gavilondogonzalo\arbolpeliculas.h
+	"Pelicula.h"
+
+1700609120 source:c:\users\gonzalo\desktop\gavilondogonzalo\listageneros.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ListaGeneros.h"
+
+1700609119 c:\users\gonzalo\desktop\gavilondogonzalo\listageneros.h
+	"Pelicula.h"
+	"ArbolPeliculas.h"
+
+1700609646 source:c:\users\gonzalo\downloads\gavilondogonzalo\arbolpeliculas.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArbolPeliculas.h"
+
+1700609641 c:\users\gonzalo\downloads\gavilondogonzalo\arbolpeliculas.h
+	"Pelicula.h"
+
+1700355528 c:\users\gonzalo\downloads\gavilondogonzalo\pelicula.h
+	<conio.h>
+	<string.h>
+
+1700609120 source:c:\users\gonzalo\downloads\gavilondogonzalo\listageneros.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ListaGeneros.h"
+
+1700609119 c:\users\gonzalo\downloads\gavilondogonzalo\listageneros.h
+	"Pelicula.h"
+	"ArbolPeliculas.h"
+
+1700609629 source:c:\users\gonzalo\downloads\gavilondogonzalo\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ArbolPeliculas.h"
+	"ListaGeneros.h"
+	"Pelicula.h"
+
+1700609201 source:c:\users\gonzalo\downloads\gavilondogonzalo\pelicula.c
+	<stdio.h>
+	<stdlib.h>
+	"Pelicula.h"
+
