@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f1b31b8d-e9f4-4837-bb23-8be5e3a7f9ce" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/.idea/libraries/com_google_code_gson_gson_2_8_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/.idea/libraries/gson_2_8_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/UTN-Programacion-Laboratorio-3-2021.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/librerias/gson-2.8.6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/libros.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/mi_archivo.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/borrador/Autor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/borrador/Borrador$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/borrador/Borrador.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/borrador/MiPersona.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase1/Clase1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase10/AtencionCliente.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase10/Clase10.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase10/Empleado.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase10/Practicante.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase10/resolucionEjercicios/Resolucion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase10/resolucionEjercicios/referencia/Cancion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase10/resolucionEjercicios/referencia/Genero.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase10/resolucionEjercicios/referencia/ListaBasica.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase10/resolucionEjercicios/referencia/ListaPremium.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase10/resolucionEjercicios/referencia/ListaReproduccion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase10/resolucionEjercicios/referencia/Reproduccion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase11/Clase11.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase11/Password.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase11/Persona.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase12/Clase12.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase12/ejercicio_1/Ejercicio_1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase12/ejercicio_2/Cliente.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase12/ejercicio_2/Ejercicio_2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase12/ejercicio_2/Persona.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase12/ejercicio_2/Usuario.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase12/ejercicio_3/Ejercicio_3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase13/Clase13.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase13/NombreNoValidoExcepcion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase13/Persona.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase14/Clase14.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase15/Caja.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase15/Clase15$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase15/Clase15.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase15/Libro.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase2/Clase2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase2/Departamento.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase2/Persona.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase3/Clase3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase3/Persona.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase4/Autor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase4/Clase4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase4/Libro.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase5/Clase5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase5/ItemDeVenta.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase5/Libro.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase6/Clase6.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase6/Cliente.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase6/Empleado.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase6/Persona.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase7/Animal.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase7/Clase7.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase7/Gato.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase7/Perro.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase7/Persa.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase7/ejemploHerencia/Animal.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase7/ejemploHerencia/Gato.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase7/ejemploHerencia/Perro.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase8/Clase8.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase8/Cliente.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase8/Empleado.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase8/Persona.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase8/Usuario.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase9/Clase9.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase9/Libro.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/out/production/UTN-Programacion-Laboratorio-3-2021/com/utn/clase9/Persona.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/personas.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/readme.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/borrador/Autor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/borrador/Borrador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/borrador/Empleado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/borrador/Usuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase1/Clase1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase10/AtencionCliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase10/Clase10.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase10/Empleado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase10/Practicante.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase10/resolucionEjercicios/Resolucion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase10/resolucionEjercicios/referencia/Cancion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase10/resolucionEjercicios/referencia/Genero.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase10/resolucionEjercicios/referencia/ListaBasica.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase10/resolucionEjercicios/referencia/ListaPremium.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase10/resolucionEjercicios/referencia/ListaReproduccion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase10/resolucionEjercicios/referencia/Reproduccion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase11/Clase11.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase11/Password.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase11/Persona.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase12/Clase12.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase12/ejercicio_1/Ejercicio_1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase12/ejercicio_2/Cliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase12/ejercicio_2/Ejercicio_2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase12/ejercicio_2/Persona.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase12/ejercicio_2/Usuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase12/ejercicio_3/Ejercicio_3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase13/Clase13.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase13/NombreNoValidoExcepcion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase13/Persona.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase14/Clase14.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase15/Caja.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase15/Clase15.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase15/Libro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase16/Clase16.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase16/Departamento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase16/Persona.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase2/Clase2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase2/Departamento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase2/Persona.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase3/Clase3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase3/Persona.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase4/Autor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase4/Clase4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase4/Libro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase5/Clase5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase5/ItemDeVenta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase5/Libro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase6/Clase6.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase6/Cliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase6/Empleado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase6/Persona.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase7/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase7/Clase7.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase7/Gato.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase7/Perro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase7/Persa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase7/ejemploHerencia/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase7/ejemploHerencia/Gato.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase7/ejemploHerencia/Perro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase8/Clase8.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase8/Cliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase8/ClienteRegular.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase8/Empleado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase8/Persona.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase8/Usuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase9/Clase9.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase9/Libro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../UTN-Laboratorio-3-profesor/src/com/utn/clase9/Persona.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Lab-2/ProyectoFinal_mio" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Lab-2/ProyectoFinal_mio" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/Calculadora/com/company/OperacionesBasicas.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/Calculadora/com/company/OperacionesBasicas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/com/company/OperacionesBasicas.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/com/company/OperacionesBasicas.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2dpZc5tSUVXgOySJ6bzvEjWQD0B" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/UTN/Lab-3/PRACTICA/Calculadora/out"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f1b31b8d-e9f4-4837-bb23-8be5e3a7f9ce" name="Changes" comment="" />
+      <created>1710707056889</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1710707056889</updated>
+    </task>
+    <servers />
+  </component>
+</project>
