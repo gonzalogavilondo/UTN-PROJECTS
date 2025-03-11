@@ -51,15 +51,33 @@ public class Main {
 
 
     private static void ejercicio1() {
+        /*
+         Realizar un programa Java que realice lo siguiente: declarar una variable
+         numN de tipo int, una variable numA de tipo double y una variable numC de
+         tipo char y asigna a cada una un valor. A continuación muestra por pantalla:
+         El valor de cada variable, la suma de numN + numA, la diferencia de numA -
+         numN, el valor numérico correspondiente al carácter que contiene la
+         variable numC.
+         */
 
-        int n = 3;
-        double a = 25.36;
-        char c = 't';
+        int numN = 3;
+        double numA = 25.36;
+        char numC = 't';
 
-        System.out.println(String.format("n: %s a: %s c: %s", n, a, c));
-        System.out.println(String.format("n + a: %s", n + a));
-        System.out.println(String.format("a - n: %s", a - n));
-        System.out.println(String.format("c: %s", Integer.valueOf(c)));
+        /*
+        * En Java, para concatenar Strings, de la forma tradicional se usa el metodo String.format
+         */
+        System.out.println(String.format("numN: %s numA: %s numC: %s\n", numN, numA, numC));
+        System.out.println(String.format("numN + numA: %s", numN + numA));
+        System.out.println(String.format("numA - numN: %s", numA - numN));
+        System.out.println(String.format("numC: %s\n", Integer.valueOf(numC)));
+
+        /*
+         * En Java, para concatenar como generalmente se hace
+         */
+        System.out.println("La suma de " + numN + " + " +numA + " = " + (numN + numA));
+        System.out.println("La resta de " + numN + " - " +numA + " = " + (numN - numA));
+        System.out.println(String.format("c: %s", Integer.valueOf(numC)));
     }
 
     private static void ejercicio2() {
