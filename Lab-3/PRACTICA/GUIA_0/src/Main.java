@@ -71,6 +71,7 @@ public class Main {
         System.out.println(String.format("numN + numA: %s", numN + numA));
         System.out.println(String.format("numA - numN: %s", numA - numN));
         System.out.println(String.format("numC: %s\n", Integer.valueOf(numC)));
+        System.out.println(String.format("numC: %s\n", Integer.valueOf(numC)));
 
         /*
          * En Java, para concatenar como generalmente se hace
@@ -86,10 +87,34 @@ public class Main {
         double n = 2.0;
         double m = 120.5;
 
-        System.out.println(String.format("x: %s y: %s n: %s m: %s", x, y, n, m));
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Valores originales \n\n");
+        System.out.println(String.format("x: %d, y: %d, n: %s, m: %s", x, y, n, m));
+
+        System.out.println("Valores de operaciones\n\n");
+        System.out.println(String.format("x: %s y: %s n: %s m: %s\n\n", x, y, n, m));
         System.out.println(String.format("x * y: %s", x*y));
         System.out.println(String.format("n + m: %s", n+m));
         System.out.println(String.format("m / x: %s", m/x));
+
+        System.out.println("Ingrese el valor para x");
+        x = scanner.nextInt();
+        System.out.println("Ingrese el valor para y");
+        y = scanner.nextInt();
+        System.out.println("Ingrese el valor para n");
+        n = scanner.nextDouble();
+        System.out.println("Ingrese el valor para m");
+        m = scanner.nextDouble();
+
+        System.out.println("\n\nValores Nuevos \n\n");
+        System.out.println(String.format("x: %d, y: %d, n: %s, m: %s", x, y, n, m));
+
+        System.out.println("Valores de las operaciones nuevas \n\n");
+        System.out.println(String.format("x * y: %s", x*y));
+        System.out.println(String.format("n + m: %s", n+m));
+        System.out.println(String.format("m / x: %s", m/x));
+
     }
 
     private static void ejercicio3() {
