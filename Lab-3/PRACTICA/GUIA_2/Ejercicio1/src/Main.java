@@ -42,7 +42,7 @@ public class Main {
                     break;
                 case 3:
                     //Cargo empleado contratista
-                    empleadoContratista = (empleadoContratista);
+                    empleadoContratista = cargarEmpleado(empleadoContratista);
                     empleados.add(empleadoContratista);
                     break;
                 case 4:
@@ -85,7 +85,7 @@ public class Main {
             int horasTrabajadas = scanner.nextInt();
             scanner.nextLine(); // Limpiar buffer
 
-            System.out.println("Ingrese la tarifa por proyecto: ");
+            System.out.println("Ingrese la tarifa del proyecto: ");
             double tarifaPorProyecto = scanner.nextDouble();
             scanner.nextLine(); // Limpiar buffer
             EmpleadoContratista empleadoContratista = new EmpleadoContratista(nombre, salario, horasTrabajadas, tarifaPorProyecto);
