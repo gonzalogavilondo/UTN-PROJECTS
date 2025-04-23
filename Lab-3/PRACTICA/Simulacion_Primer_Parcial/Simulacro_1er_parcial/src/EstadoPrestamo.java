@@ -1,4 +1,4 @@
 public enum EstadoPrestamo {
     DISPONIBLE,
-    PRESTADO
+    DEVUELTO, PRESTADO
 }

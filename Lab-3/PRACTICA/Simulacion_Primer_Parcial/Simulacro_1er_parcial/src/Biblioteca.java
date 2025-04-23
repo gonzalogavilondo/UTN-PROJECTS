@@ -1,10 +1,13 @@
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Biblioteca {
     private ArrayList<Material> materiales;
+    private ArrayList<Prestamo> prestamos;
 
     public Biblioteca() {
         this.materiales = new ArrayList<>();
+        this.prestamos = new ArrayList<>();
     }
 
     public void agregarMaterial(Material material) {
@@ -36,6 +39,49 @@ public class Biblioteca {
     public void mostrarMateriales() {
         for (Material material : materiales) {
             System.out.println(material);
+        }
+    }
+
+    public void prestarMaterial(int id, LocalDate fechaDevolucion) {
+        Material material = materiales.stream()
+                .filter(m -> m.getId() == id)
+                .findFirst()
+                .orElse(null);
+
+        if (material != null) {
+            // Verificar si el material ya está prestado
+            boolean yaPrestado = prestamos.stream()
+                    .anyMatch(p -> p.getMaterial().getId() == id && p.getEstado() == EstadoPrestamo.PRESTADO);
+
+            if (yaPrestado) {
+                System.out.println("El material ya está prestado.");
+            } else {
+                Prestamo prestamo = new Prestamo(material, LocalDate.now(), fechaDevolucion);
+                prestamos.add(prestamo);
+                System.out.println("Material prestado: " + material.getTitulo());
+            }
+        } else {
+            System.out.println("Material no encontrado.");
+        }
+    }
+
+    public void devolverMaterial(int id) {
+        Prestamo prestamo = prestamos.stream()
+                .filter(p -> p.getMaterial().getId() == id && p.getEstado() == EstadoPrestamo.PRESTADO)
+                .findFirst()
+                .orElse(null);
+
+        if (prestamo != null) {
+            prestamo.setEstado(EstadoPrestamo.DISPONIBLE);
+            System.out.println("Material devuelto: " + prestamo.getMaterial().getTitulo());
+        } else {
+            System.out.println("Préstamo no encontrado o el material ya fue devuelto.");
+        }
+    }
+
+    public void mostrarPrestamos() {
+        for (Prestamo prestamo : prestamos) {
+            System.out.println(prestamo);
         }
     }
 }

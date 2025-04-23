@@ -1,8 +1,8 @@
 public class EBook extends Material implements LecturaInmediata {
     private String url;
 
-    public EBook(int id, String titulo, String autor, int anioPublicacion, String url) {
-        super(id, titulo, autor, anioPublicacion);
+    public EBook(String titulo, String autor, int anioPublicacion, String url) {
+        super(titulo, autor, anioPublicacion);
         this.url = url;
     }
 

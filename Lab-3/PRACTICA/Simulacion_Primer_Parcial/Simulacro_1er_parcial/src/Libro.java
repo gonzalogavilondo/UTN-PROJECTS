@@ -1,8 +1,8 @@
 public class Libro extends Material {
     private Genero genero;
 
-    public Libro(int id, String titulo, String autor, int anioPublicacion, Genero genero) {
-        super(id, titulo, autor, anioPublicacion);
+    public Libro(String titulo, String autor, int anioPublicacion, Genero genero) {
+        super(titulo, autor, anioPublicacion);
         this.genero = genero;
     }
 
