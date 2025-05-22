@@ -1,0 +1,272 @@
+{"concesionaria": {
+    "ubicacion": "Avenida Segundo Parcial 2024",
+    "nombre": "Concesionaria UTN",
+    "vehiculos": [
+        {
+            "marca": "Ferrari",
+            "potencia": 720,
+            "tipo": "Deportivo",
+            "precio": 123456,
+            "caracteristicas": [
+                "Turbo",
+                "V8",
+                "Fibra de carbono"
+            ],
+            "proveedor": {
+                "nombre": "Ferrari S.p.A",
+                "pais": "Italia"
+            },
+            "modelo": "F8 Tributo",
+            "anio": 2021
+        },
+        {
+            "marca": "Mercedes-Benz",
+            "tipo": "Auto",
+            "precio": 120000,
+            "caracteristicas": [
+                "Asistente de conducción",
+                "Pantallas OLED",
+                "Sonido Burmester"
+            ],
+            "proveedor": {
+                "nombre": "Daimler AG",
+                "pais": "Alemania"
+            },
+            "modelo": "Clase S",
+            "anio": 2020
+        },
+        {
+            "marca": "Ford",
+            "tipo": "Camioneta",
+            "precio": 75000,
+            "caracteristicas": [
+                "Suspensión adaptativa",
+                "Cabina doble",
+                "Motor V6"
+            ],
+            "traccion": "4x4",
+            "proveedor": {
+                "nombre": "Ford Motor Company",
+                "pais": "EEUU"
+            },
+            "modelo": "F-150 Raptor",
+            "anio": 2022
+        },
+        {
+            "marca": "Porsche",
+            "potencia": 650,
+            "tipo": "Deportivo",
+            "precio": 200000,
+            "caracteristicas": [
+                "Turbo",
+                "All-Wheel Drive",
+                "Motor Bóxer"
+            ],
+            "proveedor": {
+                "nombre": "Porsche AG",
+                "pais": "Alemania"
+            },
+            "modelo": "911 Turbo S",
+            "anio": 2022
+        },
+        {
+            "marca": "BMW",
+            "tipo": "Auto",
+            "precio": 110000,
+            "caracteristicas": [
+                "Conducción autónoma",
+                "Sonido Bowers & Wilkins",
+                "Asientos de cuero"
+            ],
+            "proveedor": {
+                "nombre": "BMW AG",
+                "pais": "Alemania"
+            },
+            "modelo": "Serie 7",
+            "anio": 2021
+        },
+        {
+            "marca": "Chevrolet",
+            "tipo": "Camioneta",
+            "precio": 60000,
+            "caracteristicas": [
+                "Suspensión reforzada",
+                "Cabina extendida",
+                "Motor V8"
+            ],
+            "traccion": "4x4",
+            "proveedor": {
+                "nombre": "General Motors",
+                "pais": "EEUU"
+            },
+            "modelo": "Silverado 1500",
+            "anio": 2022
+        },
+        {
+            "marca": "Aston Martin",
+            "potencia": 630,
+            "tipo": "Deportivo",
+            "precio": 220000,
+            "caracteristicas": [
+                "Motor V12",
+                "Conducción deportiva",
+                "Fibra de carbono"
+            ],
+            "proveedor": {
+                "nombre": "Aston Martin Lagonda",
+                "pais": "Reino Unido"
+            },
+            "modelo": "DB11",
+            "anio": 2020
+        },
+        {
+            "marca": "Audi",
+            "tipo": "Auto",
+            "precio": 100000,
+            "caracteristicas": [
+                "Asistente de conducción",
+                "Tracción quattro",
+                "Pantallas OLED"
+            ],
+            "proveedor": {
+                "nombre": "Audi AG",
+                "pais": "Alemania"
+            },
+            "modelo": "A8",
+            "anio": 2021
+        },
+        {
+            "marca": "McLaren",
+            "potencia": 710,
+            "tipo": "Deportivo",
+            "precio": 300000,
+            "caracteristicas": [
+                "Motor V8",
+                "Fibra de carbono",
+                "Aerodinámica activa"
+            ],
+            "proveedor": {
+                "nombre": "McLaren Automotive",
+                "pais": "Reino Unido"
+            },
+            "modelo": "720S",
+            "anio": 2022
+        },
+        {
+            "marca": "Tesla",
+            "tipo": "Auto",
+            "precio": 130000,
+            "caracteristicas": [
+                "Motor eléctrico",
+                "Autonomía extendida",
+                "Pantalla táctil de 17 pulgadas"
+            ],
+            "proveedor": {
+                "nombre": "Tesla Inc.",
+                "pais": "EEUU"
+            },
+            "modelo": "Model S Plaid",
+            "anio": 2022
+        },
+        {
+            "marca": "Chevrolet",
+            "potencia": 495,
+            "tipo": "Deportivo",
+            "precio": 90000,
+            "caracteristicas": [
+                "Motor V8",
+                "Tracción trasera",
+                "Diseño aerodinámico"
+            ],
+            "proveedor": {
+                "nombre": "General Motors",
+                "pais": "EEUU"
+            },
+            "modelo": "Corvette C8",
+            "anio": 2022
+        },
+        {
+            "marca": "Toyota",
+            "tipo": "Camioneta",
+            "precio": 50000,
+            "caracteristicas": [
+                "Suspensión reforzada",
+                "Cabina doble",
+                "Motor diésel"
+            ],
+            "traccion": "4x4",
+            "proveedor": {
+                "nombre": "Toyota Motor Corporation",
+                "pais": "Japón"
+            },
+            "modelo": "Hilux",
+            "anio": 2021
+        },
+        {
+            "marca": "Jaguar",
+            "tipo": "Auto",
+            "precio": 120000,
+            "caracteristicas": [
+                "Interior de lujo",
+                "Tracción trasera",
+                "Sonido Meridian"
+            ],
+            "proveedor": {
+                "nombre": "Jaguar Land Rover",
+                "pais": "Reino Unido"
+            },
+            "modelo": "XJ",
+            "anio": 2020
+        },
+        {
+            "marca": "Nissan",
+            "potencia": 565,
+            "tipo": "Deportivo",
+            "precio": 120000,
+            "caracteristicas": [
+                "Motor V6",
+                "All-Wheel Drive",
+                "Turbo"
+            ],
+            "proveedor": {
+                "nombre": "Nissan Motor Co.",
+                "pais": "Japón"
+            },
+            "modelo": "GT-R",
+            "anio": 2021
+        },
+        {
+            "marca": "Maserati",
+            "tipo": "Auto",
+            "precio": 150000,
+            "caracteristicas": [
+                "Motor V6",
+                "Interior de lujo",
+                "Sonido Bowers & Wilkins"
+            ],
+            "proveedor": {
+                "nombre": "Maserati S.p.A",
+                "pais": "Italia"
+            },
+            "modelo": "Quattroporte",
+            "anio": 2021
+        },
+        {
+            "marca": "Ram",
+            "tipo": "Camioneta",
+            "precio": 95000,
+            "caracteristicas": [
+                "Motor V8",
+                "Suspensión adaptativa",
+                "Cabina doble"
+            ],
+            "traccion": "4x4",
+            "proveedor": {
+                "nombre": "Stellantis",
+                "pais": "EEUU"
+            },
+            "modelo": "1500 TRX",
+            "anio": 2022
+        }
+    ]
+}}
