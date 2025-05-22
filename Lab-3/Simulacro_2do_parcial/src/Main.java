@@ -24,7 +24,7 @@ public class Main {
 
             // Modificar datos de un vehículo (ejemplo)
             Vehiculo vehiculoModificado = concesionaria.getVehiculos().get(0);
-            vehiculoModificado.setPrecio(123456);
+            vehiculoModificado.setPrecio(123456);z
 
             // Guardar los cambios en el backup
             try {

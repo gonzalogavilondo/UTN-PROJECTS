@@ -23,5 +23,12 @@ public class Proveedor {
     public void setPais(String pais) {
         this.pais = pais;
     }
-    // Getters y setters...
+
+    @Override
+    public String toString() {
+        return "Proveedor{" +
+                "nombre='" + nombre + '\'' +
+                ", pais='" + pais + '\'' +
+                '}';
+    }
 }
