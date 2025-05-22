@@ -1,5 +1,7 @@
 import org.json.JSONException;
 
+import java.util.List;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -24,7 +26,29 @@ public class Main {
 
             // Modificar datos de un vehículo (ejemplo)
             Vehiculo vehiculoModificado = concesionaria.getVehiculos().get(0);
-            vehiculoModificado.setPrecio(123456);z
+            vehiculoModificado.setPrecio(123456);
+
+            //Ejemplo de utilizacion de filtros
+            List<Vehiculo> vehiculosFiltrados = concesionaria.filtrarPorPrecioYProveedor();
+            System.out.println("Vehículos filtrados:");
+            for (Vehiculo v : vehiculosFiltrados) {
+                System.out.println(v.toString());
+            }
+
+            //Ejemplo de utilizacion de los filtros
+            List<Vehiculo> vehiculosFiltrados2 = concesionaria.filtrarPorAnioCaracteristicasYProveedor();
+            System.out.println("Vehículos filtrados por año y caracteristicas de proveedor:");
+            for (Vehiculo v : vehiculosFiltrados2) {
+                System.out.println(v.toString());
+            }
+
+            //Ejemplo de utilizacion de los filtros
+            List<Deportivo> vehiculosFiltrados3 = concesionaria.filtrarDeportivosPotentesConTurbo();
+            System.out.println("Vehículos filtrados por año y caracteristicas:");
+            for (Vehiculo v : vehiculosFiltrados3) {
+                System.out.println(v.toString());
+            }
+
 
             // Guardar los cambios en el backup
             try {

@@ -69,15 +69,26 @@ public class Concesionaria {
         return filtrados;
     }
 
+
     /**
      * Filtra deportivos con más de 700 caballos y característica "Turbo"
      */
     public List<Deportivo> filtrarDeportivosPotentesConTurbo() {
         List<Deportivo> filtrados = new ArrayList<>();
         for (Vehiculo v : vehiculos) {
-            if (v instanceof Deportivo d) {
-                if (d.getPotencia() > 700 && d.getCaracteristicas().stream().anyMatch(c -> c.equalsIgnoreCase("Turbo"))) {
-                    filtrados.add(d);
+            if (v instanceof Deportivo) {
+                Deportivo d = (Deportivo) v;
+                if (d.getPotencia() > 700) {
+                    boolean tieneTurbo = false;
+                    for (String c : d.getCaracteristicas()) {
+                        if (c.equalsIgnoreCase("Turbo")) {
+                            tieneTurbo = true;
+                            break;
+                        }
+                    }
+                    if (tieneTurbo) {
+                        filtrados.add(d);
+                    }
                 }
             }
         }
