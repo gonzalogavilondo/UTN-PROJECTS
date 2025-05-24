@@ -1,0 +1,210 @@
+{
+  "concesionaria": {
+    "nombre": "Lujo Motors",
+    "ubicacion": "Avenida de la Exquisitez",
+    "vehiculos": [
+      {
+        "tipo": "Deportivo",
+        "marca": "Ferrari",
+        "modelo": "F8 Tributo",
+        "precio": 300000,
+        "año": 2021,
+        "potencia": 720,
+        "caracteristicas": ["Turbo", "V8", "Fibra de carbono"],
+        "proveedor": {
+          "nombre": "Ferrari S.p.A",
+          "pais": "Italia"
+        }
+      },
+      {
+        "tipo": "Auto",
+        "marca": "Mercedes-Benz",
+        "modelo": "Clase S",
+        "precio": 120000,
+        "año": 2020,
+        "caracteristicas": ["Asistente de conducción", "Pantallas OLED", "Sonido Burmester"],
+        "proveedor": {
+          "nombre": "Daimler AG",
+          "pais": "Alemania"
+        }
+      },
+      {
+        "tipo": "Camioneta",
+        "marca": "Ford",
+        "modelo": "F-150 Raptor",
+        "precio": 75000,
+        "año": 2022,
+        "traccion": "4x4",
+        "caracteristicas": ["Suspensión adaptativa", "Cabina doble", "Motor V6"],
+        "proveedor": {
+          "nombre": "Ford Motor Company",
+          "pais": "EEUU"
+        }
+      },
+      {
+        "tipo": "Deportivo",
+        "marca": "Porsche",
+        "modelo": "911 Turbo S",
+        "precio": 200000,
+        "año": 2022,
+        "potencia": 650,
+        "caracteristicas": ["Turbo", "All-Wheel Drive", "Motor Bóxer"],
+        "proveedor": {
+          "nombre": "Porsche AG",
+          "pais": "Alemania"
+        }
+      },
+      {
+        "tipo": "Auto",
+        "marca": "BMW",
+        "modelo": "Serie 7",
+        "precio": 110000,
+        "año": 2021,
+        "caracteristicas": ["Conducción autónoma", "Sonido Bowers & Wilkins", "Asientos de cuero"],
+        "proveedor": {
+          "nombre": "BMW AG",
+          "pais": "Alemania"
+        }
+      },
+      {
+        "tipo": "Camioneta",
+        "marca": "Chevrolet",
+        "modelo": "Silverado 1500",
+        "precio": 60000,
+        "año": 2022,
+        "traccion": "4x4",
+        "caracteristicas": ["Suspensión reforzada", "Cabina extendida", "Motor V8"],
+        "proveedor": {
+          "nombre": "General Motors",
+          "pais": "EEUU"
+        }
+      },
+      {
+        "tipo": "Deportivo",
+        "marca": "Aston Martin",
+        "modelo": "DB11",
+        "precio": 220000,
+        "año": 2020,
+        "potencia": 630,
+        "caracteristicas": ["Motor V12", "Conducción deportiva", "Fibra de carbono"],
+        "proveedor": {
+          "nombre": "Aston Martin Lagonda",
+          "pais": "Reino Unido"
+        }
+      },
+      {
+        "tipo": "Auto",
+        "marca": "Audi",
+        "modelo": "A8",
+        "precio": 100000,
+        "año": 2021,
+        "caracteristicas": ["Asistente de conducción", "Tracción quattro", "Pantallas OLED"],
+        "proveedor": {
+          "nombre": "Audi AG",
+          "pais": "Alemania"
+        }
+      },
+      {
+        "tipo": "Deportivo",
+        "marca": "McLaren",
+        "modelo": "720S",
+        "precio": 300000,
+        "año": 2022,
+        "potencia": 710,
+        "caracteristicas": ["Motor V8", "Fibra de carbono", "Aerodinámica activa"],
+        "proveedor": {
+          "nombre": "McLaren Automotive",
+          "pais": "Reino Unido"
+        }
+      },
+      {
+        "tipo": "Auto",
+        "marca": "Tesla",
+        "modelo": "Model S Plaid",
+        "precio": 130000,
+        "año": 2022,
+        "caracteristicas": ["Motor eléctrico", "Autonomía extendida", "Pantalla táctil de 17 pulgadas"],
+        "proveedor": {
+          "nombre": "Tesla Inc.",
+          "pais": "EEUU"
+        }
+      },
+      {
+        "tipo": "Deportivo",
+        "marca": "Chevrolet",
+        "modelo": "Corvette C8",
+        "precio": 90000,
+        "año": 2022,
+        "potencia": 495,
+        "caracteristicas": ["Motor V8", "Tracción trasera", "Diseño aerodinámico"],
+        "proveedor": {
+          "nombre": "General Motors",
+          "pais": "EEUU"
+        }
+      },
+      {
+        "tipo": "Camioneta",
+        "marca": "Toyota",
+        "modelo": "Hilux",
+        "precio": 50000,
+        "año": 2021,
+        "traccion": "4x4",
+        "caracteristicas": ["Suspensión reforzada", "Cabina doble", "Motor diésel"],
+        "proveedor": {
+          "nombre": "Toyota Motor Corporation",
+          "pais": "Japón"
+        }
+      },
+      {
+        "tipo": "Auto",
+        "marca": "Jaguar",
+        "modelo": "XJ",
+        "precio": 120000,
+        "año": 2020,
+        "caracteristicas": ["Interior de lujo", "Tracción trasera", "Sonido Meridian"],
+        "proveedor": {
+          "nombre": "Jaguar Land Rover",
+          "pais": "Reino Unido"
+        }
+      },
+      {
+        "tipo": "Deportivo",
+        "marca": "Nissan",
+        "modelo": "GT-R",
+        "precio": 120000,
+        "año": 2021,
+        "potencia": 565,
+        "caracteristicas": ["Motor V6", "All-Wheel Drive", "Turbo"],
+        "proveedor": {
+          "nombre": "Nissan Motor Co.",
+          "pais": "Japón"
+        }
+      },
+      {
+        "tipo": "Auto",
+        "marca": "Maserati",
+        "modelo": "Quattroporte",
+        "precio": 150000,
+        "año": 2021,
+        "caracteristicas": ["Motor V6", "Interior de lujo", "Sonido Bowers & Wilkins"],
+        "proveedor": {
+          "nombre": "Maserati S.p.A",
+          "pais": "Italia"
+        }
+      },
+      {
+        "tipo": "Camioneta",
+        "marca": "Ram",
+        "modelo": "1500 TRX",
+        "precio": 95000,
+        "año": 2022,
+        "traccion": "4x4",
+        "caracteristicas": ["Motor V8", "Suspensión adaptativa", "Cabina doble"],
+        "proveedor": {
+          "nombre": "Stellantis",
+          "pais": "EEUU"
+        }
+      }
+    ]
+  }
+}

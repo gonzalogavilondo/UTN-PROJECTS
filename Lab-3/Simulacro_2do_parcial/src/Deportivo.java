@@ -24,6 +24,7 @@ public class Deportivo extends Vehiculo {
     public String toString() {
         return "Deportivo{" +
                 "potencia=" + potencia +
+                ", " + super.toString() +
                 '}';
     }
 

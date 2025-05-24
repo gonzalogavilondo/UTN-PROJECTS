@@ -4,18 +4,33 @@ import java.util.List;
 public class Concesionaria {
     private String nombre;
     private String ubicacion;
-    private List<Vehiculo> vehiculos;
+    private Inventario<Vehiculo> inventario;
 
     public Concesionaria(String nombre, String ubicacion, List<Vehiculo> vehiculos) {
         this.nombre = nombre;
         this.ubicacion = ubicacion;
-        this.vehiculos = vehiculos;
+        this.inventario = new Inventario<>();
+        for (Vehiculo v : vehiculos) {
+            this.inventario.agregar(v);
+        }
     }
+
 
     /**
      * Getters and setters
      * @return
      */
+
+    public void agregarVehiculo(Vehiculo v) {
+        inventario.agregar(v);
+    }
+
+    public void eliminarVehiculo(Vehiculo v) {
+        inventario.eliminar(v);
+    }
+    public List<Vehiculo> getVehiculos() {
+        return inventario.getElementos();
+    }
 
     public String getNombre() {
         return nombre;
@@ -33,21 +48,21 @@ public class Concesionaria {
         this.ubicacion = ubicacion;
     }
 
-    public List<Vehiculo> getVehiculos() {
-        return vehiculos;
+    public void mostrarVehiculos() {
+        for (Vehiculo v : inventario.getElementos()) {
+            System.out.println(v);
+        }
     }
-
-    public void setVehiculos(List<Vehiculo> vehiculos) {
-        this.vehiculos = vehiculos;
-    }
-
     @Override
     public String toString() {
-        return "Concesionaria{" +
-                "nombre='" + nombre + '\'' +
-                ", ubicacion='" + ubicacion + '\'' +
-                ", vehiculos=" + vehiculos +
-                '}';
+        StringBuilder sb = new StringBuilder();
+        sb.append("Concesionaria{")
+                .append("nombre='").append(nombre).append('\'')
+                .append(", ubicacion='").append(ubicacion).append('\'')
+                .append(", vehiculos=[");
+        sb.append(inventario.imprimir());
+        sb.append("\n]}");
+        return sb.toString();
     }
 
     /**
@@ -60,7 +75,7 @@ public class Concesionaria {
      */
     public List<Vehiculo> filtrarPorPrecioYProveedor() {
         List<Vehiculo> filtrados = new ArrayList<>();
-        for (Vehiculo v : vehiculos) {
+        for (Vehiculo v : inventario.getElementos()) {
             String pais = v.getFabricante().getPais();
             if (v.getPrecio() > 100000 && (pais.equalsIgnoreCase("Italia") || pais.equalsIgnoreCase("Alemania"))) {
                 filtrados.add(v);
@@ -75,7 +90,7 @@ public class Concesionaria {
      */
     public List<Deportivo> filtrarDeportivosPotentesConTurbo() {
         List<Deportivo> filtrados = new ArrayList<>();
-        for (Vehiculo v : vehiculos) {
+        for (Vehiculo v : inventario.getElementos()) {
             if (v instanceof Deportivo) {
                 Deportivo d = (Deportivo) v;
                 if (d.getPotencia() > 700) {
@@ -100,7 +115,7 @@ public class Concesionaria {
      */
     public List<Vehiculo> filtrarPorAnioCaracteristicasYProveedor() {
         List<Vehiculo> filtrados = new ArrayList<>();
-        for (Vehiculo v : vehiculos) {
+        for (Vehiculo v : inventario.getElementos()) {
             String pais = v.getFabricante().getPais();
             if (v.getAnio() > 2020 && v.getCaracteristicas().size() >= 3 && !pais.equalsIgnoreCase("EEUU")) {
                 filtrados.add(v);
@@ -116,7 +131,7 @@ public class Concesionaria {
      * @throws VehiculoNoEncontradoException
      */
     public Vehiculo buscarVehiculoPorModelo(String modelo) throws VehiculoNoEncontradoException {
-        for (Vehiculo v : vehiculos) {
+        for (Vehiculo v : inventario.getElementos()) {
             if (v.getModelo().equalsIgnoreCase(modelo)) {
                 return v;
             }

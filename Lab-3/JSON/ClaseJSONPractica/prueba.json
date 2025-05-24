@@ -1,0 +1,44 @@
+[
+  {
+    "nombre": "Juan",
+    "edad": 22,
+    "dni": 2314312,
+    "direccion": {
+      "calle": "Av. calle1",
+      "numero": 2123
+    },
+    "numeros": [
+      {
+        "compania": "Movistar",
+        "numero": 2232543313
+      },
+      {
+        "compania": "Claro",
+        "numero": 2236523127
+      }
+    ]
+  },
+  {
+    "nombre": "Roberto",
+    "edad": 29,
+    "dni": 2314312,
+    "direccion": {
+      "calle": "Av. calle2",
+      "numero": 1531
+    },
+    "numeros": [
+      {
+        "compania": "Personal",
+        "numero": 2237546235
+      },
+      {
+        "compania": "Movistar",
+        "numero": 2237734321
+      },
+      {
+        "compania": "Claro",
+        "numero": 2237894234
+      }
+    ]
+  }
+]

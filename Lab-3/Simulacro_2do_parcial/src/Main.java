@@ -27,6 +27,18 @@ public class Main {
             // Modificar datos de un vehículo (ejemplo)
             Vehiculo vehiculoModificado = concesionaria.getVehiculos().get(0);
             vehiculoModificado.setPrecio(123456);
+            try {
+                vehiculoModificado.setPrecio(-100); // Ejemplo de precio inválido
+            } catch (PrecioNegativoException e) {
+                System.out.println("Error: " + e.getMessage());
+            }
+
+            try {
+                Vehiculo buscado = concesionaria.buscarVehiculoPorModelo("F8 Tributo");
+                System.out.println(buscado);
+            } catch (VehiculoNoEncontradoException e) {
+                System.out.println("Advertencia: " + e.getMessage());
+            }
 
             //Ejemplo de utilizacion de filtros
             List<Vehiculo> vehiculosFiltrados = concesionaria.filtrarPorPrecioYProveedor();
@@ -59,6 +71,9 @@ public class Main {
         } else {
             System.out.println("No se pudo cargar la concesionaria.");
         }
+
+        System.out.println("\n\n");
+        System.out.println(concesionaria.toString());
 
     }
 }

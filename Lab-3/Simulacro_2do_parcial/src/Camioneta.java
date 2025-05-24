@@ -24,6 +24,7 @@ public class Camioneta extends Vehiculo {
     public String toString() {
         return "Camioneta{" +
                 "traccion='" + traccion + '\'' +
+                ", " + super.toString() +
                 '}';
     }
 

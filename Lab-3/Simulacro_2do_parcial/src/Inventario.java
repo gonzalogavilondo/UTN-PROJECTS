@@ -23,4 +23,12 @@ public class Inventario<T> {
     public int cantidad() {
         return elementos.size();
     }
+
+    public String imprimir() {
+        StringBuilder sb = new StringBuilder();
+        for (T elemento : elementos) {
+            sb.append("\n  ").append(elemento.toString());
+        }
+        return sb.toString();
+    }
 }

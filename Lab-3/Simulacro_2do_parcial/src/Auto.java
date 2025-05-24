@@ -14,14 +14,7 @@ public class Auto extends Vehiculo {
 
     @Override
     public String toString() {
-        return "Auto{" +
-                "marca='" + getMarca() + '\'' +
-                ", modelo='" + getModelo() + '\'' +
-                ", precio=" + getPrecio() +
-                ", anio=" + getAnio() +
-                ", caracteristicas=" + getCaracteristicas() +
-                ", proveedor=" + getFabricante() +
-                '}';
+        return "Auto{" + super.toString() + "}";
     }
 
     public static Auto fromJSON(JSONObject obj) {
