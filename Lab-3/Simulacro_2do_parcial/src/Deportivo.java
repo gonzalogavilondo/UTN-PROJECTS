@@ -40,8 +40,8 @@ public class Deportivo extends Vehiculo {
             obj.put("potencia", getPotencia());
             obj.put("caracteristicas", new JSONArray(getCaracteristicas()));
             JSONObject prov = new JSONObject();
-            prov.put("nombre", getFabricante().getNombre());
-            prov.put("pais", getFabricante().getPais());
+            prov.put("nombre", getProveedor().getNombre());
+            prov.put("pais", getProveedor().getPais());
             obj.put("proveedor", prov);
         } catch (org.json.JSONException e) {
             e.printStackTrace();

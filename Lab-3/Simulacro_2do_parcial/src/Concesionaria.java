@@ -1,5 +1,3 @@
-import excepciones.VehiculoNoEncontradoException;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -78,7 +76,7 @@ public class Concesionaria {
     public List<Vehiculo> filtrarPorPrecioYProveedor() {
         List<Vehiculo> filtrados = new ArrayList<>();
         for (Vehiculo v : inventario.getElementos()) {
-            String pais = v.getFabricante().getPais();
+            String pais = v.getProveedor().getPais();
             if (v.getPrecio() > 100000 && (pais.equalsIgnoreCase("Italia") || pais.equalsIgnoreCase("Alemania"))) {
                 filtrados.add(v);
             }
@@ -118,7 +116,7 @@ public class Concesionaria {
     public List<Vehiculo> filtrarPorAnioCaracteristicasYProveedor() {
         List<Vehiculo> filtrados = new ArrayList<>();
         for (Vehiculo v : inventario.getElementos()) {
-            String pais = v.getFabricante().getPais();
+            String pais = v.getProveedor().getPais();
             if (v.getAnio() > 2020 && v.getCaracteristicas().size() >= 3 && !pais.equalsIgnoreCase("EEUU")) {
                 filtrados.add(v);
             }

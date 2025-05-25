@@ -1,5 +1,4 @@
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -47,8 +46,8 @@ public class Auto extends Vehiculo {
             obj.put("anio", getAnio());
             obj.put("caracteristicas", new JSONArray(getCaracteristicas()));
             JSONObject prov = new JSONObject();
-            prov.put("nombre", getFabricante().getNombre());
-            prov.put("pais", getFabricante().getPais());
+            prov.put("nombre", getProveedor().getNombre());
+            prov.put("pais", getProveedor().getPais());
             obj.put("proveedor", prov);
         } catch (org.json.JSONException e) {
             e.printStackTrace();

@@ -1,6 +1,3 @@
-// Clase base Vehiculo
-import excepciones.PrecioNegativoException;
-
 import java.util.List;
 
 public abstract class Vehiculo implements Comparable<Vehiculo> {
@@ -76,11 +73,11 @@ public abstract class Vehiculo implements Comparable<Vehiculo> {
         this.caracteristicas = caracteristicas;
     }
 
-    public Proveedor getFabricante() {
+    public Proveedor getProveedor() {
         return proveedor;
     }
 
-    public void setFabricante(Proveedor proveedor) {
+    public void setProveedor(Proveedor proveedor) {
         this.proveedor = proveedor;
     }
 
