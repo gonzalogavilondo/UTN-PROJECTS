@@ -1,9 +1,11 @@
-// Clase base Vehiculo
-import excepciones.PrecioNegativoException;
+package clases;
 
+import excepciones.PrecioInvalidoException;
+
+import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Vehiculo implements Comparable<Vehiculo> {
+public abstract class Vehiculo {
     private String tipo;
     private String marca;
     private String modelo;
@@ -12,21 +14,9 @@ public abstract class Vehiculo implements Comparable<Vehiculo> {
     private List<String> caracteristicas;
     private Proveedor proveedor;
 
-    public Vehiculo(String tipo, String marca, String modelo, double precio, int anio, List<String> caracteristicas, Proveedor proveedor) {
-        if (precio < 0) throw new PrecioNegativoException("El precio no puede ser negativo");
-        this.tipo = tipo;
-        this.marca = marca;
-        this.modelo = modelo;
-        this.precio = precio;
-        this.anio = anio;
-        this.caracteristicas = caracteristicas;
-        this.proveedor = proveedor;
+    public Vehiculo() {
+        this.caracteristicas=new ArrayList<>();
     }
-
-    /**
-     * Setters y getters
-     * @return
-     */
 
     public String getTipo() {
         return tipo;
@@ -57,6 +47,9 @@ public abstract class Vehiculo implements Comparable<Vehiculo> {
     }
 
     public void setPrecio(double precio) {
+        if (precio<0){
+            throw new PrecioInvalidoException("El precio no puede ser menor a 0");
+        }
         this.precio = precio;
     }
 
@@ -76,11 +69,11 @@ public abstract class Vehiculo implements Comparable<Vehiculo> {
         this.caracteristicas = caracteristicas;
     }
 
-    public Proveedor getFabricante() {
+    public Proveedor getProveedor() {
         return proveedor;
     }
 
-    public void setFabricante(Proveedor proveedor) {
+    public void setProveedor(Proveedor proveedor) {
         this.proveedor = proveedor;
     }
 
@@ -89,20 +82,10 @@ public abstract class Vehiculo implements Comparable<Vehiculo> {
         return "Vehiculo{" +
                 "tipo='" + tipo + '\'' +
                 ", marca='" + marca + '\'' +
-                ", modelo='" + modelo + '\'' +
                 ", precio=" + precio +
-                ", anio=" + anio +
-                ", caracteristicas=" + caracteristicas +
-                ", fabricante=" + proveedor +
-                '}';
+                ", anio=" + anio + "\n" +
+                "Caracteristicas=" + caracteristicas + "\n" +
+                 proveedor +
+                '}' + "\n-----------------------------------\n";
     }
-
-    /**
-     * Metodo para comparar productos por precio
-     */
-    @Override
-    public int compareTo(Vehiculo otro) {
-        return Double.compare(this.precio, otro.precio);
-    }
-
 }

@@ -1,3 +1,5 @@
+import excepciones.VehiculoNoEncontradoException;
+
 import java.util.ArrayList;
 import java.util.List;
 

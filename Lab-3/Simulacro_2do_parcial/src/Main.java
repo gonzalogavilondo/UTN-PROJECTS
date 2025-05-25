@@ -1,3 +1,5 @@
+import excepciones.PrecioNegativoException;
+import excepciones.VehiculoNoEncontradoException;
 import org.json.JSONException;
 
 import java.util.List;
