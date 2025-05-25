@@ -6,7 +6,7 @@
             "marca": "Ferrari",
             "potencia": 720,
             "tipo": "Deportivo",
-            "precio": -100,
+            "precio": 300000,
             "caracteristicas": [
                 "Turbo",
                 "V8",

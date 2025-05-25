@@ -5,6 +5,9 @@ public class Concesionaria {
     private String ubicacion;
     private Inventario<Vehiculo> inventario;
 
+    public Concesionaria() {
+
+    }
     public Concesionaria(String nombre, String ubicacion, List<Vehiculo> vehiculos) {
         this.nombre = nombre;
         this.ubicacion = ubicacion;
@@ -13,7 +16,6 @@ public class Concesionaria {
             this.inventario.agregar(v);
         }
     }
-
 
     /**
      * Getters and setters
