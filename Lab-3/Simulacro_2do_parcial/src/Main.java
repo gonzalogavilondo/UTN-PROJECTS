@@ -40,25 +40,34 @@ public class Main {
                 System.out.println("Advertencia: " + e.getMessage());
             }
 
-            //Ejemplo de utilizacion de filtros
-            List<Vehiculo> vehiculosFiltrados = concesionaria.filtrarPorPrecioYProveedor();
-            System.out.println("Vehículos filtrados:");
-            for (Vehiculo v : vehiculosFiltrados) {
-                System.out.println(v.toString());
-            }
+            //Utilizacion de filtro
+            // Acceder al inventario desde la concesionaria cargada
+            System.out.println("\n\nFILTRADOS\n\n");
+            Inventario<Vehiculo> inventario = concesionaria.getInventario();
 
-            //Ejemplo de utilizacion de los filtros
-            List<Vehiculo> vehiculosFiltrados2 = concesionaria.filtrarPorAnioCaracteristicasYProveedor();
-            System.out.println("Vehículos filtrados por año y caracteristicas de proveedor:");
-            for (Vehiculo v : vehiculosFiltrados2) {
-                System.out.println(v.toString());
-            }
+            try {
+                // Filtro por precio y proveedor
+                List<Vehiculo> filtrados1 = inventario.filtrarXPrecioYProveedor(50000);
+                System.out.println("Filtrados por precio y proveedor:");
+                for (Vehiculo v : filtrados1) {
+                    System.out.println(v);
+                }
 
-            //Ejemplo de utilizacion de los filtros
-            List<Deportivo> vehiculosFiltrados3 = concesionaria.filtrarDeportivosPotentesConTurbo();
-            System.out.println("Vehículos filtrados por año y caracteristicas:");
-            for (Vehiculo v : vehiculosFiltrados3) {
-                System.out.println(v.toString());
+                // Filtro de deportivos potentes con turbo
+                List<Deportivo> filtrados2 = inventario.filtrarDeportivos(400, "Turbo");
+                System.out.println("Deportivos potentes con turbo:");
+                for (Deportivo d : filtrados2) {
+                    System.out.println(d);
+                }
+
+                // Filtro por año, proveedor y características
+                List<Vehiculo> filtrados3 = inventario.filtrarXAnioXProveedorYCaracteristicas(2020, "Toyota");
+                System.out.println("Filtrados por año, proveedor y características:");
+                for (Vehiculo v : filtrados3) {
+                    System.out.println(v);
+                }
+            } catch (VehiculoNoEncontradoException | PrecioNegativoException e) {
+                System.out.println("Error en filtro: " + e.getMessage());
             }
 
 

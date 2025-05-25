@@ -53,6 +53,15 @@ public class Concesionaria {
             System.out.println(v);
         }
     }
+
+    public Inventario<Vehiculo> getInventario() {
+        return inventario;
+    }
+
+    public void setInventario(Inventario<Vehiculo> inventario) {
+        this.inventario = inventario;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -63,65 +72,6 @@ public class Concesionaria {
         sb.append(inventario.imprimir());
         sb.append("\n]}");
         return sb.toString();
-    }
-
-    /**
-     * Metodos de filtro
-     */
-
-
-    /**
-     * Filtra vehículos con precio > 100,000 y proveedor de Italia o Alemania
-     */
-    public List<Vehiculo> filtrarPorPrecioYProveedor() {
-        List<Vehiculo> filtrados = new ArrayList<>();
-        for (Vehiculo v : inventario.getElementos()) {
-            String pais = v.getProveedor().getPais();
-            if (v.getPrecio() > 100000 && (pais.equalsIgnoreCase("Italia") || pais.equalsIgnoreCase("Alemania"))) {
-                filtrados.add(v);
-            }
-        }
-        return filtrados;
-    }
-
-
-    /**
-     * Filtra deportivos con más de 700 caballos y característica "Turbo"
-     */
-    public List<Deportivo> filtrarDeportivosPotentesConTurbo() {
-        List<Deportivo> filtrados = new ArrayList<>();
-        for (Vehiculo v : inventario.getElementos()) {
-            if (v instanceof Deportivo) {
-                Deportivo d = (Deportivo) v;
-                if (d.getPotencia() > 700) {
-                    boolean tieneTurbo = false;
-                    for (String c : d.getCaracteristicas()) {
-                        if (c.equalsIgnoreCase("Turbo")) {
-                            tieneTurbo = true;
-                            break;
-                        }
-                    }
-                    if (tieneTurbo) {
-                        filtrados.add(d);
-                    }
-                }
-            }
-        }
-        return filtrados;
-    }
-
-    /**
-     * Filtra vehículos fabricados después de 2020, con al menos 3 características y proveedor distinto de EEUU
-     */
-    public List<Vehiculo> filtrarPorAnioCaracteristicasYProveedor() {
-        List<Vehiculo> filtrados = new ArrayList<>();
-        for (Vehiculo v : inventario.getElementos()) {
-            String pais = v.getProveedor().getPais();
-            if (v.getAnio() > 2020 && v.getCaracteristicas().size() >= 3 && !pais.equalsIgnoreCase("EEUU")) {
-                filtrados.add(v);
-            }
-        }
-        return filtrados;
     }
 
     /**
