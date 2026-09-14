@@ -1,0 +1,38 @@
+* {
+    background-color: rgb(233, 199, 157); /* Define el color de fondo de todos los elementos. */
+}
+
+h1 {
+    color: #293579; /* Cambia el color del texto del título principal. */
+    text-align: center; /* Centra horizontalmente el título principal. */
+}
+
+p {
+    font-family: Arial, sans-serif; /* Establece la tipografía del párrafo. */
+    font-size: 18px; /* Define el tamaño de la letra. */
+    font-style: italic; /* Inclina el texto para mostrarlo en cursiva. */
+    font-weight: bold; /* Muestra el texto en negrita. */
+    max-width: 650px; /* Limita el ancho máximo del párrafo. */
+    margin: 10px auto; /* Agrega margen vertical y centra el párrafo. */
+    padding: 25px; /* Agrega espacio entre el texto y el borde. */
+    border: 2px solid black; /* Crea un borde negro de 2 píxeles. */
+    border-radius: 10px; /* Redondea las esquinas del borde. */
+    text-align: center; /* Centra horizontalmente el texto del párrafo. */
+    background-color: rgb(236, 209, 176);
+}
+
+h2 {
+    font-weight: bold; /* Muestra los subtítulos en negrita. */
+    color: #293579; /* Cambia el color de los subtítulos. */
+}
+
+.listas {
+    text-align: center; /* Centra el contenido de la sección de listas. */
+}
+
+.lista {
+    display: inline-block; /* Permite ubicar los bloques de listas en línea. */
+    vertical-align: top; /* Alinea los bloques por su parte superior. */
+    margin: 0 160px; /* Agrega espacio horizontal entre las listas. */
+    text-align: left; /* Alinea a la izquierda el contenido de cada lista. */
+}   

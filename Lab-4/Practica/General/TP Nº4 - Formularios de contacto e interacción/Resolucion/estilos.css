@@ -1,0 +1,123 @@
+body { /* Definimos un color de fondo general */
+    margin: 0; /* Quitamos el margen por defecto del navegador */
+    padding: 24px; /* Separamos el contenido del borde de la ventana */
+    font-family: Arial, sans-serif; /* Elegimos una tipografía simple y legible */
+    color: #2f3f5a; /* Color de texto principal */
+    background-color: #efefe8; /* Fondo claro para toda la página */
+}
+
+main { /* Centramos el contenido y limitamos el ancho */
+    max-width: 760px; /* Ancho máximo del contenido principal */
+    margin: 0 auto; /* Centramos horizontalmente */
+}
+
+h1 { /* Estilo del título principal */
+    font-size: 48px; /* Tamaño del título principal */
+    font-weight: 600; /* Grosor del título */
+    margin-bottom: 28px; /* Espacio inferior */
+}
+
+.bloque-formulario { /* Caja base para cada bloque que contiene formularios */
+    background-color: #e6e6dc; /* Fondo del bloque */
+    padding: 26px; /* Espaciado interno */
+    margin-bottom: 36px; /* Separación inferior entre bloques */
+    border: 1px solid #d3d3c7; /* Borde suave */
+}
+
+.bloque-formulario > h2 { /* Subtítulo del primer bloque */
+    margin-top: 0; /* Quitamos margen superior */
+    text-align: center; /* Centrado del subtítulo */
+    font-size: 42px; /* Tamaño del subtítulo */
+    margin-bottom: 24px; /* Espacio inferior */
+}
+
+fieldset { /* Quitamos borde visual por defecto del fieldset */
+    border: 1px solid #b8b8ae; /* Borde del agrupador */
+    padding: 20px; /* Espaciado interno */
+}
+
+legend { /* Título del fieldset */
+    padding: 0 8px; /* Espaciado lateral */
+    font-weight: 600; /* Peso de la tipografía */
+}
+
+label { /* Etiquetas de los formularios */
+    display: block; /* Mostramos una etiqueta por línea */
+    margin-top: 14px; /* Separación superior */
+    margin-bottom: 6px; /* Separación inferior */
+    font-weight: 600; /* Grosor medio para legibilidad */
+}
+
+input,
+select,
+textarea { /* Inputs, select y textarea comparten el mismo ancho */
+    width: 100%; /* Ocupan todo el ancho disponible */
+    box-sizing: border-box; /* Caja con padding incluido en el cálculo de ancho */
+    padding: 10px; /* Espacio interno */
+    border: 1px solid #a9a9a0; /* Borde simple */
+    font-size: 18px; /* Tamaño de fuente uniforme */
+    font-family: inherit; /* Hacemos que algunos campos no hereden estilos del navegador */
+    color: inherit; /* Mantenemos color de texto coherente */
+}
+
+.contenedor-precio { /* Ajustamos solo el contenedor del precio para posicionamiento */
+    position: relative; /* Permitimos posicionamiento absoluto de hijos */
+    display: block; /* Lo convertimos en bloque para ocupar una línea completa */
+}
+
+.simbolo-moneda { /* Signo de moneda ubicado visualmente dentro de la caja */
+    position: absolute; /* Posicionamiento absoluto relativo al contenedor */
+    left: 12px; /* Distancia al borde izquierdo */
+    top: 50%; /* Distancia al borde superior */
+    transform: translateY(-50%); /* Ajuste para centrar verticalmente */
+    color: #5a5a55; /* Color del símbolo */
+}
+
+#precio { /* Corremos el texto del input de precio para que no se pise con el símbolo */
+    padding-left: 28px; /* Más espacio a la izquierda */
+}
+
+input[type="checkbox"] { /* Checkbox con tamaño automático para no ocupar toda la línea */
+    width: auto; /* Permitimos ancho natural del checkbox */
+    vertical-align: middle; /* Lo dejamos alineado con el texto cercano */
+}
+
+.etiqueta-checkbox { /* Ajuste de etiqueta del checkbox en línea */
+    display: inline-block; /* Mostramos la etiqueta en línea */
+    margin-right: 10px; /* Margen derecho para separar del checkbox */
+}
+
+.acciones-formulario { /* Botonera de acciones */
+    margin-top: 18px; /* Separación respecto de los campos */
+    text-align: center; /* Centrado del contenido sin usar flex */
+}
+
+.acciones-formulario input { /* Botones de enviar y borrar */
+    width: 47%; /* Cada botón ocupa casi la mitad */
+    font-size: 20px; /* Tamaño de texto */
+    background-color: #ececef; /* Fondo claro */
+    border: 1px solid #a9a9a0; /* Borde del botón */
+    padding: 10px; /* Espaciado interno */
+}
+
+.acciones-formulario input + input { /* Separamos visualmente ambos botones */
+    margin-left: 2%; /* Margen izquierdo para el segundo botón */
+}
+
+.bloque-contacto { /* Segundo bloque con sombra para despegar del fondo */
+    border: none; /* Le quitamos el borde para cumplir consigna de este formulario */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.25); /* Aplicamos sombra externa */
+}
+
+.formulario-contacto h2 { /* Estilo del h2 del formulario de contacto */
+    text-align: center; /* Centramos el texto */
+    margin-top: 0; /* Ajustamos margen superior */
+    font-size: 46px; /* Tamaño del subtítulo */
+    margin-bottom: 18px; /* Espacio inferior */
+}
+
+textarea { /* Área de texto con ajuste manual deshabilitado para mantener forma */
+    overflow-y: auto; /* Permitimos solo scroll en caso de exceso de texto */
+    resize: none; /* Evitamos redimensionado para mantener diseño */
+}
+

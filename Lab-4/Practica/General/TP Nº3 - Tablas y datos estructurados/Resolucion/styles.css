@@ -1,0 +1,92 @@
+:root {
+  --bg-page: #f4f2ec; /* Define el color de fondo general de la página. */
+  --bg-header: #cfc9b8; /* Define el color de fondo de encabezados y pie. */
+  --bg-odd: #e4e0d3; /* Define el color de las filas impares. */
+  --bg-even: #ece9df; /* Define el color de las filas pares. */
+  --border-color: #8c8672; /* Define el color común de los bordes. */
+  --text-color: #2b2b2b; /* Define el color principal del texto. */
+  --icon-edit: #3a5f8a; /* Define el color del ícono de editar. */
+  --icon-delete: #8a3a3a; /* Define el color del ícono de eliminar. */
+}
+
+body {
+  margin: 0; /* Elimina el margen predeterminado del navegador. */
+  min-height: 100vh; /* Hace que el cuerpo tenga como mínimo toda la altura visible. */
+  display: flex; /* Activa Flexbox para organizar el contenido. */
+  justify-content: center; /* Centra el contenido horizontalmente. */
+  align-items: center; /* Centra el contenido verticalmente. */
+  background: #f4f2ec; /* Aplica el color de fondo de la página. */
+  color: #2b2b2b; /* Aplica el color principal al texto. */
+}
+
+main {
+  padding: 2rem; /* Agrega espacio interno alrededor del contenido principal. */
+}
+
+table {
+  border-collapse: collapse; /* Une los bordes de las celdas en un solo borde. */
+  border: 2px solid var(--border-color); /* Define el borde exterior de la tabla. */
+  background: var(--bg-even); /* Define el fondo general de la tabla. */
+  box-shadow: 0 0 45px 0 #0007; /* Agrega una sombra alrededor de la tabla. */
+  user-select: none; /* Evita que el usuario seleccione el texto de la tabla. */
+}
+
+caption {
+  font-size: 1.8rem; /* Define el tamaño del título de la tabla. */
+  font-weight: bold; /* Muestra el título con trazo grueso. */
+  font-family: Georgia, "Times New Roman", serif; /* Define la familia tipográfica del título. */
+  padding: 1rem 0; /* Agrega espacio arriba y abajo del título. */
+}
+
+th, td {
+  border: 1px solid var(--border-color); /* Dibuja los bordes de encabezados y celdas. */
+  padding: 0.6rem 1.2rem; /* Agrega espacio interno vertical y horizontal. */
+  text-align: center; /* Centra el contenido de cada celda. */
+}
+
+thead th {
+  background: var(--bg-header); /* Aplica el fondo a los encabezados. */
+  font-weight: bold; /* Destaca el texto de los encabezados. */
+}
+
+tbody tr:nth-child(odd) {
+  background: var(--bg-odd); /* Aplica un color a las filas impares. */
+}
+
+tbody tr:nth-child(even) {
+  background: var(--bg-even); /* Aplica un color a las filas pares. */
+}
+
+tfoot td {
+  background: var(--bg-header); /* Aplica el fondo al pie de la tabla. */
+  font-weight: bold; /* Destaca el texto del pie. */
+}
+
+.material-icons {
+  cursor: pointer; /* Cambia el cursor para indicar que el ícono es interactivo. */
+  font-size: 1.3rem; /* Define el tamaño de los íconos. */
+  transition: transform 0.2s ease, color 0.2s ease; /* Suaviza las animaciones de tamaño y color. */
+}
+
+.icon-edit {
+  color: var(--icon-edit); /* Aplica el color del ícono de editar. */
+}
+
+.icon-edit:hover {
+  transform: scale(1.80); /* Agranda el ícono cuando el cursor pasa por encima. */
+}
+
+.icon-delete {
+  color: var(--icon-delete); /* Aplica el color del ícono de eliminar. */
+}
+
+.icon-delete:hover {
+  transform: scale(1.15); /* Agranda levemente el ícono al pasar el cursor. */
+}
+
+.footer-text {
+  text-align: center; /* Centra el texto debajo de la tabla. */
+  font-size: 0.85rem; /* Define un tamaño de texto más pequeño. */
+  color: #555; /* Aplica un color gris al texto. */
+  margin-top: 1rem; /* Separa el texto de la tabla. */
+}

@@ -1,0 +1,141 @@
+/* -------------------- RESET BASICO -------------------- */ /* Paso 1: Seccion separada como sugiere la guia */
+* { /* Paso 2: Selector universal para normalizar */
+    box-sizing: border-box; /* Paso 3: Incluye borde y padding en el ancho/alto */
+    margin: 0; /* Paso 4: Quitamos margenes por defecto */
+    padding: 0; /* Paso 5: Quitamos padding por defecto */
+}
+
+/* -------------------- ESTRUCTURA GENERAL -------------------- */ /* Paso 6: Seccion de layout principal */
+html { /* Paso 7: Documento raiz */
+    scroll-behavior: smooth; /* Paso 8: Scroll suave al saltar por anclas */
+}
+
+body { /* Paso 9: Cuerpo completo de la pagina */
+    min-height: 100vh; /* Paso 10: Ocupa alto total de la ventana */
+    display: flex; /* Paso 11: Habilitamos flex */
+    flex-direction: column; /* Paso 12: Apilamos header, contenido y footer en columna */
+    font-family: "Georgia", serif; /* Paso 13: Tipografia similar al ejemplo */
+    background: #f7f7f5; /* Paso 14: Fondo claro */
+    color: #232323; /* Paso 15: Color base de texto */
+    line-height: 1.45; /* Paso 16: Mejora lectura del texto */
+}
+
+/* -------------------- HEADER -------------------- */ /* Paso 17: Encabezado con logo y links */
+.site-header { /* Paso 18: Contenedor del header */
+    background: #dddcd5; /* Paso 19: Fondo del encabezado */
+    border-bottom: 1px solid #9a9a9a; /* Paso 20: Borde inferior para separar */
+    display: flex; /* Paso 21: Flex para logo + nav */
+    align-items: center; /* Paso 22: Alineacion vertical centrada */
+    justify-content: space-between; /* Paso 23: Logo a la izquierda y links a la derecha */
+    gap: 16px; /* Paso 24: Espacio entre bloques */
+    padding: 12px 16px; /* Paso 25: Relleno interno */
+}
+
+.logo { /* Paso 26: Bloque del logo */
+    display: flex; /* Paso 27: Isotipo + texto en fila */
+    align-items: center; /* Paso 28: Centrado vertical */
+    gap: 10px; /* Paso 29: Separacion interna */
+}
+
+.logo-icon { /* Paso 30: Icono real cargado desde la carpeta img */
+    width: 44px; /* Paso 31: Aumentamos tamano visible del icono */
+    height: 44px; /* Paso 32: Mantenemos un bloque cuadrado */
+    object-fit: cover; /* Paso 33: Recorta el area vacia del PNG */
+    object-position: left center; /* Paso 34: Toma la parte util del icono (lado izquierdo) */
+    display: block; /* Paso 35: Evita espacio extra de imagen inline */
+}
+
+.logo-text { /* Paso 39: Texto junto al isotipo */
+    display: flex; /* Paso 40: Texto en columna */
+    flex-direction: column; /* Paso 41: Nombre arriba, subtitulo abajo */
+    line-height: 1.1; /* Paso 42: Compactamos altura de linea */
+}
+
+.logo-text small { /* Paso 43: Subtitulo del logo */
+    font-size: 11px; /* Paso 44: Tamano mas pequeno */
+}
+
+.top-nav { /* Paso 45: Navegacion superior */
+    display: flex; /* Paso 46: Links en fila */
+    gap: 12px; /* Paso 47: Espacio entre enlaces */
+    flex-wrap: wrap; /* Paso 48: Salto de linea en pantallas chicas */
+}
+
+.top-nav a { /* Paso 49: Enlaces del header */
+    border: 1px solid #5f6f88; /* Paso 50: Borde visible */
+    border-radius: 999px; /* Paso 51: Boton redondeado */
+    padding: 4px 14px; /* Paso 52: Espacio interno tipo boton */
+    text-decoration: none; /* Paso 53: Sacamos subrayado */
+    color: #3f5574; /* Paso 54: Color inicial de texto */
+    background: #ffffff; /* Paso 55: Fondo inicial blanco */
+    transition: background-color 0.25s ease, color 0.25s ease; /* Paso 56: Transition pedida en el enunciado */
+}
+
+.top-nav a:hover { /* Paso 57: Estado hover para intercambio de colores */
+    background: #3f5574; /* Paso 58: Fondo pasa a oscuro */
+    color: #ffffff; /* Paso 59: Texto pasa a blanco */
+}
+
+/* -------------------- LAYOUT PRINCIPAL (NAV + MAIN) -------------------- */ /* Paso 60: Seccion del holy grail simplificado */
+.layout { /* Paso 61: Contenedor de barra lateral + contenido */
+    flex: 1; /* Paso 62: Ocupa el espacio vertical restante entre header y footer */
+    display: flex; /* Paso 63: Habilitamos fila para nav lateral y main */
+    min-height: 0; /* Paso 64: Permite que el hijo scrolleable no rompa el layout */
+    border-bottom: 1px solid #9a9a9a; /* Paso 65: Separador antes del footer */
+}
+
+.side-nav { /* Paso 66: Barra lateral de navegacion interna */
+    width: 130px; /* Paso 67: Medida absoluta requerida por el TP */
+    flex: 0 0 130px; /* Paso 68: Evita que se estire o encoja */
+    padding: 16px; /* Paso 69: Relleno interno */
+    border-right: 1px solid #9a9a9a; /* Paso 70: Separador vertical */
+    background: #e6e5df; /* Paso 71: Fondo lateral */
+    display: flex; /* Paso 72: Apilamos links */
+    flex-direction: column; /* Paso 73: Direccion vertical */
+    gap: 10px; /* Paso 74: Espacio entre enlaces */
+}
+
+.side-nav h2 { /* Paso 75: Titulo de la barra lateral */
+    font-size: 24px; /* Paso 76: Tamano similar a maqueta */
+    color: #4f4f4f; /* Paso 77: Color de titulo */
+}
+
+.side-nav a { /* Paso 78: Links que saltan a subtitulos */
+    color: #2f2f2f; /* Paso 79: Texto oscuro */
+    text-decoration: none; /* Paso 80: Sin subrayado */
+}
+
+.side-nav a:hover { /* Paso 81: Feedback visual de hover */
+    text-decoration: underline; /* Paso 82: Subrayado al pasar mouse */
+}
+
+.content { /* Paso 83: Main del documento */
+    flex-grow: 1; /* Paso 84: Ocupa el ancho restante como pide el enunciado */
+    overflow-y: auto; /* Paso 85: Scroll SOLO dentro de main */
+    background: #ecebe5; /* Paso 86: Fondo del area de lectura */
+}
+
+.content section { /* Paso 87: Cada bloque de contenido */
+    padding: 22px 24px; /* Paso 88: Espaciado interno */
+    border-bottom: 1px solid #c7c7c7; /* Paso 89: Separador entre secciones */
+}
+
+.content h1,
+.content h2 { /* Paso 90: Titulos del contenido */
+    margin-bottom: 10px; /* Paso 91: Separacion respecto al parrafo */
+    color: #38445a; /* Paso 92: Color de titulos */
+}
+
+.content p { /* Paso 93: Parrafos del contenido */
+    max-width: 75ch; /* Paso 94: Limite para mejor legibilidad */
+    margin-bottom: 10px; /* Paso 95: Separacion entre parrafos */
+}
+
+/* -------------------- FOOTER -------------------- */ /* Paso 96: Pie de pagina dentro de pantalla */
+.site-footer { /* Paso 97: Contenedor del footer */
+    background: #dddcd5; /* Paso 98: Fondo similar al header */
+    padding: 10px 16px; /* Paso 99: Relleno del pie */
+    text-align: center; /* Paso 100: Texto centrado */
+    font-size: 14px; /* Paso 101: Tamano del texto */
+}
+

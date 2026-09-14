@@ -1,0 +1,31 @@
+/* Sacar los puntos de la lista */
+ul {
+    list-style: none;      /* elimina los marcadores de la lista */
+    padding: 0;            /* elimina el espacio interno del ul */
+    margin: 0;             /* elimina el margen externo del ul */
+}
+
+/* Hace que cada ítem de la lista quede en línea */
+li {
+    display: inline-block; /* permite poner elementos uno al lado del otro */
+}
+
+/* Estilo de cada enlace del menú */
+a {
+    display: inline-block;     /* se comporta como inline, pero con ancho y alto */
+    width: 100px;              /* ancho fijo para todos los enlaces */
+    text-align: center;        /* centra el texto horizontalmente */
+    line-height: 40px;         /* centra el texto verticalmente */
+    padding: 10px;             /* espacio interno del enlace */
+    margin: 5px;               /* separa cada botón del siguiente */
+    text-decoration: none;     /* quita el subrayado del enlace */
+    color: #333;               /* color del texto */
+    background-color: #f0f0f0; /* color de fondo normal */
+    border: 1px solid #ccc;    /* borde visible */
+}
+
+/* Cambia el color cuando el mouse pasa por encima */
+a:hover {
+    background-color: #ccc;    /* color de fondo al pasar el mouse */
+    border-color: #bbb;        /* cambia el color del borde */
+}

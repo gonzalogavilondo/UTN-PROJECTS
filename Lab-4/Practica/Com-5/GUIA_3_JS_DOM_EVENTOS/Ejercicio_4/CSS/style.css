@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+}
+
+#area {
+    width: 400px;
+    height: 200px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border: 3px solid #333;
+
+    background-color: #eee;
+
+    border-radius: 15px;
+
+    cursor: pointer;
+}
+
+#area.activa {
+    background-color: gold;
+    border-color: orange;
+}

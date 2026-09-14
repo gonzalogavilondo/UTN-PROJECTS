@@ -1,0 +1,17 @@
+POSTMAN - SISTEMA HOTELERO
+
+1. Mantené la aplicación corriendo desde IntelliJ.
+2. En Postman, presioná Import.
+3. Seleccioná Sistema-Hotelero.openapi.json.
+   Postman creará una colección con una carpeta por módulo y cada endpoint.
+4. Importá también Sistema-Hotelero.local.postman_environment.json.
+5. Seleccioná el entorno "Sistema Hotelero - Local" arriba a la derecha.
+6. Para endpoints protegidos, obtené un JWT desde POST /auth/login y copiá el token.
+
+La especificación contiene 52 operaciones, agrupadas por Swagger:
+Autenticación, Usuarios, Huéspedes, Habitaciones, Reservas, Canales de Reserva,
+Acompañantes, Productos, Consumos, Pagos, Check-In, Check-Out y Dashboard.
+
+Nota: la especificación original no declara un esquema de autenticación Bearer.
+Si Postman no agrega el encabezado automáticamente, en cada solicitud protegida
+usá Authorization > Bearer Token y pegá el JWT obtenido en /auth/login.

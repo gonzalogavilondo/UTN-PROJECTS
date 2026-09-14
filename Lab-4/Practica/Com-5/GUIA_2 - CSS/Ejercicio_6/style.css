@@ -1,0 +1,36 @@
+body {
+    margin: 0; /* elimina el margen por defecto del navegador */
+}
+
+main {
+    width: 100%; /* el contenedor ocupa todo el ancho de la página */
+}
+
+.caja {
+    width: 220px; /* ancho fijo para todas las cajas */
+    height: 100px; /* alto fijo para todas las cajas */
+    border: 2px solid #000; /* borde visible para distinguir cada caja */
+    box-sizing: border-box; /* el borde entra dentro del ancho y alto indicado */
+    margin-bottom: 20px; /* separa una caja de la siguiente */
+    background: #f3f3f3; /* fondo claro para que se vea la caja */
+}
+
+.izquierda {
+    margin-right: auto; /* empuja la caja hacia la izquierda dejando espacio a la derecha */
+}
+
+.centro {
+    margin-left: auto; /* deja espacio a la izquierda para centrar la caja */
+    margin-right: auto; /* deja espacio a la derecha para centrar la caja */
+}
+
+.derecha {
+    margin-left: auto; /* empuja la caja hacia la derecha dejando espacio a la izquierda */
+}
+
+p {
+    margin: 0; /* elimina el margen del párrafo para que quede alineado */
+    line-height: 100px; /* centra el texto verticalmente dentro de la caja */
+    text-align: center; /* centra el texto horizontalmente */
+    font-weight: bold; /* pone el texto en negrita */
+}

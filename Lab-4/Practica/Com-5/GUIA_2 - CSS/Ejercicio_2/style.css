@@ -1,0 +1,11 @@
+.caja { 
+    width: 200px;
+    height: 100px;
+    background: lightblue;
+    color: black;
+    text-align: center;
+    line-height: 100px; /* Centra el texto verticalmente */
+    padding: 20px; /* Espacio interno */
+    border: 5px solid darkblue; /* Borde de la caja */
+    margin: 30px; /* Espacio externo */
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP 3 - Tablas y datos estructurados</title>
+    <!-- Carga la fuente de íconos Material Icons. -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Vincula este documento HTML con la hoja de estilos propia. -->
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+
+    <main>
+      <!-- table organiza los datos en filas y columnas. -->
+      <table>
+        <!-- caption agrega un título descriptivo a la tabla. -->
+        <caption>Datos estructurados</caption>
+
+        <!-- thead contiene los encabezados de las columnas. -->
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nombre del producto</th>
+            <th>Precio</th>
+            <th>Apto para celíacos</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
+          </tr>
+        </thead>
+
+        <!-- tbody contiene los registros o datos principales de la tabla. -->
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Facturas</td>
+            <td>$500 c/u</td>
+            <td>no</td>
+            <!-- span muestra el ícono de editar usando Material Icons. -->
+            <td><span class="material-icons icon-edit">edit</span></td>
+            <!-- span muestra el ícono de eliminar usando Material Icons. -->
+            <td><span class="material-icons icon-delete">delete</span></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Pan</td>
+            <td>$3.000 kg</td>
+            <td>no</td>
+            <td><span class="material-icons icon-edit">edit</span></td>
+            <td><span class="material-icons icon-delete">delete</span></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Alfajores</td>
+            <td>$2.000 c/u</td>
+            <td>si</td>
+            <td><span class="material-icons icon-edit">edit</span></td>
+            <td><span class="material-icons icon-delete">delete</span></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Galletitas</td>
+            <td>$12.000 kg</td>
+            <td>no</td>
+            <td><span class="material-icons icon-edit">edit</span></td>
+            <td><span class="material-icons icon-delete">delete</span></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Chipá</td>
+            <td>$18.000 kg</td>
+            <td>si</td>
+            <td><span class="material-icons icon-edit">edit</span></td>
+            <td><span class="material-icons icon-delete">delete</span></td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Sandwich de miga</td>
+            <td>$2.500 c/u</td>
+            <td>no</td>
+            <td><span class="material-icons icon-edit">edit</span></td>
+            <td><span class="material-icons icon-delete">delete</span></td>
+          </tr>
+        </tbody>
+
+        <!-- tfoot contiene información complementaria o el pie de la tabla. -->
+        <tfoot>
+          <tr>
+            <!-- colspan hace que esta celda ocupe las seis columnas. -->
+            <td colspan="6">Productos de panaderia</td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <!-- Este párrafo identifica el trabajo práctico. -->
+      <p class="footer-text">Trabajo práctico tablas y datos estructurados.</p>
+    </main>
+
+  </body>
+
+</html>

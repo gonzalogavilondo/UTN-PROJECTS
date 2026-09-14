@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mis tareas</title>
+
+    <link rel="stylesheet" href="./CSS/style.css">
+    <script type="module" src="./JS/app.js"></script>
+</head>
+
+<body>
+
+    <main class="app">
+
+        <h1>Mis tareas</h1>
+
+        <form id="formulario">
+
+            <input
+                type="text"
+                id="inputTarea"
+                placeholder="Nueva tarea..."
+            >
+
+            <button type="submit">
+                Agregar
+            </button>
+
+        </form>
+
+        <div class="filtros">
+
+            <button type="button" id="todas">
+                Todas
+            </button>
+
+            <button type="button" id="pendientes">
+                Pendientes
+            </button>
+
+            <button type="button" id="completadas">
+                Completadas
+            </button>
+
+        </div>
+
+        <ul id="listaTareas">
+
+            <!-- Las tareas serán creadas por JavaScript -->
+
+        </ul>
+
+        <p id="mensajeVacio">
+            No hay tareas pendientes.
+        </p>
+
+    </main>
+
+</body>
+</html>

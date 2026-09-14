@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP 4 - Formularios de contacto e interacción</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <main>
+        <h1>Formularios de contacto e interacción</h1>
+
+        <section class="bloque-formulario">
+            <h2>Agregar un producto</h2> <!-- Subtítulo del primer formulario -->
+
+            <form action="#" method="post" class="formulario-producto"> <!-- Formulario de alta de producto -->
+                <fieldset> <!-- Agrupamos campos relacionados del producto -->
+                    <legend>Datos del producto</legend> <!-- Título del fieldset, como indica la consigna -->
+
+                    <label for="nombre-producto">Nombre del producto</label> <!-- Etiqueta del campo nombre -->
+                    <input id="nombre-producto" name="nombreProducto" type="text" placeholder="Pan de molde" required> <!-- Campo de texto obligatorio para el nombre -->
+
+                    <label for="precio">Precio</label> <!-- Etiqueta del campo precio -->
+                    <span class="contenedor-precio"> <!-- Envoltorio para posicionar el signo $ sin que forme parte del input -->
+                        <span class="simbolo-moneda">$</span> <!-- Signo de moneda visual fuera del valor del input -->
+                        <input id="precio" name="precio" type="number" min="0" step="0.01" placeholder="3200.00" required> <!-- Campo numérico obligatorio para el precio -->
+                    </span> <!-- Fin del envoltorio del precio -->
+
+                    <label for="categoria">Categoría</label> <!-- Etiqueta del desplegable de categoría -->
+                    <select id="categoria" name="categoria" required> <!-- Lista desplegable obligatoria -->
+                        <option value="" selected disabled>--Elija una categoría--</option> <!-- Opción inicial no seleccionable para guiar al usuario -->
+                        <option value="panificados">Panificados</option> <!-- Opción de categoría 1 -->
+                        <option value="facturas">Facturas</option> <!-- Opción de categoría 2 -->
+                        <option value="tortas">Tortas</option> <!-- Opción de categoría 3 -->
+                        <option value="galletitas">Galletitas</option> <!-- Opción de categoría 4 -->
+                    </select> <!-- Fin de la lista desplegable -->
+
+                    <label for="celiaco" class="etiqueta-checkbox">Apto para celiacos</label> <!-- Etiqueta del checkbox -->
+                    <input id="celiaco" name="celiaco" type="checkbox"> <!-- Casilla para marcar si el producto es apto para celiacos -->
+
+                    <div class="acciones-formulario"> <!-- Contenedor de botones de acción -->
+                        <input type="reset" value="borrar"> <!-- Botón para limpiar todos los campos -->
+                        <input type="submit" value="enviar"> <!-- Botón para enviar el formulario -->
+                    </div> <!-- Fin del contenedor de botones -->
+                </fieldset> <!-- Cerramos el agrupador del formulario de producto -->
+            </form> <!-- Fin del primer formulario -->
+        </section> <!-- Fin del primer bloque visual -->
+
+        <section class="bloque-formulario bloque-contacto"> <!-- Segundo bloque visual para el formulario de contacto -->
+            <form action="#" method="post" class="formulario-contacto"> <!-- Formulario de contacto -->
+                <h2>Contacto</h2> <!-- Subtítulo usando h2 en lugar de legend, como pide la consigna -->
+
+                <label for="nombre">Nombre</label> <!-- Etiqueta del nombre -->
+                <input id="nombre" name="nombre" type="text" placeholder="Juan" required> <!-- Campo obligatorio para nombre -->
+
+                <label for="apellido">Apellido</label> <!-- Etiqueta del apellido -->
+                <input id="apellido" name="apellido" type="text" placeholder="Perez" required> <!-- Campo obligatorio para apellido -->
+
+                <label for="email">e-mail</label> <!-- Etiqueta del correo electrónico -->
+                <input id="email" name="email" type="email" placeholder="usuario@ejemplo.com" required> <!-- Campo obligatorio de correo con validación de formato -->
+
+                <label for="mensaje">Mensaje</label> <!-- Etiqueta del área de texto -->
+                <textarea id="mensaje" name="mensaje" rows="8" placeholder="Dejá tu mensaje..." required></textarea> <!-- Área de texto grande obligatoria para el mensaje -->
+
+                <div class="acciones-formulario"> <!-- Contenedor de botones del formulario de contacto -->
+                    <input type="reset" value="borrar"> <!-- Botón para borrar campos -->
+                    <input type="submit" value="enviar"> <!-- Botón para enviar datos -->
+                </div> <!-- Fin del contenedor de botones -->
+            </form> <!-- Fin del segundo formulario -->
+        </section> <!-- Fin del segundo bloque visual -->
+    </main>
+</body>
+</html>

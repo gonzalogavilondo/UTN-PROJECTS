@@ -1,0 +1,164 @@
+:root {
+  --bg-page: #e4e0d3;
+  --bg-header: #d9d6cf;
+  --bg-sidenav: #d9d6cf;
+  --bg-main: #f4f2ec;
+  --bg-footer: #d9d6cf;
+  --border-color: #b5af9b;
+  --text-color: #2b2b2b;
+  --title-color: #3a5f8a;
+  --link-color: #3a5f8a;
+  --link-bg: #eceade;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--text-color);
+  background: var(--bg-page);
+}
+
+/* ==================== Contenedor general (holy grail) ==================== */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* ==================== Header ==================== */
+
+.site-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-header);
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.logo-icon {
+  font-size: 2rem;
+  color: #1c1c1c;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.logo-title {
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.logo-subtitle {
+  font-size: 0.7rem;
+  color: #666;
+}
+
+.header-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.header-nav a {
+  color: var(--link-color);
+  background: var(--link-bg);
+  text-decoration: none;
+  padding: 0.5rem 1.2rem;
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header-nav a:hover {
+  background: var(--link-color);
+  color: var(--link-bg);
+}
+
+/* ==================== Contenido (sidebar + main) ==================== */
+
+.content {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  overflow: hidden;
+}
+
+.side-nav {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 200px;
+  background: var(--bg-sidenav);
+  padding: 2rem 1.5rem;
+  border-right: 1px solid var(--border-color);
+}
+
+.side-nav a {
+  color: var(--title-color);
+  text-decoration: none;
+  margin-bottom: 1.2rem;
+  transition: color 0.2s ease;
+}
+
+.side-nav a:hover {
+  color: #1c1c1c;
+  text-decoration: underline;
+}
+
+.main-content {
+  flex-grow: 1;
+  background: var(--bg-main);
+  padding: 2rem 3rem;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+
+.main-content h1 {
+  color: var(--title-color);
+}
+
+.main-content h2 {
+  color: var(--title-color);
+  margin-top: 2.5rem;
+}
+
+.main-content p {
+  line-height: 1.6;
+}
+
+.main-content a {
+  color: var(--title-color);
+}
+
+/* ==================== Footer ==================== */
+
+.site-footer {
+  background: var(--bg-footer);
+  border-top: 1px solid var(--border-color);
+  padding: 0.8rem 2rem;
+  font-size: 0.85rem;
+  color: #555;
+  flex-shrink: 0;
+}

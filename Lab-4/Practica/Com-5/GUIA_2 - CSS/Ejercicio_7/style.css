@@ -1,0 +1,118 @@
+/*
+	RESET BASICO:
+	Quitamos margenes por defecto y aseguramos que el padding no rompa medidas.
+*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*
+	CENTRADO DE LA PAGINA:
+	Con min-height: 100vh tomamos toda la altura visible.
+	Luego usamos Flexbox para centrar horizontal y verticalmente.
+*/
+body {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(135deg, #f2f6ff, #eef2f7);
+	color: #1f2937;
+}
+
+/*
+	CONTENEDOR PRINCIPAL:
+    - Ocupa todo el ancho disponible
+*/
+main {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 24px;
+}
+
+/*
+	TARJETA:
+	- Borde redondeado
+	- Sombra suave
+	- Espaciado interno consistente
+*/
+.profile-card {
+	width: min(360px, 100%);
+	background-color: #ffffff;
+	border-radius: 18px;
+	box-shadow: 0 10px 30px rgba(17, 24, 39, 0.12);
+	padding: 28px 24px;
+	text-align: center;
+}
+
+/*
+	IMAGEN CIRCULAR:
+	border-radius: 50% transforma el cuadrado en circulo.
+	object-fit: cover evita deformaciones.
+*/
+.profile-image {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 4px solid #e5e7eb;
+	margin-bottom: 16px;
+}
+
+/*
+	TITULO:
+	Nombre del perfil con mayor jerarquia visual.
+*/
+.profile-name {
+	font-size: 1.5rem;
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+
+/*
+	DESCRIPCION:
+	Color mas suave y line-height para mejor lectura.
+*/
+.profile-description {
+	font-size: 1rem;
+	line-height: 1.6;
+	color: #4b5563;
+	margin-bottom: 22px;
+}
+
+/*
+	BOTON:
+	Estilo base + transicion para suavizar el hover.
+*/
+.contact-button {
+	border: none;
+	border-radius: 10px;
+	background-color: #2563eb;
+	color: #ffffff;
+	padding: 12px 22px;
+	font-size: 1rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+/*
+	HOVER DEL BOTON:
+	Cambia color y sube ligeramente para indicar interaccion.
+*/
+.contact-button:hover {
+	background-color: #1d4ed8;
+	transform: translateY(-2px);
+}
+
+/*
+	ESTADO AL NAVEGAR CON TECLADO (ACCESIBILIDAD):
+	Mejora visibilidad del foco cuando se usa Tab.
+*/
+.contact-button:focus-visible {
+	outline: 3px solid #93c5fd;
+	outline-offset: 2px;
+}

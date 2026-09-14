@@ -1,0 +1,74 @@
+<!DOCTYPE html> <!-- Paso 1: Declaramos HTML5 -->
+<html lang="es"> <!-- Paso 2: Indicamos idioma español -->
+<head> <!-- Paso 3: Inicio de metadatos -->
+    <meta charset="UTF-8"> <!-- Paso 4: Soporte de caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Paso 5: Vista responsiva -->
+    <title>TP 5 - Layout con Flexbox</title> <!-- Paso 6: Titulo de la pestana -->
+    <link rel="stylesheet" href="styles.css"> <!-- Paso 7: Vinculamos la hoja de estilos -->
+</head>
+<body> <!-- Paso 8: Inicio del contenido visible -->
+
+    <header class="site-header"> <!-- Paso 9: Encabezado con logo + 4 enlaces -->
+        <div class="logo" aria-label="Logo UTNMDP"> <!-- Paso 10: Contenedor del logo -->
+            <img src="img/UTN-icon.png" alt="Icono UTN" class="logo-icon"> <!-- Paso 11: Usamos el icono real ubicado en /img -->
+            <div class="logo-text"> <!-- Paso 12: Texto del logo -->
+                <strong>UTNMDP</strong> <!-- Paso 13: Nombre principal -->
+                <small>Regional Mar del Plata</small> <!-- Paso 14: Subtitulo del logo -->
+            </div>
+        </div>
+
+        <nav class="top-nav" aria-label="Navegacion superior"> <!-- Paso 15: Barra de enlaces del header -->
+            <a href="#">Nosotros</a> <!-- Paso 16: Enlace 1 -->
+            <a href="#">Servicios</a> <!-- Paso 17: Enlace 2 -->
+            <a href="#">Comunidad</a> <!-- Paso 18: Enlace 3 -->
+            <a href="#">Contacto</a> <!-- Paso 19: Enlace 4 -->
+        </nav>
+    </header>
+
+    <div class="layout"> <!-- Paso 20: Contenedor principal en flex para nav lateral + main -->
+        <nav class="side-nav" aria-label="Navegacion del documento"> <!-- Paso 21: Barra lateral para saltos -->
+            <h2>Titulo</h2> <!-- Paso 22: Titulo de la barra -->
+            <a href="#tp1">TP1</a> <!-- Paso 23: Salto a subtitulo 1 -->
+            <a href="#tp2">TP2</a> <!-- Paso 24: Salto a subtitulo 2 -->
+            <a href="#tp3">TP3</a> <!-- Paso 25: Salto a subtitulo 3 -->
+            <a href="#tp4">TP4</a> <!-- Paso 26: Salto a subtitulo 4 -->
+        </nav>
+
+        <main class="content" aria-label="Contenido principal"> <!-- Paso 27: Main scrolleable (no scrollea toda la ventana) -->
+            <section id="intro"> <!-- Paso 28: Bloque introductorio -->
+                <h1>Layout con Flexbox</h1> <!-- Paso 29: Titulo principal -->
+                <p>En este trabajo practico se muestra como se veria un tipico layout conocido como "holy grail". A continuacion se hace un resumen de cada trabajo practico realizado hasta el momento.</p> <!-- Paso 30: Texto descriptivo -->
+            </section>
+
+            <section id="tp1"> <!-- Paso 31: Subtitulo enlazable TP1 -->
+                <h2>Trabajo practico 1 - HTML y CSS basico</h2> <!-- Paso 32: Encabezado TP1 -->
+                <p>En este trabajo practico aprendimos a vincular hojas de estilo y a posicionar elementos de texto, centrarlos, distanciarlos entre si, etc.</p> <!-- Paso 33: Descripcion TP1 -->
+                <p>Puede verlo <a href="../../TP Nº1 - HTML y CSS Basico/Resolucion/index.html">aqui</a></p> <!-- Paso 34: Enlace real al TP1 -->
+            </section>
+
+            <section id="tp2"> <!-- Paso 35: Subtitulo enlazable TP2 -->
+                <h2>Trabajo practico 2 - Enlaces y navegacion</h2> <!-- Paso 36: Encabezado TP2 -->
+                <p>En este trabajo practico aprendimos sobre enlaces, como navegar a paginas ajenas a nuestra aplicacion web, asi como tambien a otros documentos (o partes) de la misma.</p> <!-- Paso 37: Descripcion TP2 -->
+                <p>Puede verlo <a href="../../TP Nº2 - Enlaces y Navegacion/Resolucion/index.html">aqui</a></p> <!-- Paso 38: Enlace real al TP2 -->
+            </section>
+
+            <section id="tp3"> <!-- Paso 39: Subtitulo enlazable TP3 -->
+                <h2>Trabajo practico 3 - Tablas y datos estructurados</h2> <!-- Paso 40: Encabezado TP3 -->
+                <p>En este trabajo practico aprendimos a darle estilo a tablas de datos estructurados, utilizamos sombras para separar la tabla del fondo, patron de cebra para mejorar la legibilidad entre las filas y vinculacion de iconos y simbolos.</p> <!-- Paso 41: Descripcion TP3 -->
+                <p>Puede verlo <a href="../../TP Nº3 - Tablas y datos estructurados/Resolucion/index.html">aqui</a></p> <!-- Paso 42: Enlace real al TP3 -->
+            </section>
+
+            <section id="tp4"> <!-- Paso 43: Subtitulo enlazable TP4 -->
+                <h2>Trabajo practico 4 - Formularios de contacto e interaccion</h2> <!-- Paso 44: Encabezado TP4 -->
+                <p>En este trabajo practico aprendimos sobre formularios e hicimos dos estilos diferentes, uno de ellos tiene el borde por defecto que aparece cuando englobamos los inputs en un fieldset y otro con sombra para que se separe del fondo.</p> <!-- Paso 45: Descripcion TP4 -->
+                <p>Puede verlo <a href="../../TP Nº4 - Formularios de contacto e interacción/Resolucion/index.html">aqui</a></p> <!-- Paso 46: Enlace real al TP4 -->
+            </section>
+        </main>
+    </div>
+
+    <footer class="site-footer"> <!-- Paso 47: Pie de pagina siempre visible abajo dentro de la pantalla -->
+        <p>Trabajo practico layout con flexbox.</p> <!-- Paso 48: Texto del pie -->
+    </footer>
+
+</body>
+</html>

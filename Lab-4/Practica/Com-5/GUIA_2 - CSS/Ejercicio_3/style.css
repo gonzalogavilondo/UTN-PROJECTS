@@ -1,0 +1,14 @@
+div {
+    width: 300px;
+    padding: 20px;
+    border: 5px solid #333;
+}
+
+.box-sizing-1 {
+    background-color: #ff0c0c;
+}
+
+.box-sizing-2 {
+    box-sizing: border-box; /*Este es el valor que hace que el tamaño de la caja incluya el padding y el borde, lo que facilita el trabajo con layouts.*/
+    background-color: #25ac13;
+}

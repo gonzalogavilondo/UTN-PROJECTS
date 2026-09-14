@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP2 - Enlaces y navegación</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <aside>
+        <nav>
+            <ul>
+                <!-- Enlaces internos que llevan a secciones de la misma página -->
+                <li><a href="#titulo-principal">Inicio</a></li>
+                <li><a href="#introduccion">Introducción</a></li>
+                <li><a href="#objetivos">Objetivos</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <!-- Enlace a otra página del mismo sitio -->
+                <li><a href="otrodoc.html">Documento secundario</a></li>
+                <!-- Enlace externo a otra web -->
+                <li><a href="https://mdp.utn.edu.ar/" target="_blank" rel="noopener">UTN MDP</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <!--
+            article: se usa cuando el contenido es principal y tiene sentido por sí mismo.
+            Por ejemplo, un texto completo, una noticia, una entrada del blog o este trabajo práctico.
+            En este caso, el contenido principal de la página es el trabajo práctico, así que va dentro de article.
+        -->
+        <article>
+            <h1 id="titulo-principal">Trabajo Práctico N°2</h1>
+
+            <h2 id="introduccion">Introducción</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis dicta, exercitationem voluptatem architecto explicabo doloremque quo molestiae tempore voluptates sequi autem, iure vero, similique ipsa. Ad excepturi molestias unde.</p>
+
+            <h2 id="objetivos">Objetivos</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, eum amet. Autem, nobis quis. Sed totam, nisi eaque quisquam accusamus ipsa, deleniti reiciendis, iure illum voluptatem quidem enim. Ullam, dignissimos.</p>
+
+            <h2 id="servicios">Servicios</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam deleniti ex, nostrum nisi dignissimos blanditiis molestiae possimus porro id quasi ad, rerum voluptatum perspiciatis qui reiciendis aliquam ut facilis! Praesentium.</p>
+
+            <h2 id="contacto">Contacto</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptas ipsum voluptas omnis recusandae laborum odit, iure fugiat voluptates perspiciatis soluta officiis architecto ex! Sit quae ipsa atque quod.</p>
+        </article>
+
+        <!--
+            section: se usa para agrupar contenido relacionado dentro de una página.
+            Es útil cuando querés separar una parte del contenido por tema o función.
+            Usamos section para las listas porque son bloques temáticos distintos dentro del mismo documento.
+        -->
+        <!-- Lista sin orden -->
+        <section>
+            <h2>Lista desordenada</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Enlaces</li>
+                <li>Navegación</li>
+            </ul>
+        </section>
+
+        <!-- Lista ordenada -->
+        <section>
+            <h2>Lista ordenada</h2>
+            <ol>
+                <li>Crear estructura</li>
+                <li>Agregar enlaces</li>
+                <li>Estilar la página</li>
+                <li>Verificar navegación</li>
+            </ol>
+        </section>
+    </main>
+</body>
+</html>

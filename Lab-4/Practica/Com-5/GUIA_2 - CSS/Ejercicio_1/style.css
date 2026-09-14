@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+h1 {
+    color: blue;
+}
+
+p {
+    font-size: 18px;
+}
+
+li {
+    border-bottom: 1px solid gray;
+}
+
+.destacado {
+    background-color: yellow;
+}

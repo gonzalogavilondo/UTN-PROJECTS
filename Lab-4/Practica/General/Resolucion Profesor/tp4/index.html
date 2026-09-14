@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TP 4 - Formularios de contacto e interacción</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>Formularios de contacto e interacción</h1>
+
+  <form id="form-producto">
+    <fieldset>
+      <legend>Agregar un producto</legend>
+
+      <label for="nombre-producto">Nombre del producto</label>
+      <input type="text" id="nombre-producto" name="nombre-producto" placeholder="Pan de molde" required>
+
+      <label for="precio">Precio</label>
+      <div class="input-precio">
+        <span class="simbolo-peso">$</span>
+        <input type="number" id="precio" name="precio" placeholder="3200.00" step="0.01" required>
+      </div>
+
+      <label for="categoria">Categoría</label>
+      <select id="categoria" name="categoria" required>
+        <option value="" selected disabled>--Elija una categoría--</option>
+        <option value="panificados">Panificados</option>
+        <option value="reposteria">Repostería</option>
+        <option value="facturas">Facturas</option>
+        <option value="tortas">Tortas</option>
+      </select>
+
+      <label class="label-checkbox" for="apto-celiacos">
+        Apto para celíacos
+        <input type="checkbox" id="apto-celiacos" name="apto-celiacos">
+      </label>
+
+      <div class="botones">
+        <button type="reset">borrar</button>
+        <button type="submit">enviar</button>
+      </div>
+    </fieldset>
+  </form>
+
+  <form id="form-contacto">
+    <h2>Contacto</h2>
+
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" name="nombre" placeholder="Juan" required>
+
+    <label for="apellido">Apellido</label>
+    <input type="text" id="apellido" name="apellido" placeholder="Perez" required>
+
+    <label for="email">e-mail</label>
+    <input type="email" id="email" name="email" placeholder="usuario@ejemplo.com" required>
+
+    <label for="mensaje">Mensaje</label>
+    <textarea id="mensaje" name="mensaje" rows="6" placeholder="Dejá tu mensaje..." required></textarea>
+
+    <div class="botones">
+      <button type="reset">borrar</button>
+      <button type="submit">enviar</button>
+    </div>
+  </form>
+
+</body>
+</html>
